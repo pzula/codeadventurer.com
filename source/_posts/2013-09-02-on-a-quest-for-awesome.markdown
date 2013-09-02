@@ -6,8 +6,6 @@ comments: true
 categories: journey
 ---
 
-# On a Quest for Awesome
-
 Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University [Agricultural Ecosystem Management Program](http://www.oardc.ohio-state.edu/amp/) <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to [Local Food Systems](http://localfoodsystems.org), a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in [Drupal](http://drupal.org), and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.
 
 When the end of August came, I was sad to find out that this awesome job could not become a full-time endeavor because there were no new grants for the project, and neither could my half-time contract be extended. That same week, I was contacted by an internal recruiter for [Fathom](http://fathomdelivers.com), a digital marketing and analytics agency closer to where I had just moved, and began the conversation of becoming a full time web developer there. 

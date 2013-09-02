@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-09-02T17:47:25-06:00</updated>
+  <updated>2013-09-02T17:49:20-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -18,9 +18,7 @@
     <link href="http://codeadventurer.com/blog/2013/09/02/on-a-quest-for-awesome/"/>
     <updated>2013-09-02T17:41:00-06:00</updated>
     <id>http://codeadventurer.com/blog/2013/09/02/on-a-quest-for-awesome</id>
-    <content type="html"><![CDATA[<h1>On a Quest for Awesome</h1>
-
-<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>
+    <content type="html"><![CDATA[<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>
 
 <p>When the end of August came, I was sad to find out that this awesome job could not become a full-time endeavor because there were no new grants for the project, and neither could my half-time contract be extended. That same week, I was contacted by an internal recruiter for <a href="http://fathomdelivers.com">Fathom</a>, a digital marketing and analytics agency closer to where I had just moved, and began the conversation of becoming a full time web developer there.</p>
 

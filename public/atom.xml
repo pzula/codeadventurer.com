@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-09-03T08:14:11-06:00</updated>
+  <updated>2013-09-06T09:15:04-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -14,8 +14,51 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Getting a New Development Environment Up &amp; Running on Mac OSX]]></title>
+    <link href="http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx"/>
+    <updated>2013-09-05T21:14:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
+    <content type="html"><![CDATA[<p>Getting a new computer can be fun, but it also means a lot of work. Between running into bugs, new versions of software running amok, and documentation from various sources on the big, bad internet just not lining up, it can quickly go from being fun to just being plain frustrating.</p>
+
+<p>I had a few of those moments myself in the last couple days, so I thought I&rsquo;d share with other journeymen and women some of the core items I get set up on a new machine. Perhaps a few of the snippets may help you get out of a snag, or maybe you&rsquo;ll find a new tool to love.</p>
+
+<h2>In a loose order of importance</h2>
+
+<ol>
+<li><p>The very first thing I installed was <a href="http://www.alfredapp.com/">Alfred</a>. If you love Spotlight, go ahead and stick with it, but I love the flexibility of Alfred for getting around, doing math for me, and lots of other tasks that usually take more than two keystrokes.</p></li>
+<li><p><a href="http://www.mozilla.org/en-US/firefox/fx/#desktop">Firefox</a> &amp; <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, to have browsers to test in. I primarily use Chrome in my daily work, and only every touch Safari for testing.</p></li>
+<li><p>A few extensions for Firefox and Chrome include <a href="http://getpocket.com">Pocket</a> (for saving things to read later), <a href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/">Web Developer Toolbar</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/firebug/?src=search">Firebug</a>, and <a href="https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef?hl=en">Personal Blocklist for Chrome</a> (this one helps me block anything by w3cschools.com, because most of the time, that site does not promote best practices)</p></li>
+<li><p><a href="http://www.evernote.com">Evernote</a> helps me keep track of everything &mdash; from grocery lists to bug fixes. Whenever I think of something, I can pop open Evernote, and be sure that when I need to come back to it, I can access it from anywhere. I love this app, and it&rsquo;s free!</p></li>
+<li><p><a href="http://www.skype.com">Skype</a> helps me keep in touch with other developers, friends, and family around the world.</p></li>
+<li><p><a href="http://www.sublimetext.com">Sublime Text 2</a> is my editor of choice. Although I know there are many proponents of Vi/Vim and other non-GUI editors, my focus right now is on learning to become a better programmer. I&rsquo;ll focus on learning those later.</p></li>
+<li><p>Here are my favorite Sublime Text 2 packages:</p>
+
+<ul>
+<li><a href="http://docs.emmet.io/">Emmet</a></li>
+<li><a href="http://net.tutsplus.com/articles/news/introducing-nettuts-fetch/">NetTuts Fetch</a></li>
+<li><a href="https://tutsplus.com/lesson/lightning-fast-folder-and-file-creation/">Advanced New File</a></li>
+<li><a href="https://tutsplus.com/lesson/sidebar-enhancements/">Sidebar Enhancements</a></li>
+<li><a href="https://github.com/SublimeLinter/SublimeLinter">Sublime Linter</a></li>
+<li>I also enable Sublime to be opened from the command line (this is where the Vim users scoff).
+Run this in your terminal: <code>ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /bin/subl
+</code>   Now you will be able to open any file from the Terminal with <code>$ subl filename-here.html</code></li>
+</ul>
+</li>
+<li><p>You can use Sublime Text 2 as your Markdown editor for blog posts, but I prefer the immediate feedback of <a href="http://mouapp.com">Mou</a>.</p>
+
+<ul>
+<li>I find that I&rsquo;m often at the command line wanting to use Mou, but don&rsquo;t feel like going through the GUI to open a new file or the app itself, so I set up an alias in my <code>.bash_profile</code> as follows: <code>alias mou="open /Applications/Mou.app"</code>. Now whenever I <code>rake</code> a new post in Octopress, I can immediately open it with Mou without having to take my hands off the keyboard.</li>
+</ul>
+</li>
+<li><p>Speaking of the command line, I have a few little modifications I like to make to the Terminal</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[On a Quest for Awesome]]></title>
-    <link href="http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome/"/>
+    <link href="http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome"/>
     <updated>2013-09-02T17:41:00-06:00</updated>
     <id>http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome</id>
     <content type="html"><![CDATA[<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>

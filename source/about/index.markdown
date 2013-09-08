@@ -20,7 +20,7 @@ After leaving the College of Wooster, Persa worked with many clients implementin
 
 After a temporary position at the Ohio State Agricultural   Research & Development Center working on [Local Food Systems](http://localfoodsystems.org), Persa realized that she wanted to be more than a web designer. She wanted to become a full-stack web developer.
 
-In September of 2012, Persa joined [Fathom](http://fathomdelivers.com) as a web developer, but spent a lot of her time building front-ends, working with many different CMS', and learning more about backend development using PHP.
+In September of 2012, Persa joined [Fathom](http://fathomdelivers.com) as a web developer, and spent a lot of her time building front-ends, working with many different CMS', and learning more about backend development using PHP.
 
 After beginning to collaborate with [Code for America](http://codeforamerica.org), Persa started a local brigade, [Code for Summit County](http://codeforsummitcounty.org), where fellow interested citizens began working with open data to build tools for the community. During her involvement with CfA, Persa began learning about Test Driven Development, Agile methodologies, and Ruby. 
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: environment | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/environment/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-09-06T12:10:48-06:00</updated>
+  <updated>2013-09-07T18:42:23-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -20,9 +20,16 @@
     <id>http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
     <content type="html"><![CDATA[<p>Getting a new computer can be fun, but it also means a lot of work. Between running into bugs, new versions of software running amok, and documentation from various sources on the big, bad internet just not lining up, it can quickly go from being fun to just being plain frustrating.</p>
 
+<!-- more -->
+
+
+<p></p>
+
 <p>I had a few of those moments myself in the last couple days, so I thought I&rsquo;d share with other journeymen and women some of the core items I get set up on a new machine. Perhaps a few of the snippets may help you get out of a snag, or maybe you&rsquo;ll find a new tool to love.</p>
 
 <h2>In a loose order of importance</h2>
+
+<h3>Basic Apps</h3>
 
 <ol>
 <li><p>The very first thing I installed was <a href="http://www.alfredapp.com/">Alfred</a>. If you love Spotlight, go ahead and stick with it, but I love the flexibility of Alfred for getting around, doing math for me, and lots of other tasks that usually take more than two keystrokes.</p></li>
@@ -30,8 +37,13 @@
 <li><p>A few extensions for Firefox and Chrome include <a href="http://getpocket.com">Pocket</a> (for saving things to read later), <a href="https://addons.mozilla.org/en-US/firefox/addon/web-developer/">Web Developer Toolbar</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/firebug/?src=search">Firebug</a>, and <a href="https://chrome.google.com/webstore/detail/personal-blocklist-by-goo/nolijncfnkgaikbjbdaogikpmpbdcdef?hl=en">Personal Blocklist for Chrome</a> (this one helps me block anything by w3cschools.com, because most of the time, that site does not promote best practices)</p></li>
 <li><p><a href="http://www.evernote.com">Evernote</a> helps me keep track of everything &mdash; from grocery lists to bug fixes. Whenever I think of something, I can pop open Evernote, and be sure that when I need to come back to it, I can access it from anywhere. I love this app, and it&rsquo;s free!</p></li>
 <li><p><a href="http://www.skype.com">Skype</a> helps me keep in touch with other developers, friends, and family around the world.</p></li>
-<li><p><a href="http://www.sublimetext.com">Sublime Text 2</a> is my editor of choice. Although I know there are many proponents of Vi/Vim and other non-GUI editors, my focus right now is on learning to become a better programmer. I&rsquo;ll focus on learning those later.</p></li>
-<li><p>Here are my favorite Sublime Text 2 packages:</p>
+</ol>
+
+
+<h3>Developer&rsquo;s choice</h3>
+
+<ol>
+<li><p><a href="http://www.sublimetext.com">Sublime Text 2</a> is my editor of choice. Although I know there are many proponents of Vi/Vim and other non-GUI editors, my focus right now is on learning to become a better programmer. I&rsquo;ll focus on learning those later. Here are my favorite Sublime Text 2 packages:</p>
 
 <ul>
 <li><a href="http://docs.emmet.io/">Emmet</a></li>
@@ -50,9 +62,60 @@ Run this in your terminal: <code>ln -s "/Applications/Sublime Text 2.app/Content
 <li>I find that I&rsquo;m often at the command line wanting to use Mou, but don&rsquo;t feel like going through the GUI to open a new file or the app itself, so I set up an alias in my <code>.bash_profile</code> as follows: <code>alias mou="open /Applications/Mou.app"</code>. Now whenever I <code>rake</code> a new post in Octopress, I can immediately open it with Mou without having to take my hands off the keyboard.</li>
 </ul>
 </li>
-<li><p>Speaking of the command line, I have a few little modifications I like to make to the Terminal</p></li>
 </ol>
 
+
+<h3>Terminal modifications</h3>
+
+<ol>
+<li><p>Speaking of the command line, I have a few little modifications I like to make to the Terminal in order to make it easier for me to use. Take what you want, leave what you don&rsquo;t.</p>
+
+<ul>
+<li>First, I update my Terminal theme. I personally like <a href="https://github.com/altercation/solarized">Solarized</a>, as it is easy on the eyes. <a href="http://noiseandheat.com/blog/2011/12/os-x-lion-terminal-colours/">Mac installation instructions here</a></li>
+<li><p>A typical install of OS X won&rsquo;t create a <code>.bash_profile</code> for you. When you want to run functions from your command line, this is a must-have:</p>
+
+<ul>
+<li>Start up Terminal</li>
+<li>Type <code>cd ~/</code> to go to your home folder</li>
+<li>Type <code>touch .bash_profile</code> to create your new file.</li>
+<li>Edit .bash_profile with your favorite editor (or you can just type <code>open -e .bash_profile</code> to open it in TextEdit.</li>
+<li>Type <code>. .bash_profile</code> to reload .bash_profile and update any functions you add.</li>
+</ul>
+</li>
+<li><p>I then update the Terminal to show the full path of where I am at. This helps me when I&rsquo;m working on programs that might have similar file names in different folders.</p>
+
+<ul>
+<li>In ~.bash_profile, add: <code>export PS1='\u@\H:\w$</code></li>
+<li>Then restart bash</li>
+</ul>
+</li>
+<li><p>I also like my file listings to be colorful, so I add the following items to my <code>.bash_profile</code>:</p>
+
+<ul>
+<li><code>export CLICOLOR=1</code></li>
+<li><code>export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx</code> (This color set works well with the Solarized bash theme)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+
+<h3>Development environment</h3>
+
+<p>Now that my basic tools are installed, I get into installing my development tools specific to Ruby and my <a href="http://gschool.it">gSchool</a> learning needs.</p>
+
+<ol>
+<li>I got my Ruby development environment all set up and worked through the nuances with <a href="http://twitter.com/kytrinyx">Katrina Owen</a> from Jumpstart Lab. <a href="http://tutorials.jumpstartlab.com/topics/environment/environment.html">Here are the updated instructions</a>, in great detail.</li>
+<li>I also copied over my ssh key pairs from my old machine to ensure I could continue using them for my GitHub and Heroku accounts. Remember to copy permissions for all files in the folder as well!</li>
+<li>I also go to my home directory and <code>mkdir</code> a Sites folder &mdash; this restores the functionality of the Sites folder that used to work in previous OSX versions. I like to store my web projects in there for easy access. I also tell Alfred about that folder so that it becomes indexed and searchable.</li>
+<li>Finally, I alias my Ruby versions and I am ready to go!</li>
+</ol>
+
+
+<h2>After all that…</h2>
+
+<p>I definitely recommend <a href="http://support.apple.com/kb/ht1553">creating a backup image of your machine</a> in this state, because it all takes a lot of work. Keep you image in a safe space, because you never know when you&rsquo;re going to need it!</p>
 ]]></content>
   </entry>
   

@@ -23,7 +23,9 @@ email: persa@persazula.com
 
 # Navigation Elements
 navigation_elements: [
-  {name: "Portfolio", link: "http://persazula.com"}]
+  {name: "About", link: "/about"},
+  {name: "Portfolio", link: "http://persazula.com"}
+  ]
 
 # ----------------------- #
 #    Jekyll & Plugins     #

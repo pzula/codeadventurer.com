@@ -8,6 +8,8 @@ categories: environment
 
 In the previous post, I spoke about getting your computer ready for you to work, but I didn't spend much time talking about getting **yourself** ready to work. In a series of posts, I will cover tools beyond your computer that can help you be a better developer.
 
+<!-- more -->
+
 As developers, we spend a lot of time at our computers. We obsess over the technical specifications of the newest laptop, and discuss the benefits and drawbacks of the newest library that was released, but we don't spend much time talking about how we -- as human beings in physical bodies -- interact with the tools of our trade.
 
 Generally speaking, these days many programmers are working on powerful, lightweight laptops. The freedom of being able to work from anywhere -- a coffee shop, an airport, or even sitting on the couch -- has led many of us to ditch the notion of large, noisy computer towers in favor of the ultrabook.

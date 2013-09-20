@@ -3,7 +3,7 @@ layout: post
 title: "Learning is Effin' Hard"
 date: 2013-09-20 09:04
 comments: true
-categories: journey, projects
+categories: journey projects
 ---
 
 Two days into building Event Reporter (you can find the project guidelines [here](http://tutorials.jumpstartlab.com/projects/event_reporter.html)), I was flummoxed. <!-- more -->I'd only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to `rm -rf` everything. All of it.

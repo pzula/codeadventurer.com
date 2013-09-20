@@ -24,4 +24,4 @@ And then I have to remind myself that today is day 10 of gSchool. And there are 
 
 Thank you, gSchool, for showing me that learning a new programming language can be one of the most amazing things to teach me about myself.
 
-If you're interested in the spiderweb of code I've been building for this project, you can find my codebase on [GitHub](). Feel free to let me know what you think, either about the code, or about my journey, or about similar experiences you've had in the comments section.
+If you're interested in the spiderweb of code I've been building for this project, you can find my codebase on [GitHub](https://github.com/pzula/event_reporter). Feel free to let me know what you think, either about the code, or about my journey, or about similar experiences you've had in the comments section.

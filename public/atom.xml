@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-09-20T09:41:31-06:00</updated>
+  <updated>2013-09-29T19:17:57-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning from the Community]]></title>
+    <link href="http://codeadventurer.com/2013/09/29/learning-from-the-community"/>
+    <updated>2013-09-29T18:40:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/09/29/learning-from-the-community</id>
+    <content type="html"><![CDATA[<p>This past week of gSchool, we got our first outside-of-the-classroom introductions to the Ruby community by attending <a href="http://rockymtnruby.com/">Rocky Mountain Ruby Conf</a><!-- more -->, and also by having a personal session with <a href="https://github.com/wayneeseguin">Wayne E. Seguin</a>, the original creator of RVM.</p>
+
+<p>Wayne taught us a few important lessons, but the most important advice I heard is to know yourself, and to know how to deal with yourself. As a similar work-a-holic, when I am at home (aka: not in gSchool, where work-a-holicism is somewhat of a neccessity), I tend to spend hours learning new things after work, and ignoring my friends and family. Although great for keeping up with the current tech trends, this tends to wear on my personal relationships. To combat this, Wayne has set aside the 5pm to 8pm block of time as &ldquo;family time&rdquo;, and has alerted all of his friends, the open source projects he works on, and his colleagues of this rule. He sticks to it, and with this expectation, he does not let anyone down. His family knows his focus is on them during that time, and his co-collaborators respect that he is away and unavailable to work during that time of day.</p>
+
+<p>At Rocky Mountain Ruby, I learned a lot about the community. Aside from the stickers, soft tshirts, and good food, the presenters where really knowledgable about their topics. I have attended conferences before, but I have never been to a conference with only one track. This was interesting to me, because although I didn&rsquo;t have enough practical knowledge on the subject, I was forced to hear about threading, Go (the language), and 17 databases that I&rsquo;ve never heard of before, I listened throughout the presentations and was able to learn something about the subject. Coming out of the conference, I was amazed at how much I had understood about every presentation. It goes to show that if you listen and try to understand, you will learn.*</p>
+
+<p>Learning from the community, regardless of whether it is the Ruby community, or another community in general, is a very interesting experience. If you listen carefully, you hear about the triumphs, the losses, the intersections of people and pride, and the lessons that others have learned. I&rsquo;ve found that it is wise to listen hard during these anecdotes, because those that wore this path before us have made mistakes (or discoveries) that we can benefit from knowing, and hopefully apply to our own individual journeys.</p>
+
+<p><strong>*Pro-tip:</strong> Sit in the front during conferences and presentations. If you have any sense of shame left in you, you won&rsquo;t be as compelled to whip open your laptop or check your phone. And without distractions, there is only one thing left to do: listen to the presentation.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning is Effin' Hard]]></title>

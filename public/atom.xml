@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-09-29T19:17:57-06:00</updated>
+  <updated>2013-10-06T15:31:51-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Turtles & Mentors]]></title>
+    <link href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
+    <updated>2013-10-04T20:41:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
+    <content type="html"><![CDATA[<p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
+
+<p>With our new pairs, we dove into the requirements. The project looked massive at first glance, but slowly we started to follow through the requirements (with very handy method and class name requirement) and made progress.</p>
+
+<p>Our progress skidded to a halt once we hit the relationships piece. Although I understand databases, foreign key relationships and how to get my data in and out of MySQL using PHP, I had no idea how to get my objects to pass around stored information to each other in Ruby.</p>
+
+<p>My partner was equally confused. We stepped through an explanation with Jorge on Friday, and spent the weekend putting it together. We took the approach of calling our main interface class, SalesEngine, from every other piece of the program, so that we could reach through SalesEngine down into our data storage collections (called Repositories in this project). Apparently, we didn&rsquo;t understand the Object Model, but then again we haven&rsquo;t talked much about the Object Model except for the fact that everything is an object.</p>
+
+<p>Having completed our relationships piece exactly the wrong way, we were on to building the pieces of business intelligence into the program. Suddenly we had to actually make our idea of the relationships make sense in our heads to get these pieces working, and suddenly everything seemed to be running in circles. On Monday, our instructor Katrina helped us understand where we went wrong, and showed us how to pass through a copy of SalesEngine (by using <code>self</code>) to each repository, and in turn to each individual piece of the program.</p>
+
+<p>We spent a good deal of time of Monday refactoring our relationship model, and finally were back to our original issue: how do we grab and compare data stored in different places in the application?</p>
+
+<p>After some nudging and help from various instructors, we started to understand how things were supposed to work. On Tuesday, with two days to go, we got to building the first few pieces of business intelligence. I sat down to read the piece on the first item, and this is what my psuedocode looked like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">test_it_can_find_the_merchant_with_the_most_x_revenue</span>
+</span><span class='line'>    <span class="n">engine</span> <span class="o">=</span> <span class="no">SalesEngine</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;./test/fixtures&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="c1"># find all invoices by merchant_id</span>
+</span><span class='line'>    <span class="c1"># then find each invoice id for the merchant_id</span>
+</span><span class='line'>    <span class="c1"># use invoice_id to call invoice_items that match</span>
+</span><span class='line'>    <span class="c1"># compare these invoice_id&#39;s to tranactions invoice_id </span>
+</span><span class='line'>    <span class="c1"># only use the ids that have result == success</span>
+</span><span class='line'>    <span class="c1"># take the quantitiy of the items &amp; multiply by the price</span>
+</span><span class='line'>    <span class="c1"># process the price into BigDecimal (don&#39;t use Float)</span>
+</span><span class='line'>    <span class="c1"># store that in an array</span>
+</span><span class='line'>    <span class="c1"># sort the array on .sort or some similar array method</span>
+</span><span class='line'> <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the end, this pseudocode actually didn&rsquo;t help me out at all. It wasn&rsquo;t until I stepped back and read through
+all of the requirements that I realized that starting at the top of the list would not get us to the final endpoint. In order to report the top <code>x</code> merchants based on revenue, we would have to create helper classes associated with invoices and transactions.</p>
+
+<p>Eventually, by the end of the night we had tested and created methods for our individual <code>Merchant</code>, <code>Invoice</code>, <code>Transaction</code>, and <code>MerchantRepository</code> classes to help us get some sort of response from the system.</p>
+
+<p>But there was a bug. And that it turns out that wherever there is one bug, there are many more in hiding. It was 4:30, and the instructors were leaving for the day, and we were stuck.</p>
+
+<p>Thankfully, <a href="https://twitter.com/corylanou">Cory LaNou</a> and <a href="https://twitter.com/levicook">Levi Cook</a>, founders and developers at <a href="http://www.supportlocal.com/">SupportLocal</a>, offer their time and energy for help on Tuesday evenings to gSchool students.</p>
+
+<p>Cory spent four hours with my partner and I that night, showing us how to debug a program, and exploring with us where things were going wrong. Besides various errors that we have made using core methods, we also discovered that our test data set was completely useless without our foreign keys matching up. It took us that fours hours to get two tests to pass.</p>
+
+<p>I couldn&rsquo;t believe how much time he had spent with us, going around in circles, walking us through debugging, and helping us find the issues in our program. I would love it if every mentor out there were as patient as Cory.</p>
+
+<p>Although in the end we did not finish SalesEngine, I believe the lessons we learned from Cory about debugging, and the persistence needed when tracking down issues, were monumental, and very important to the success of our future projects.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning from the Community]]></title>

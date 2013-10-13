@@ -5,7 +5,6 @@ date: 2013-10-11 09:01
 comments: true
 categories: journey
 ---
-(**Title disclaimer**: *Ok, so perhaps more like worth two projects)
 
 This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.
 
@@ -22,4 +21,6 @@ Although I'm not yet a master of creating beautiful, small, concise methods, and
 It was great to work with a group at my same level of understanding for the week, and not be derailed by questions that are either to basic or too advanced for our current skillset. I'm not sure if I'd want the entire 24 weeks to work this way, but I do think that pairing with someone of a similar skill level is helpful. I have found that when I have been paired with someone who has been programming in Ruby for longer than the course, that they often do not explain their thought process and just forge ahead to get done with things, instead of hanging back to bring the person with less experience up to their level. I believe the true purpose of pairing is to slow down, explain your thought process, and pair through a problem together. If more advanced students were willing to do this without taking control of a project, I'd be happy to be paired with them. Otherwise, I'd rather stay with someone who is at the same level of understanding as me.
 
 After this week of focus, which has helped me immensely in terms of understanding how to do things the right way (moreso than working independently on projects without much instruction) I'm excited that we're digging into web applications next week. Although I've built small web systems in PHP before, I know I have a lot to learn and am eager to get on the right path.
+
+(**Title disclaimer**: *Ok, so perhaps more like worth two projects)
 

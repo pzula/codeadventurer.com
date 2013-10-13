@@ -5,6 +5,7 @@ date: 2013-10-11 09:01
 comments: true
 categories: journey
 ---
+(**Title disclaimer**: *Ok, so perhaps more like worth two projects)
 
 This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.
 

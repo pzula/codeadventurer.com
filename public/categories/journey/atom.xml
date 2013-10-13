@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-11T09:32:38-06:00</updated>
+  <updated>2013-10-12T22:10:51-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -18,7 +18,9 @@
     <link href="http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
     <updated>2013-10-11T09:01:00-06:00</updated>
     <id>http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
-    <content type="html"><![CDATA[<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
+    <content type="html"><![CDATA[<p>(<strong>Title disclaimer</strong>: *Ok, so perhaps more like worth two projects)</p>
+
+<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
 
 <p>I felt like I could get some benefit out of the exercises the emerging group has been working on (like locking in various ways of using hashes, arrays, and enumerators), but I also had a feeling that I might have a good enough grasp on those things that I could push myself in a different way. Instead, I chose to join in with Jeff&rsquo;s group, the progress group, to take a fresh look at our first paired project from a few weeks back, <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">EventReporter</a>.</p>
 

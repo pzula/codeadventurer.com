@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-12T22:12:32-06:00</updated>
+  <updated>2013-10-18T09:18:17-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Back to the land of HTTP requests]]></title>
+    <link href="http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests"/>
+    <updated>2013-10-18T08:58:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</id>
+    <content type="html"><![CDATA[<p>This week, we started using Sinatra to build a web application. At the start of the week, we built <a href="http://tutorials.jumpstartlab.com/projects/web_guesser.html">WebGuesser</a>, a random-number guessing site <!--more -->that allows for a user to guess the number, and gives feedback on how close they are. <a href="http://agile-peak-6795.herokuapp.com/">My version</a> has a few bugs. For instance, if two people are accessing the site at the same time and playing, each person&rsquo;s guess counts towards the total, so you may only guess once or twice and be presented with a &ldquo;Too many guesses&rdquo; message. This can easily be solved with session cookies, but I haven&rsquo;t gotten around to refactoring yet. I&rsquo;m sure I&rsquo;ll get a chance to come back and make that short project better.</p>
+
+<p>We also started building <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>, a place for someone to jot down ideas and store them. Originally, I just worked through the tutorial to have an understanding of the application, and then I implemented a few changes before writing tests. It was hard to work through the tutorial to understand what was happening and try to write tests at the same time, but now that I have gone back and written tests for the application, I am much more comfortable with moving forward with implementing the extensions.</p>
+
+<p>I actually feel that writing the tests gave me a better understanding of each piece of the application. I definitely felt the pain of not having tests when I had decided to change how IDs are generated and add them to the YAML database, without any tests to help me spot where things were breaking. I&rsquo;m still shaky on the best ways to test web applications from the acceptance-test level, but I&rsquo;ve got five more months to nail that piece!</p>
+
+<p>What I like about this project is that we are working at our own pace. Some people will have amazing full-blown web apps with design, users, SMS capability, etc. at the end of this, others will have gone through the basic implementation, and everyone will have a better understanding of how web applications work. It&rsquo;s also been great to be in groups of four because we are all at different stages of the project, and can ask for help in specific places, instead of being dragged along by a stronger pair.</p>
+
+<p>Next week, we&rsquo;re going to have our first assessment. I think we&rsquo;ll be paired with one of our instructors for the length of the assessment, and will have to build a program while being observed. This sounds a little intimidating, but the instructors are also there to provide feedback on our thought process and implementation, which I think is one of the coolest opportunities in the program. I think I&rsquo;ll be overall in a good place during the assessment, and I&rsquo;m very eager to find out what I need to spend more time learning and understanding.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A week of focus is worth a thousand projects]]></title>

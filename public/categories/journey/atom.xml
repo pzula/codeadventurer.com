@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-18T09:18:17-06:00</updated>
+  <updated>2013-10-26T14:04:26-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Naming Your Weakness]]></title>
+    <link href="http://codeadventurer.com/2013/10/26/naming-your-weakness"/>
+    <updated>2013-10-26T13:28:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/10/26/naming-your-weakness</id>
+    <content type="html"><![CDATA[<p>This past week at gSchool, we had our first assessment. We were offered a problem, in this case, the <a href="http://tutorials.jumpstartlab.com/academy/workshops/scrabble.html">building blocks of the Scrabble game</a>, which included a short guide <!-- more -->that informed us of some of the API decisions based on the expected input and output of the program, and we sat down with one of our three instructors for 40 minutes, while they watched and listened to us work through the problem.</p>
+
+<p>As an exercise in Enumerators a few weeks ago, I took a similar look at the beginnings of the Scrabble exercise (counting word scores), so I did not spend too much time &ldquo;preparing&rdquo; for the assessment. I did not want to memorize how to solve the problem, because I wanted a raw feel to how my process works from my instructors' perspective, so that I knew what I needed to work on improving.</p>
+
+<p>Honestly, I was a little surprised by how it went. Although I got much further in solving the problem (with a little guidance in the right direction when I steered off course), my happiness with progress was not the purpose of the review. My reviewer pointed out that I had difficulties breaking down problems into their smaller pieces, and writing tests for these smaller pieces prior to attempting to solve the problem with code. I was using tests to verify my solutions as I busted through a problem, instead of using smaller tests along the way to drive the solutions.</p>
+
+<p>I can memorize all the syntax out there, that has never been a problem for me. But can I use it efficiently and effectively? Not as well as I should. I was the student who shirked away from math courses, but loved science classes. I can tell you how many things work, recite hundreds of odd facts, but can I break down a logical pathway of WHY they work that way, and apply it to something else? Not always.</p>
+
+<p>I thought I came to gSchool to learn Ruby best practices, learn agile and TDD, and make sure that I don&rsquo;t get lost in the world of StackOverflow and Google when I get stuck. But really, what I&rsquo;m starting to realize is that beyond those things, I came to gSchool to learn algorithmic thinking.</p>
+
+<p>Learning to program is easy if you have a good foundation of algorithmic thinking, but this is something I never knew until this week. I had never heard the term until my assessment, and after the assessment, I wanted to do everything in my power to learn more about it, how to develop it, and find problems to practice.</p>
+
+<p>My research on the matter leads me to conclude this:</p>
+
+<ul>
+<li>Repetition is how this skill is built</li>
+<li>Smaller exercises are easier to digest</li>
+<li>Math problems are actually great ways of building this skill</li>
+<li>If you were a math major or minor, you&rsquo;ve probably mastered this already</li>
+</ul>
+
+
+<p>I guess it&rsquo;s finally time to face my fears of math so that I can become a better programmer.</p>
+
+<p>As resources to help me practice building this skill, I&rsquo;m going to use various websites to work through at least a problem a day. <a href="http://projecteuler.net/">ProjectEuler</a> actually fits all three of the criteria above for how to build the skill. The problems are small, the build on one another, and they are math-focused. I&rsquo;ve found another, <a href="http://rosalind.info/problems/list-view/">Rosalind</a>, which is focused on BioInformatics, and seems promising for not quite as math-heavy solutions. Another interesting site is <a href="http://rubyquiz.com/">RubyQuiz</a>, but this one might not be quite as helpful, as many of the quizzes seem to already contain a problem break-down spelled out for the user.</p>
+
+<p>My goal is to look back at the assessment at the end of this course, and inherently know how to break down a problem into it&rsquo;s smallest parts. I hope to marvel at how easily I can solve this problem, and many others &mdash; not through memorizing the solution, but by knowing how to work through the details.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Back to the land of HTTP requests]]></title>
@@ -123,33 +158,6 @@ all of the requirements that I realized that starting at the top of the list wou
 <p>Learning from the community, regardless of whether it is the Ruby community, or another community in general, is a very interesting experience. If you listen carefully, you hear about the triumphs, the losses, the intersections of people and pride, and the lessons that others have learned. I&rsquo;ve found that it is wise to listen hard during these anecdotes, because those that wore this path before us have made mistakes (or discoveries) that we can benefit from knowing, and hopefully apply to our own individual journeys.</p>
 
 <p><strong>*Pro-tip:</strong> Sit in the front during conferences and presentations. If you have any sense of shame left in you, you won&rsquo;t be as compelled to whip open your laptop or check your phone. And without distractions, there is only one thing left to do: listen to the presentation.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
-    <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
-    <updated>2013-09-20T09:04:00-06:00</updated>
-    <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
-    <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
-
-<p>I looked at her in disbelief, explained that this was hours worth of work (even though really it looked like there wasn&rsquo;t much there)… and then complied. And cried a little inside.</p>
-
-<p>Starting with a blank slate, and just two files this time &ndash; one for all of my classes, and one for all of my tests &ndash; I looked at the requirements and started building from the first test case, &ldquo;Happy Path&rdquo;. I had one day left before the project was done, and I was starting to stress out. Why was this so hard? Every class I&rsquo;ve ever taken, every passion I have pursued, has come easily to me. I can memorize insane facts, make connections between farming and management, lead groups, organize events, cook awesome organic meals, fix bicycles, juggle, live in yurts… and this project is the thing that is going to show me who is boss? I couldn&rsquo;t handle it.</p>
-
-<p>With every hour that went by, as some tests failed and somewhere along the way, a few passed, I kept getting more and more frustrated. I started to doubt being ever able to call myself a web developer in the past. If I couldn&rsquo;t get this basic project to work, how was I going to move on to the next one? At 8:30pm the night before the project was due, I had only four methods that could pass tests. I shut my laptop, realized there was no way I could finish in time, and went to sleep.</p>
-
-<p>I awoke at 3:30am from dreams where I was expertly solving Event Reporter, one passing test at a time, and quickly got out my laptop to try to recreate what was I was programming in my dreams. I cranked out the tests, and slowly started realizing that all of it was gibberish. Dream-state me wasn&rsquo;t actually expertly solving anything, although it seemed like it. But, I was awake anyway, so I hit the gym at 4am, got through my workout, and decided to come to gSchool early and try again.</p>
-
-<p>I worked through my code for a little while before Katrina showed up (she has some crazy schedule where she goes to bed at 8pm and gets to work at 5am), and helped me back away from the ledge of jumping off of the programmer cliff. She looked at me and said, &ldquo;Learning is elfin' hard.&rdquo; Coming from a molecular biologist, I must have actually believed her, because an hour and  half later, after talking through my code and my struggles, I started to feel better about the project (even through I was still nowhere near done).</p>
-
-<p>I&rsquo;m still not done today, but I have an idea of where I&rsquo;m going. Talking with Katrina, Jorge, and Franklin during different pieces, and various colorful feelings ranging from rage to anger to depression to self-hate (gosh, I never knew programming could bring out so much in me) really helped me understand that all of us at gSchool are used to being good at things. And a lot of us are struggling &mdash; not just with the syntax and the TDD mindset, but also with this ego-crushing feeling of failure.</p>
-
-<p>And then I have to remind myself that today is day 10 of gSchool. And there are still five and a half months to go. Two weeks ago, I had never written a test for one of my programs. I&rsquo;ve learned a lot in this time &mdash; not only about Ruby, but about myself, my classmates, and the human spirit.</p>
-
-<p>Thank you, gSchool, for showing me that learning a new programming language can be one of the most amazing things to teach me about myself.</p>
-
-<p>If you&rsquo;re interested in the spiderweb of code I&rsquo;ve been building for this project, you can find my codebase on <a href="https://github.com/pzula/event_reporter">GitHub</a>. Feel free to let me know what you think, either about the code, or about my journey, or about similar experiences you&rsquo;ve had in the comments section.</p>
 ]]></content>
   </entry>
   

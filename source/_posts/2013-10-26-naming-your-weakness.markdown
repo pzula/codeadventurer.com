@@ -31,8 +31,9 @@ As resources to help me practice building this skill, I'm going to use various w
 
 My goal is to look back at the assessment at the end of this course, and inherently know how to break down a problem into it's smallest parts. I hope to marvel at how easily I can solve this problem, and many others -- not through memorizing the solution, but by knowing how to work through the details.
 
+---	
 
-**Asides:**
+#### Asides
 I also found [this resource](http://www.google.com/edu/computational-thinking/index.html), provided by Google, for any educators looking to teach kids math through the use of computational thinking. I may go through some of the exercises myself, even if they are for grades 6-12!
 
 [This free course from Udacity](https://www.udacity.com/course/cs215) also explains algorithms through social networks. I've started working through it and it seems like it will be helpful. 

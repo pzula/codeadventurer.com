@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-26T14:26:13-06:00</updated>
+  <updated>2013-10-26T14:27:26-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -46,8 +46,11 @@
 
 <p>My goal is to look back at the assessment at the end of this course, and inherently know how to break down a problem into it&rsquo;s smallest parts. I hope to marvel at how easily I can solve this problem, and many others &mdash; not through memorizing the solution, but by knowing how to work through the details.</p>
 
-<p><strong>Asides:</strong>
-I also found <a href="http://www.google.com/edu/computational-thinking/index.html">this resource</a>, provided by Google, for any educators looking to teach kids math through the use of computational thinking. I may go through some of the exercises myself, even if they are for grades 6-12!</p>
+<hr />
+
+<h4>Asides</h4>
+
+<p>I also found <a href="http://www.google.com/edu/computational-thinking/index.html">this resource</a>, provided by Google, for any educators looking to teach kids math through the use of computational thinking. I may go through some of the exercises myself, even if they are for grades 6-12!</p>
 
 <p><a href="https://www.udacity.com/course/cs215">This free course from Udacity</a> also explains algorithms through social networks. I&rsquo;ve started working through it and it seems like it will be helpful.</p>
 ]]></content>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Turtles & Mentors - Code Adventurer</title>
+  <title>Web Apps &amp; Code Retreats - Code Adventurer</title>
   <meta name="author" content="Persa Zula">
   <link rel="author" href="humans.txt">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,7 +13,7 @@
   
     
   
-  <meta name="description" content=" Our most recent project at gSchool, called SalesEngine, was quite a stretch for a lot of us in the class. ">
+  <meta name="description" content="Our latest project, finished last week, was IdeaBox. As mentioned in a previous post, we started building the project from a tutorial, without tests &hellip;">
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -21,17 +21,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor">
+  <link rel="canonical" href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="Code Adventurer" />
-  <meta name="og:title" content="Turtles & Mentors" />
-  <meta name="og:description" content=" Our most recent project at gSchool, called SalesEngine, was quite a stretch for a lot of us in the class. " />
-  <meta name="og:url" content="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
-  <meta name="url" content="http://codeadventurer.com/2013/10/04/learning-from-a-mentor">
+  <meta name="og:title" content="Web Apps &amp; Code Retreats" />
+  <meta name="og:description" content="Our latest project, finished last week, was IdeaBox. As mentioned in a previous post, we started building the project from a tutorial, without tests &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
+  <meta name="url" content="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats">
   
   <meta name="subject" content="journey"/>
   <meta name="category" content="journey"/>
@@ -100,7 +100,7 @@
 
   <header>
     
-      <h1 class="entry-title">Turtles & Mentors</h1>
+      <h1 class="entry-title">Web Apps &amp; Code Retreats</h1>
     
     
       <p class="meta">
@@ -125,7 +125,7 @@
   
 
 
-<time datetime="2013-10-04T20:41:00-06:00" pubdate data-updated="true">Oct 4<span>th</span>, 2013</time> - 
+<time datetime="2013-10-28T09:22:00-06:00" pubdate data-updated="true">Oct 28<span>th</span>, 2013</time> - 
         
 
 posted in
@@ -142,61 +142,20 @@ posted in
   </header>
 
 
-  <div class="entry-content"><p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
+  <div class="entry-content"><p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
 
-<p>With our new pairs, we dove into the requirements. The project looked massive at first glance, but slowly we started to follow through the requirements (with very handy method and class name requirement) and made progress.</p>
+<p>After building through IdeaBox on our own, we presented the projects on Thursday afternoon. It was great to see everybody&rsquo;s work, and see how far they got in the project, learn about their &ldquo;a-ha!&rdquo; moments, and also hear about pain points. It was great to see a project starting to turn out differently &mdash; I&rsquo;m sure as the course progresses, we will end up with vastly different projects than in the first third of the course.</p>
 
-<p>Our progress skidded to a halt once we hit the relationships piece. Although I understand databases, foreign key relationships and how to get my data in and out of MySQL using PHP, I had no idea how to get my objects to pass around stored information to each other in Ruby.</p>
+<p>On Friday, we all left the classroom and Galvanize to have an all-day code retreat. We made our way to the <a href="http://www.rivernorthart.com/">RiNo</a> part of Denver and spent the day inside of <a href="https://www.facebook.com/thesourcedenver">The Source</a>, a rehabbed warehouse-turned-young-money-shopping-facility. (I&rsquo;m probably totally wrong, but that&rsquo;s the best way I can describe it). We spent the day pairing in 30 minute time blocks, switching partners after every time block, and working on the same problem from scratch in a different way. In the morning, we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/beer">Beer Song</a> problem spec, and in the afternoon we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/robot">Robot</a> spec. Each was interesting in it&rsquo;s own way, and both tested fundamentals &mdash; working with strings, or working with arrays and hashes.</p>
 
-<p>My partner was equally confused. We stepped through an explanation with Jorge on Friday, and spent the weekend putting it together. We took the approach of calling our main interface class, SalesEngine, from every other piece of the program, so that we could reach through SalesEngine down into our data storage collections (called Repositories in this project). Apparently, we didn&rsquo;t understand the Object Model, but then again we haven&rsquo;t talked much about the Object Model except for the fact that everything is an object.</p>
+<p>It was exciting to work with so many different classmates, and come up with so many different solutions, based on different contraints. I learned about how to build a program with no conditional statements (since <code>if</code> is not object oriented), learned about traversing through an array using modulo math, and various other amazing tidbits. I had a lot of fun, learned a bunch, and left at the end of the day completely exhausted, but mentally invigorated. I hope that I can continue to participate in code retreats beyond gSchool &mdash; it seems like an amazing way to keep developers sharp and practice different pairing techniques.</p>
 
-<p>Having completed our relationships piece exactly the wrong way, we were on to building the pieces of business intelligence into the program. Suddenly we had to actually make our idea of the relationships make sense in our heads to get these pieces working, and suddenly everything seemed to be running in circles. On Monday, our instructor Katrina helped us understand where we went wrong, and showed us how to pass through a copy of SalesEngine (by using <code>self</code>) to each repository, and in turn to each individual piece of the program.</p>
+<p>I&rsquo;m really enjoying being back in web territory. I have a foundational understanding some things already, so I can focus on testing the applications, using Ruby, and building things in a TDD (or BDD) fashion. I definitely like Sinatra, and that it&rsquo;s lightweight enough that you can choose your own design pattern, your own database ORM, and pretty much everything inbetween. In contrast, I started playing with Rails for the first time last week, and I&rsquo;m not sure how I feel about how much work it does for the developer. I&rsquo;m sure I&rsquo;ll change my mind once I know how to build everything from scratch really well and don&rsquo;t want to always do it myself, but for now I enjoy learning how to implement all of the pieces.</p>
 
-<p>We spent a good deal of time of Monday refactoring our relationship model, and finally were back to our original issue: how do we grab and compare data stored in different places in the application?</p>
+<hr />
 
-<p>After some nudging and help from various instructors, we started to understand how things were supposed to work. On Tuesday, with two days to go, we got to building the first few pieces of business intelligence. I sat down to read the piece on the first item, and this is what my psuedocode looked like:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'> <span class="k">def</span> <span class="nf">test_it_can_find_the_merchant_with_the_most_x_revenue</span>
-</span><span class='line'>    <span class="n">engine</span> <span class="o">=</span> <span class="no">SalesEngine</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;./test/fixtures&quot;</span><span class="p">)</span>
-</span><span class='line'>    <span class="c1"># find all invoices by merchant_id</span>
-</span><span class='line'>    <span class="c1"># then find each invoice id for the merchant_id</span>
-</span><span class='line'>    <span class="c1"># use invoice_id to call invoice_items that match</span>
-</span><span class='line'>    <span class="c1"># compare these invoice_id&#39;s to tranactions invoice_id </span>
-</span><span class='line'>    <span class="c1"># only use the ids that have result == success</span>
-</span><span class='line'>    <span class="c1"># take the quantitiy of the items &amp; multiply by the price</span>
-</span><span class='line'>    <span class="c1"># process the price into BigDecimal (don&#39;t use Float)</span>
-</span><span class='line'>    <span class="c1"># store that in an array</span>
-</span><span class='line'>    <span class="c1"># sort the array on .sort or some similar array method</span>
-</span><span class='line'> <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>In the end, this pseudocode actually didn&rsquo;t help me out at all. It wasn&rsquo;t until I stepped back and read through
-all of the requirements that I realized that starting at the top of the list would not get us to the final endpoint. In order to report the top <code>x</code> merchants based on revenue, we would have to create helper classes associated with invoices and transactions.</p>
-
-<p>Eventually, by the end of the night we had tested and created methods for our individual <code>Merchant</code>, <code>Invoice</code>, <code>Transaction</code>, and <code>MerchantRepository</code> classes to help us get some sort of response from the system.</p>
-
-<p>But there was a bug. And that it turns out that wherever there is one bug, there are many more in hiding. It was 4:30, and the instructors were leaving for the day, and we were stuck.</p>
-
-<p>Thankfully, <a href="https://twitter.com/corylanou">Cory LaNou</a> and <a href="https://twitter.com/levicook">Levi Cook</a>, founders and developers at <a href="http://www.supportlocal.com/">SupportLocal</a>, offer their time and energy for help on Tuesday evenings to gSchool students.</p>
-
-<p>Cory spent four hours with my partner and I that night, showing us how to debug a program, and exploring with us where things were going wrong. Besides various errors that we have made using core methods, we also discovered that our test data set was completely useless without our foreign keys matching up. It took us that fours hours to get two tests to pass.</p>
-
-<p>I couldn&rsquo;t believe how much time he had spent with us, going around in circles, walking us through debugging, and helping us find the issues in our program. I would love it if every mentor out there were as patient as Cory.</p>
-
-<p>Although in the end we did not finish SalesEngine, I believe the lessons we learned from Cory about debugging, and the persistence needed when tracking down issues, were monumental, and very important to the success of our future projects.</p>
+<p><strong><em>Side note:</em></strong>
+* My reason for liking the idea of BDD comes from the various times I&rsquo;ve been bitten by not having a way to test the entire experience from a user perspective. Our workload at my previous position was so high that often the developers would run through scenarios at a high level, test that things worked on their own machines, and ship the code to production. Often, many things went wrong in this process, sometimes after the client had already seen the problems themselves. We had started out with QA testers, but over time the people in the company that did QA on development projects were eventually reassigned to other things, leaving the developers without dedicated QA resources, and no time to do testing themselves. I would have loved to be able to do BDD back then, but then again, I&rsquo;m just learning about it now! I think I might give this approach a shot in a future project at gSchool, just to see how it differs from starting with unit tests first.</p>
 </div>
 
 
@@ -223,7 +182,7 @@ all of the requirements that I realized that starting at the top of the list wou
   
 
 
-<time datetime="2013-10-04T20:41:00-06:00" pubdate data-updated="true">Oct 4<span>th</span>, 2013</time>
+<time datetime="2013-10-28T09:22:00-06:00" pubdate data-updated="true">Oct 28<span>th</span>, 2013</time>
       
 
 posted in
@@ -238,7 +197,7 @@ posted in
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://codeadventurer.com/2013/10/04/learning-from-a-mentor" data-via="pzula" data-counturl="http://codeadventurer.com/2013/10/04/learning-from-a-mentor" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats" data-via="pzula" data-counturl="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -248,10 +207,8 @@ posted in
 
     
     
-      <a class="pull-left" href="/2013/09/29/learning-from-the-community" title="Previous Post: Learning from the Community">&laquo; Learning from the Community</a>
+      <a class="pull-left" href="/2013/10/26/naming-your-weakness" title="Previous Post: Naming Your Weakness">&laquo; Naming Your Weakness</a>
     
-    
-      <a class="pull-right" href="/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects" title="Next Post: A week of focus is worth a thousand projects">A week of focus is worth a thousand projects &raquo;</a>
     
   </footer>
 
@@ -360,8 +317,8 @@ posted in
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://codeadventurer.com/2013/10/04/learning-from-a-mentor';
-        var disqus_url = 'http://codeadventurer.com/2013/10/04/learning-from-a-mentor';
+        var disqus_identifier = 'http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats';
+        var disqus_url = 'http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats';
         var disqus_script = 'embed.js';
       
     (function () {

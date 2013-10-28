@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-26T14:27:26-06:00</updated>
+  <updated>2013-10-28T09:55:06-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
+    <link href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
+    <updated>2013-10-28T09:22:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
+    <content type="html"><![CDATA[<p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
+
+<p>After building through IdeaBox on our own, we presented the projects on Thursday afternoon. It was great to see everybody&rsquo;s work, and see how far they got in the project, learn about their &ldquo;a-ha!&rdquo; moments, and also hear about pain points. It was great to see a project starting to turn out differently &mdash; I&rsquo;m sure as the course progresses, we will end up with vastly different projects than in the first third of the course.</p>
+
+<p>On Friday, we all left the classroom and Galvanize to have an all-day code retreat. We made our way to the <a href="http://www.rivernorthart.com/">RiNo</a> part of Denver and spent the day inside of <a href="https://www.facebook.com/thesourcedenver">The Source</a>, a rehabbed warehouse-turned-young-money-shopping-facility. (I&rsquo;m probably totally wrong, but that&rsquo;s the best way I can describe it). We spent the day pairing in 30 minute time blocks, switching partners after every time block, and working on the same problem from scratch in a different way. In the morning, we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/beer">Beer Song</a> problem spec, and in the afternoon we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/robot">Robot</a> spec. Each was interesting in it&rsquo;s own way, and both tested fundamentals &mdash; working with strings, or working with arrays and hashes.</p>
+
+<p>It was exciting to work with so many different classmates, and come up with so many different solutions, based on different contraints. I learned about how to build a program with no conditional statements (since <code>if</code> is not object oriented), learned about traversing through an array using modulo math, and various other amazing tidbits. I had a lot of fun, learned a bunch, and left at the end of the day completely exhausted, but mentally invigorated. I hope that I can continue to participate in code retreats beyond gSchool &mdash; it seems like an amazing way to keep developers sharp and practice different pairing techniques.</p>
+
+<p>I&rsquo;m really enjoying being back in web territory. I have a foundational understanding some things already, so I can focus on testing the applications, using Ruby, and building things in a TDD (or BDD) fashion. I definitely like Sinatra, and that it&rsquo;s lightweight enough that you can choose your own design pattern, your own database ORM, and pretty much everything inbetween. In contrast, I started playing with Rails for the first time last week, and I&rsquo;m not sure how I feel about how much work it does for the developer. I&rsquo;m sure I&rsquo;ll change my mind once I know how to build everything from scratch really well and don&rsquo;t want to always do it myself, but for now I enjoy learning how to implement all of the pieces.</p>
+
+<hr />
+
+<p><strong><em>Side note:</em></strong>
+* My reason for liking the idea of BDD comes from the various times I&rsquo;ve been bitten by not having a way to test the entire experience from a user perspective. Our workload at my previous position was so high that often the developers would run through scenarios at a high level, test that things worked on their own machines, and ship the code to production. Often, many things went wrong in this process, sometimes after the client had already seen the problems themselves. We had started out with QA testers, but over time the people in the company that did QA on development projects were eventually reassigned to other things, leaving the developers without dedicated QA resources, and no time to do testing themselves. I would have loved to be able to do BDD back then, but then again, I&rsquo;m just learning about it now! I think I might give this approach a shot in a future project at gSchool, just to see how it differs from starting with unit tests first.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Naming Your Weakness]]></title>

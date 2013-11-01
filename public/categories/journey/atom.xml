@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-10-28T09:55:06-06:00</updated>
+  <updated>2013-11-01T09:51:09-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>
+    <link href="http://codeadventurer.com/2013/11/01/scraping-a-website"/>
+    <updated>2013-11-01T09:12:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/11/01/scraping-a-website</id>
+    <content type="html"><![CDATA[<p>This week, we started a quick-turnaround project in Sinatra called <a href="http://tutorials.jumpstartlab.com/projects/clone_wars.html">Clone Wars</a>. Our challenge was to pick one of five local businesses, build a CMS for their existing types of content, and then scrape their existing website into our database &mdash; all in three days. <!-- more --></p>
+
+<p>On Monday, before the project started, we took a little time to research web scrapers as a class. Afterwards, we did a short <a href="http://tutorials.jumpstartlab.com/topics/mechanize.html">tutorial</a> with the <a href="https://github.com/sparklemotion/mechanize">Mechanize</a> and <a href="https://github.com/sparklemotion/nokogiri">Nokogiri</a> gems, and started scraping different websites.</p>
+
+<p>We were assigned our teams in the afternoon, and got to planning out our project. We got up to speed on what local business we wanted to choose (we went for the <a href="http://thebikedepot.org/">Bike Depot</a>), and started sketching out what the different types of content might look like. We set up our hours of availability as a team, and decided that we wanted to approach the entire project from an acceptance-test-first approach. It was our first time trying it, but we were all very interested in learning how to do it.</p>
+
+<p>We then sat down with Elaine from <a href="http://pivotallabs.com/">Pivotal Labs</a> (and prior gSchool student) to talk about user stories, acceptance tests, and <a href="http://www.pivotaltracker.com/">PivotalTracker</a>. She gave us a lot of good insight on how to use the tool, and soon we started crafting our user stories for the project.</p>
+
+<p>Once we got to the point where we felt we had flushed out the project requirements from a user story perspective, we started digging in. We set up our Sinatra app, and began by writing our first Capybara user test. We ran that first test… and it passed. That didn&rsquo;t make any sense &mdash; we had not set up any routes for the route that we had requested, and certainly did not have any views to display the content that the test requested!</p>
+
+<p>This problem tripped us up for over an hour, when we discovered that in our Gemfile we had declared a test group, but we had not yet set our environment variables in our acceptance test. We also later discovered that looking for content as the first piece of an acceptance test is too many steps into the process &mdash; the first step would be to verify the response code. Finally on our way to a true failing test, we moved to the first piece of the error, and started working our way through the controller, the models, and the views. It was exciting to go through the process and actually successfully go from dummy data to a real database with real data in the matter of a few hours, and then repeat the process over and over again throughout the process.</p>
+
+<p>From my perspective, our team worked incredibly well together. When one of us would get stuck, we&rsquo;d stop and explain what was happening, and why. We all paired (side note: what is the three-person equivalent of pairing? Triading?) throughout the length of the project, since we  had a small enough project that it was likely we might end up with merge conflicts otherwise.</p>
+
+<p>Although we did not completely finish building the CMS in three days, we learned a lot about scraping, dynamic routing, serializing data into databases, and setting up different rack test groups. We had an awesome time trying the acceptace-test-first approach, and stuck together as a group to work through tough problems.</p>
+
+<p>The differences between working in a two person versus a three person group weren&rsquo;t too obvious, since our project was so compact. I can definitely see where a four person group might split into two pairs that rotate, but with three people at different levels in the program, and with a small spec and a short timeframe, it seemed more appropriate to stick together and learn together.</p>
+
+<p>If we had another week to work on Clone Wars, we&rsquo;d likely get our authorization working correctly, and work on integrating more functionality into the CMS &mdash; including the addition of news items, products for sale, and a volunteer database.</p>
+
+<p>Overall, I was extremely satisfied with where we got with our project because I felt that we built it well, communicated with each other clearly, and have a solid foundation to build upon when we choose to revisit the project.</p>
+
+<p>To see the project in action, you can visit George&rsquo;s <a href="https://github.com/Egogre/CloneWarz">GitHub repository</a>, clone the project, run <code>bundle</code>, then run <code>rackup</code> in your terminal, and visit your localhost for a peek at the project. At localhost/admin, you can view our CMS functionality. Make sure to take a look at our test suite, and run the tests by running the <code>rake</code> command in your terminal. Then marvel at the beautiful rainbow of passing tests!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
@@ -117,60 +148,6 @@
 <p>After this week of focus, which has helped me immensely in terms of understanding how to do things the right way (moreso than working independently on projects without much instruction) I&rsquo;m excited that we&rsquo;re digging into web applications next week. Although I&rsquo;ve built small web systems in PHP before, I know I have a lot to learn and am eager to get on the right path.</p>
 
 <p>(<strong>Title disclaimer</strong>: *Ok, so perhaps more like worth two projects)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Turtles & Mentors]]></title>
-    <link href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
-    <updated>2013-10-04T20:41:00-06:00</updated>
-    <id>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
-    <content type="html"><![CDATA[<p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
-
-<p>With our new pairs, we dove into the requirements. The project looked massive at first glance, but slowly we started to follow through the requirements (with very handy method and class name requirement) and made progress.</p>
-
-<p>Our progress skidded to a halt once we hit the relationships piece. Although I understand databases, foreign key relationships and how to get my data in and out of MySQL using PHP, I had no idea how to get my objects to pass around stored information to each other in Ruby.</p>
-
-<p>My partner was equally confused. We stepped through an explanation with Jorge on Friday, and spent the weekend putting it together. We took the approach of calling our main interface class, SalesEngine, from every other piece of the program, so that we could reach through SalesEngine down into our data storage collections (called Repositories in this project). Apparently, we didn&rsquo;t understand the Object Model, but then again we haven&rsquo;t talked much about the Object Model except for the fact that everything is an object.</p>
-
-<p>Having completed our relationships piece exactly the wrong way, we were on to building the pieces of business intelligence into the program. Suddenly we had to actually make our idea of the relationships make sense in our heads to get these pieces working, and suddenly everything seemed to be running in circles. On Monday, our instructor Katrina helped us understand where we went wrong, and showed us how to pass through a copy of SalesEngine (by using <code>self</code>) to each repository, and in turn to each individual piece of the program.</p>
-
-<p>We spent a good deal of time of Monday refactoring our relationship model, and finally were back to our original issue: how do we grab and compare data stored in different places in the application?</p>
-
-<p>After some nudging and help from various instructors, we started to understand how things were supposed to work. On Tuesday, with two days to go, we got to building the first few pieces of business intelligence. I sat down to read the piece on the first item, and this is what my psuedocode looked like:</p>
-
-<p>``` ruby
- def test_it_can_find_the_merchant_with_the_most_x_revenue</p>
-
-<pre><code>engine = SalesEngine.new("./test/fixtures")
-# find all invoices by merchant_id
-# then find each invoice id for the merchant_id
-# use invoice_id to call invoice_items that match
-# compare these invoice_id's to tranactions invoice_id 
-# only use the ids that have result == success
-# take the quantitiy of the items &amp; multiply by the price
-# process the price into BigDecimal (don't use Float)
-# store that in an array
-# sort the array on .sort or some similar array method
-</code></pre>
-
-<p> end
-```</p>
-
-<p>In the end, this pseudocode actually didn&rsquo;t help me out at all. It wasn&rsquo;t until I stepped back and read through
-all of the requirements that I realized that starting at the top of the list would not get us to the final endpoint. In order to report the top <code>x</code> merchants based on revenue, we would have to create helper classes associated with invoices and transactions.</p>
-
-<p>Eventually, by the end of the night we had tested and created methods for our individual <code>Merchant</code>, <code>Invoice</code>, <code>Transaction</code>, and <code>MerchantRepository</code> classes to help us get some sort of response from the system.</p>
-
-<p>But there was a bug. And that it turns out that wherever there is one bug, there are many more in hiding. It was 4:30, and the instructors were leaving for the day, and we were stuck.</p>
-
-<p>Thankfully, <a href="https://twitter.com/corylanou">Cory LaNou</a> and <a href="https://twitter.com/levicook">Levi Cook</a>, founders and developers at <a href="http://www.supportlocal.com/">SupportLocal</a>, offer their time and energy for help on Tuesday evenings to gSchool students.</p>
-
-<p>Cory spent four hours with my partner and I that night, showing us how to debug a program, and exploring with us where things were going wrong. Besides various errors that we have made using core methods, we also discovered that our test data set was completely useless without our foreign keys matching up. It took us that fours hours to get two tests to pass.</p>
-
-<p>I couldn&rsquo;t believe how much time he had spent with us, going around in circles, walking us through debugging, and helping us find the issues in our program. I would love it if every mentor out there were as patient as Cory.</p>
-
-<p>Although in the end we did not finish SalesEngine, I believe the lessons we learned from Cory about debugging, and the persistence needed when tracking down issues, were monumental, and very important to the success of our future projects.</p>
 ]]></content>
   </entry>
   

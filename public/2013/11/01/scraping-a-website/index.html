@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Review: The Carolina Morning Zen Office Floor Desk - Code Adventurer</title>
+  <title>Scraping a Website, Building a CMS - Code Adventurer</title>
   <meta name="author" content="Persa Zula">
   <link rel="author" href="humans.txt">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,7 +13,7 @@
   
     
   
-  <meta name="description" content="In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting yourself &hellip;">
+  <meta name="description" content="This week, we started a quick-turnaround project in Sinatra called Clone Wars. Our challenge was to pick one of five local businesses, build a CMS &hellip;">
   
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -21,20 +21,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office">
+  <link rel="canonical" href="http://codeadventurer.com/2013/11/01/scraping-a-website">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
   <meta name="og:type" content="website" />
   <meta name="og:site_name" content="Code Adventurer" />
-  <meta name="og:title" content="Review: The Carolina Morning Zen Office Floor Desk" />
-  <meta name="og:description" content="In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting yourself &hellip;" />
-  <meta name="og:url" content="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office"/>
-  <meta name="url" content="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office">
+  <meta name="og:title" content="Scraping a Website, Building a CMS" />
+  <meta name="og:description" content="This week, we started a quick-turnaround project in Sinatra called Clone Wars. Our challenge was to pick one of five local businesses, build a CMS &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2013/11/01/scraping-a-website"/>
+  <meta name="url" content="http://codeadventurer.com/2013/11/01/scraping-a-website">
   
-  <meta name="subject" content="environment"/>
-  <meta name="category" content="environment"/>
+  <meta name="subject" content="journey"/>
+  <meta name="category" content="journey"/>
   
   <meta name="distribution" content="global">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
@@ -100,7 +100,7 @@
 
   <header>
     
-      <h1 class="entry-title">Review: The Carolina Morning Zen Office Floor Desk</h1>
+      <h1 class="entry-title">Scraping a Website, Building a CMS</h1>
     
     
       <p class="meta">
@@ -125,13 +125,13 @@
   
 
 
-<time datetime="2013-09-10T22:02:00-06:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time> - 
+<time datetime="2013-11-01T09:12:00-06:00" pubdate data-updated="true">Nov 1<span>st</span>, 2013</time> - 
         
 
 posted in
 <span class="categories">
   
-    <a class='category' href='/categories/environment/'>environment</a>
+    <a class='category' href='/categories/journey/'>journey</a>
   
 </span>
 
@@ -142,44 +142,29 @@ posted in
   </header>
 
 
-  <div class="entry-content"><p>In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting <strong>yourself</strong> ready to work. In a series of posts, I will cover tools beyond your computer that can help you be a better developer.</p>
+  <div class="entry-content"><p>This week, we started a quick-turnaround project in Sinatra called <a href="http://tutorials.jumpstartlab.com/projects/clone_wars.html">Clone Wars</a>. Our challenge was to pick one of five local businesses, build a CMS for their existing types of content, and then scrape their existing website into our database &mdash; all in three days. <!-- more --></p>
 
-<!-- more -->
+<p>On Monday, before the project started, we took a little time to research web scrapers as a class. Afterwards, we did a short <a href="http://tutorials.jumpstartlab.com/topics/mechanize.html">tutorial</a> with the <a href="https://github.com/sparklemotion/mechanize">Mechanize</a> and <a href="https://github.com/sparklemotion/nokogiri">Nokogiri</a> gems, and started scraping different websites.</p>
 
+<p>We were assigned our teams in the afternoon, and got to planning out our project. We got up to speed on what local business we wanted to choose (we went for the <a href="http://thebikedepot.org/">Bike Depot</a>), and started sketching out what the different types of content might look like. We set up our hours of availability as a team, and decided that we wanted to approach the entire project from an acceptance-test-first approach. It was our first time trying it, but we were all very interested in learning how to do it.</p>
 
-<p>As developers, we spend a lot of time at our computers. We obsess over the technical specifications of the newest laptop, and discuss the benefits and drawbacks of the newest library that was released, but we don&rsquo;t spend much time talking about how we &mdash; as human beings in physical bodies &mdash; interact with the tools of our trade.</p>
+<p>We then sat down with Elaine from <a href="http://pivotallabs.com/">Pivotal Labs</a> (and prior gSchool student) to talk about user stories, acceptance tests, and <a href="http://www.pivotaltracker.com/">PivotalTracker</a>. She gave us a lot of good insight on how to use the tool, and soon we started crafting our user stories for the project.</p>
 
-<p>Generally speaking, these days many programmers are working on powerful, lightweight laptops. The freedom of being able to work from anywhere &mdash; a coffee shop, an airport, or even sitting on the couch &mdash; has led many of us to ditch the notion of large, noisy computer towers in favor of the ultrabook.</p>
+<p>Once we got to the point where we felt we had flushed out the project requirements from a user story perspective, we started digging in. We set up our Sinatra app, and began by writing our first Capybara user test. We ran that first test… and it passed. That didn&rsquo;t make any sense &mdash; we had not set up any routes for the route that we had requested, and certainly did not have any views to display the content that the test requested!</p>
 
-<p>As we put away our gargantuan computers of years past, we also traded in our ergonomic desk setups for hunched-over, strained-neck, cramped sitting styles in laps and on table-tops to use our primary tool of the trade. Gone are the keyboard trays, the gel-padded wrist protectors, and the $500 chairs.</p>
+<p>This problem tripped us up for over an hour, when we discovered that in our Gemfile we had declared a test group, but we had not yet set our environment variables in our acceptance test. We also later discovered that looking for content as the first piece of an acceptance test is too many steps into the process &mdash; the first step would be to verify the response code. Finally on our way to a true failing test, we moved to the first piece of the error, and started working our way through the controller, the models, and the views. It was exciting to go through the process and actually successfully go from dummy data to a real database with real data in the matter of a few hours, and then repeat the process over and over again throughout the process.</p>
 
-<p>The issue at hand is that laptop keyboards are attached to the screen of the laptop, which, when seated at a regular desk, forces the laptop user to look down. This posture consequently rounds the shoulders in wards towards the chest. Keeping the neck and shoulders in this unnatural position for hours at a time can lead to long-term injuries, including RSI (repetitive stress injury), nerve damage, migraines, and more. (For all of the potential risks, ask a professional chiropractor or musculoskeletal specialist).</p>
+<p>From my perspective, our team worked incredibly well together. When one of us would get stuck, we&rsquo;d stop and explain what was happening, and why. We all paired (side note: what is the three-person equivalent of pairing? Triading?) throughout the length of the project, since we  had a small enough project that it was likely we might end up with merge conflicts otherwise.</p>
 
-<p><img src="http://www.codeadventurer.com/images/laptop_positions.gif" alt="Three potential postures with a laptop" /></p>
+<p>Although we did not completely finish building the CMS in three days, we learned a lot about scraping, dynamic routing, serializing data into databases, and setting up different rack test groups. We had an awesome time trying the acceptace-test-first approach, and stuck together as a group to work through tough problems.</p>
 
-<p>As you can see in the figure(1) above, there seems to be no decent way to achieve good posture while using a laptop without additional peripherals.</p>
+<p>The differences between working in a two person versus a three person group weren&rsquo;t too obvious, since our project was so compact. I can definitely see where a four person group might split into two pairs that rotate, but with three people at different levels in the program, and with a small spec and a short timeframe, it seemed more appropriate to stick together and learn together.</p>
 
-<p>Enter <a href="http://www.zafu.net/">Carolina Morning Designs</a>* and the Japenese-inspired minimalist furniture that Linsi Deyo and her partner Patrick Clark offer for sale on their website. Linsi and Patrick have designed the <a href="http://www.zafu.net/zenoffice.html">Zen Office</a>, a desk that keeps you seated close to the floor and re-stacks your skeletal structure so that your back stays straight, your head is not bent over, and your arms are in a comfortable typing position.</p>
+<p>If we had another week to work on Clone Wars, we&rsquo;d likely get our authorization working correctly, and work on integrating more functionality into the CMS &mdash; including the addition of news items, products for sale, and a volunteer database.</p>
 
-<p><img src="http://www.codeadventurer.com/images/zen_desk.jpg" alt="Using the Carolina Morning Designs Zen Office" /></p>
+<p>Overall, I was extremely satisfied with where we got with our project because I felt that we built it well, communicated with each other clearly, and have a solid foundation to build upon when we choose to revisit the project.</p>
 
-<p>This type of seating is called &ldquo;active sitting&rdquo;, as you engage the core muscles of your abdomen and back to help you stay seated. It is uncomfortable to take a slouched position at the Zen Office.</p>
-
-<p>In addition to the floor position, it is also possible for the Zen Office to be repurposed in other ways. If you prefer to switch between sitting and standing, you can easily use the Zen Office along with a wireless keyboard and mouse to accomplish this.</p>
-
-<p><img src="http://www.codeadventurer.com/images/zen_desk_sitting.jpg" alt="Using the Carolina Morning Designs Zen Office While Sitting" /></p>
-
-<p>Having used a gamut of seating situations for computer work, ranging from cardboard-box standing desks, to $22 Ikea hacks for a standing desk, and even yoga balls for active sitting, I can say with confidence that I don&rsquo;t think I will ever need another desk besides the Carolina Mornings Design Zen Office. Since it breaks back down to two small packages, with no tools required for assembly, I can take it anywhere, and whenever I get tired in one position, I can quickly move to another.</p>
-
-<p><img src="http://www.codeadventurer.com/images/zen_desk_standing.jpg" alt="Using the Carolina Morning Designs Zen Office While Standing" /></p>
-
-<p>What sort of sitting and standing arrangements have you used for computer work? Do you alternate throughout the day, or just stay in one position?</p>
-
-<hr />
-
-<p>*I found Carolina Morning Designs while researching sleeping on the floor, as I have been living in a yurt again and in my packing for gSchool have refused to bring a mattress or purchase a new one. If you love sleeping on a firm surface, as I do, check out their modular platform bedframes and other minimalistic sleeping surfaces.</p>
-
-<p>1: Griffin, Timothy, &ldquo;The Adaptive Laptop&rdquo;. October, 2001. Timothy Griffin, Industrial Design Program, The University of Calgary. <a href="http://tim.griffins.ca/writings/mdp-intro">http://tim.griffins.ca/writings/mdp-intro</a></p>
+<p>To see the project in action, you can visit George&rsquo;s <a href="https://github.com/Egogre/CloneWarz">GitHub repository</a>, clone the project, run <code>bundle</code>, then run <code>rackup</code> in your terminal, and visit your localhost for a peek at the project. At localhost/admin, you can view our CMS functionality. Make sure to take a look at our test suite, and run the tests by running the <code>rake</code> command in your terminal. Then marvel at the beautiful rainbow of passing tests!</p>
 </div>
 
 
@@ -206,13 +191,13 @@ posted in
   
 
 
-<time datetime="2013-09-10T22:02:00-06:00" pubdate data-updated="true">Sep 10<span>th</span>, 2013</time>
+<time datetime="2013-11-01T09:12:00-06:00" pubdate data-updated="true">Nov 1<span>st</span>, 2013</time>
       
 
 posted in
 <span class="categories">
   
-    <a class='category' href='/categories/environment/'>environment</a>
+    <a class='category' href='/categories/journey/'>journey</a>
   
 </span>
 
@@ -221,7 +206,7 @@ posted in
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office" data-via="pzula" data-counturl="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://codeadventurer.com/2013/11/01/scraping-a-website" data-via="pzula" data-counturl="http://codeadventurer.com/2013/11/01/scraping-a-website" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -231,10 +216,8 @@ posted in
 
     
     
-      <a class="pull-left" href="/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx" title="Previous Post: Getting a New Development Environment Up &amp; Running on Mac OSX">&laquo; Getting a New Development Environment Up &amp; Running on Mac OSX</a>
+      <a class="pull-left" href="/2013/10/28/web-apps-and-code-retreats" title="Previous Post: Web Apps &amp; Code Retreats">&laquo; Web Apps &amp; Code Retreats</a>
     
-    
-      <a class="pull-right" href="/2013/09/20/learning-is-effin-hard" title="Next Post: Learning is Effin' Hard">Learning is Effin' Hard &raquo;</a>
     
   </footer>
 
@@ -343,8 +326,8 @@ posted in
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office';
-        var disqus_url = 'http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office';
+        var disqus_identifier = 'http://codeadventurer.com/2013/11/01/scraping-a-website';
+        var disqus_url = 'http://codeadventurer.com/2013/11/01/scraping-a-website';
         var disqus_script = 'embed.js';
       
     (function () {

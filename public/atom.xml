@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-11-01T09:51:09-06:00</updated>
+  <updated>2013-11-02T13:20:41-06:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Running Rails with PostgreSQL locally]]></title>
+    <link href="http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
+    <updated>2013-11-02T13:18:00-06:00</updated>
+    <id>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
+    <content type="html"><![CDATA[<p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. <!-- more --></p>
+
+<h3>Installing pgsql with home-brew</h3>
+
+<p>This topic has been covered exhaustively on the web, but the way I did it was to run:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>$ brew install postgresql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Then, I followed the rest of the directions in the terminal to finish my install, and to install the pg gem.</p>
+
+<p><strong><em>Big thing of note:</em></strong> If you are not sure you followed all the directions, and you&rsquo;re getting crazy errors, and you&rsquo;ve already closed your terminal, all is not lost!</p>
+
+<p>You can run <code>brew info postgresql</code> to see the instructions again and double check.</p>
+
+<h3>Fixing your broken PG Connection in Rails</h3>
+
+<p>I decided to start my first rails project with pgsql, because I wanted to give it a try and after using sqlite3 a few times already, I was ready to graduate to something I could actually deploy on Heroku.</p>
+
+<p>So I created my brand-new rails app by running this command in my terminal:</p>
+
+<p><code>rails new blogger -d postgresql</code></p>
+
+<p>Everything looked gravy, until I loaded up <a href="http://localhost:3000">http://localhost:3000</a> and got the big red Rails error with something I did not understand:</p>
+
+<p><code>PG::ConnectionBad (FATAL:  role "blogger" does not exist
+):</code></p>
+
+<p>So I found that after doing that, I did some research and found that I needed to run the rake task to actually set up the databases. That&rsquo;s fine by me! So I ran this in my terminal:
+<code>rake db:create:all</code></p>
+
+<p>Then, my terminal blew up and the error I would get would be:
+<code>FATAL:  role "blogger" does not exist</code></p>
+
+<p>Not knowing much about this, I spent some time searching and found out that I needed to create a new user named the same thing as the user in my <code>database.yml</code> file in the Rails app. Mine happens to be <code>blogger</code>, so I then went into my terminal and ran the following command:
+<code>createuser -s -r blogger</code></p>
+
+<p>Then, I ran this command again, this time successfully: <code>rake db:create:all</code></p>
+
+<p>After doing this, and restarting my Rails server, I went back to <a href="http://localhost:3000">http://localhost:3000</a> and I was happily riding the Rails!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-11-02T13:20:41-06:00</updated>
+  <updated>2013-11-08T10:56:04-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dashing Down the Rails]]></title>
+    <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
+    <updated>2013-11-08T10:13:00-07:00</updated>
+    <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
+
+<p>I can imagine what a contrast this is for people who learn as little Ruby as possible in order to get by using all the magic that Rails provides. I think that if I didn&rsquo;t know about the internals of how it worked, I would likely end up in the same boat as when I was hacking things together in Drupal. I have often heard that it is best to know Ruby before working with Rails, and now having experience with both Ruby, and Sinatra, I can see the differences between what Rails provides, and what the language itself does for me, which I think is very important for anyone using any framework.</p>
+
+<p>Our current project is called <a href="http://tutorials.jumpstartlab.com/projects/dinner_dash.html">Dinner Dash</a>, and the task at hand is to build an online ordering system for a restaurant. My group has been working with MiniTest, RackTest &amp; Capybara to use a BDD-style approach to the project, and we have also been using PivotalTracker to track our progress, combined with <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> to keep ourselves organized. My mentor works for PivotalLabs, and was very helpful in giving me a few more tips on how to use PivotalTracker to map through our user stories and scheduling our work and expectations.</p>
+
+<p>At the beginning of this project, I was having a hard time mapping my prior knowledge of SQL queries and database relationships to ActiveRecord, but now I have a better grasp on it thanks to two sessions with two different people that helped me understand what was happening. My mentor, Brian Rose from PivotalLabs, helped me understand the entity relationship diagram of our current application by installing the <code>rails-erd</code> gem into our project and generating a PDF of our relationships for me. This was helpful to see, and his explanations helped immensely. I also sat with Jorge and we drew a few diagrams with carefully placed labels to map out a new many-to-many relationship I was creating, and now I think I have a good hold on the whole <code>belongs_to</code>, <code>has_many</code>, <code>is_one_of</code> structure.</p>
+
+<p>I think that besides structuring models, views, and controllers well and understanding ActiveRecord, knowing all of the work that Rails can do might take a little time to learn and master &mdash; but overall I&rsquo;m enjoying working with it. My goals for this project are to get my feet wet with Rails, and start to understand where it can lift some of the burden of common tasks when building applications.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>
@@ -123,31 +140,6 @@
 <p>What I like about this project is that we are working at our own pace. Some people will have amazing full-blown web apps with design, users, SMS capability, etc. at the end of this, others will have gone through the basic implementation, and everyone will have a better understanding of how web applications work. It&rsquo;s also been great to be in groups of four because we are all at different stages of the project, and can ask for help in specific places, instead of being dragged along by a stronger pair.</p>
 
 <p>Next week, we&rsquo;re going to have our first assessment. I think we&rsquo;ll be paired with one of our instructors for the length of the assessment, and will have to build a program while being observed. This sounds a little intimidating, but the instructors are also there to provide feedback on our thought process and implementation, which I think is one of the coolest opportunities in the program. I think I&rsquo;ll be overall in a good place during the assessment, and I&rsquo;m very eager to find out what I need to spend more time learning and understanding.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A week of focus is worth a thousand projects]]></title>
-    <link href="http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
-    <updated>2013-10-11T09:01:00-06:00</updated>
-    <id>http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
-    <content type="html"><![CDATA[<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
-
-<p>I felt like I could get some benefit out of the exercises the emerging group has been working on (like locking in various ways of using hashes, arrays, and enumerators), but I also had a feeling that I might have a good enough grasp on those things that I could push myself in a different way. Instead, I chose to join in with Jeff&rsquo;s group, the progress group, to take a fresh look at our first paired project from a few weeks back, <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">EventReporter</a>.</p>
-
-<p>The first time around this project, I had been tackling it from the provided test routes, one item at the time. I also had chosen not to work closely with my pair, because he had completed the assignment several times before and was beyond my level in terms of understanding how to do it, and I had wanted to learn how to go about it myself instead of watching someone code things I did not understand. If I had actually paired with him, I probably would have had the project completed, but I&rsquo;m not sure if I would have learned as much. So originally, my EventReporter was not complete, nor very pretty.</p>
-
-<p>It was great to step through the thought process with Jeff this week. He helped us understand how to break down the problem, how to start with an MVP, how to create test doubles (or stubs) so that our tests were independent of each other (in the case of unit tests), and to build small pieces of a project and get one piece working at a time using test-driven development. He also helped us understand when to use text fixtures, and when to use hard-coded data in tests.</p>
-
-<p>Throughout the week, we tacked a method or two a day, writing the tests, talking through the process, and slowly chipping away at the requirements. We started with a much better separation of concerns than the first time around (when many of us had everything in one giant method, in one giant file). It felt great to bring in all of our pieces yesterday, and write one controller that brought it all to life as a command line interface. After a little debugging, many of us had an EventReporter that worked, in half of the time with twice the quality of the first round.</p>
-
-<p>Although I&rsquo;m not yet a master of creating beautiful, small, concise methods, and knowing when to use <code>send</code> instead of an <code>if</code> statement, I have a great example with commit messages at every step to reference when I need to dig in and remember how we did things.</p>
-
-<p>It was great to work with a group at my same level of understanding for the week, and not be derailed by questions that are either to basic or too advanced for our current skillset. I&rsquo;m not sure if I&rsquo;d want the entire 24 weeks to work this way, but I do think that pairing with someone of a similar skill level is helpful. I have found that when I have been paired with someone who has been programming in Ruby for longer than the course, that they often do not explain their thought process and just forge ahead to get done with things, instead of hanging back to bring the person with less experience up to their level. I believe the true purpose of pairing is to slow down, explain your thought process, and pair through a problem together. If more advanced students were willing to do this without taking control of a project, I&rsquo;d be happy to be paired with them. Otherwise, I&rsquo;d rather stay with someone who is at the same level of understanding as me.</p>
-
-<p>After this week of focus, which has helped me immensely in terms of understanding how to do things the right way (moreso than working independently on projects without much instruction) I&rsquo;m excited that we&rsquo;re digging into web applications next week. Although I&rsquo;ve built small web systems in PHP before, I know I have a lot to learn and am eager to get on the right path.</p>
-
-<p>(<strong>Title disclaimer</strong>: *Ok, so perhaps more like worth two projects)</p>
 ]]></content>
   </entry>
   

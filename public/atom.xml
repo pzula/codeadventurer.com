@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-11-22T11:23:50-07:00</updated>
+  <updated>2013-11-22T11:28:41-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -19,6 +19,9 @@
     <updated>2013-11-22T11:07:00-07:00</updated>
     <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
     <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
+
+<p><img src="http://codeadventurer.com/images/dinner_dash.png" title="Platable" alt="Platable" />
+<a href="http://platable.herokuapp.com">(See Platable on Heroku)</a></p>
 
 <p>At the end of last week, we had our second code retreat. We worked through a few 50-minute sessions to build <a href="https://github.com/JumpstartLab/code_retreat">Battleship</a> under different constraints. Unlike our last code retreat, where the scope was much smaller and tests were provided to help guide the design of the API, this time there were only instructions of how the gameplay works. Although the problem is very interesting, it was frustrating to keep switching the context of which piece of the game we were building, and it did not seem like any of my pairs and I got remotely close to solving the piece at hand before we had to delete our code and start over on a new part of the game. However, the exercise has definitely piqued my interest, and I plan on revisiting Battleship on my own to try to build it as a CLI.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-11-22T11:28:41-07:00</updated>
+  <updated>2013-12-06T09:34:48-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Halfway Home]]></title>
+    <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
+    <updated>2013-12-06T09:05:00-07:00</updated>
+    <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
+    <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
+
+<p>This week we got back at it in full force. We&rsquo;re working on <a href="http://tutorials.jumpstartlab.com/projects/fourth_meal.html#functional-requirements">Fourth Meal</a>, building upon Dinner Dash using a codebase that is different from the last project. My group chose the project I worked on last time, which I am grateful for, because I did not feel I understood all of the parts of it before. We started out by refactoring a few pieces of the code, exploring the implementations, deploying a staging and production site, and writing our user stories in <a href="https://www.pivotaltracker.com/s/projects/968652">Pivotal Tracker</a>. We&rsquo;ve been focused on writing proper user stories, understanding our iterations, and dealing with a &ldquo;real&rdquo; client (&ldquo;real&rdquo; meaning Jeff Casimir, acting (in good character)  a demanding client). Our project includes expanding the original codebase to support multi-tenancy (i.e. multiple restaurants in the system with the ability to shop between them independently). I&rsquo;m enjoying the focus on iterations, and sticking to user stories throughout the development process. I believe it&rsquo;s important to delivering value as quickly as possible in an agile way.</p>
+
+<p>Yesterday, we also started a small side project with <a href="http://yacenter.org/">Young Entrepreneurs</a> to help a group of kids launch their online presence for the small businesses they are working on. We have a different group in this project than for Fourth Meal, and are primarily working on design and listening to client needs. Our clients are two young girls (age 7 and 11) that have launched their own body care products line. They are very excited about their products, and it amazes me at how professional they acted for their ages. We had a great brainstorming session with them, and I&rsquo;m looking forward to sharing our ideas and wireframes with them next week for their input.</p>
+
+<p>Halfway through the course, I&rsquo;m feeling excited about my progress and the ways I&rsquo;ve grown along the way. I&rsquo;m excited to see where I stand at the end of the course, and how I continue to progress at my first job out of gSchool. I feel that my ability to collaborate with other developers has vastly improved. Prior to gSchool, I was always a lone coder &mdash; this was not by choice, but due to the work styles of the previous workplaces. I&rsquo;m starting to get better at articulating my thoughts verbally during pair programming sessions, explaining why something makes sense in my head without taking over someone&rsquo;s keyboard, and articulating when I&rsquo;m stuck on a piece of functionality and the thought process behind what I&rsquo;m trying to accomplish and the things I&rsquo;ve already tried that didn&rsquo;t seem to work.</p>
+
+<p>I&rsquo;m excited to continue working on Fourth Meal with my group members, and seeing where we can take this project by the deadline. It will be interesting to see if we have estimated our iterations correctly, and to see if keeping a close eye on Tracker will help us reach our goals and deliver a great final product.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
@@ -98,49 +115,6 @@
 
 <p><strong><em>Side note:</em></strong>
 * My reason for liking the idea of BDD comes from the various times I&rsquo;ve been bitten by not having a way to test the entire experience from a user perspective. Our workload at my previous position was so high that often the developers would run through scenarios at a high level, test that things worked on their own machines, and ship the code to production. Often, many things went wrong in this process, sometimes after the client had already seen the problems themselves. We had started out with QA testers, but over time the people in the company that did QA on development projects were eventually reassigned to other things, leaving the developers without dedicated QA resources, and no time to do testing themselves. I would have loved to be able to do BDD back then, but then again, I&rsquo;m just learning about it now! I think I might give this approach a shot in a future project at gSchool, just to see how it differs from starting with unit tests first.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Naming Your Weakness]]></title>
-    <link href="http://codeadventurer.com/2013/10/26/naming-your-weakness"/>
-    <updated>2013-10-26T13:28:00-06:00</updated>
-    <id>http://codeadventurer.com/2013/10/26/naming-your-weakness</id>
-    <content type="html"><![CDATA[<p>This past week at gSchool, we had our first assessment. We were offered a problem, in this case, the <a href="http://tutorials.jumpstartlab.com/academy/workshops/scrabble.html">building blocks of the Scrabble game</a>, which included a short guide <!-- more -->that informed us of some of the API decisions based on the expected input and output of the program, and we sat down with one of our three instructors for 40 minutes, while they watched and listened to us work through the problem.</p>
-
-<p>As an exercise in Enumerators a few weeks ago, I took a similar look at the beginnings of the Scrabble exercise (counting word scores), so I did not spend too much time &ldquo;preparing&rdquo; for the assessment. I did not want to memorize how to solve the problem, because I wanted a raw feel to how my process works from my instructors' perspective, so that I knew what I needed to work on improving.</p>
-
-<p>Honestly, I was a little surprised by how it went. Although I got much further in solving the problem (with a little guidance in the right direction when I steered off course), my happiness with progress was not the purpose of the review. My reviewer pointed out that I had difficulties breaking down problems into their smaller pieces, and writing tests for these smaller pieces prior to attempting to solve the problem with code. I was using tests to verify my solutions as I busted through a problem, instead of using smaller tests along the way to drive the solutions.</p>
-
-<p>I can memorize all the syntax out there, that has never been a problem for me. But can I use it efficiently and effectively? Not as well as I should. I was the student who shirked away from math courses, but loved science classes. I can tell you how many things work, recite hundreds of odd facts, but can I break down a logical pathway of WHY they work that way, and apply it to something else? Not always.</p>
-
-<p>I thought I came to gSchool to learn Ruby best practices, learn agile and TDD, and make sure that I don&rsquo;t get lost in the world of StackOverflow and Google when I get stuck. But really, what I&rsquo;m starting to realize is that beyond those things, I came to gSchool to learn algorithmic thinking.</p>
-
-<p>Learning to program is easy if you have a good foundation of algorithmic thinking, but this is something I never knew until this week. I had never heard the term until my assessment, and after the assessment, I wanted to do everything in my power to learn more about it, how to develop it, and find problems to practice.</p>
-
-<p>My research on the matter leads me to conclude this:</p>
-
-<ul>
-<li>Repetition is how this skill is built</li>
-<li>Smaller exercises are easier to digest</li>
-<li>Math problems are actually great ways of building this skill</li>
-<li>If you were a math major or minor, you&rsquo;ve probably mastered this already</li>
-</ul>
-
-
-<p>I guess it&rsquo;s finally time to face my fears of math so that I can become a better programmer.</p>
-
-<p>As resources to help me practice building this skill, I&rsquo;m going to use various websites to work through at least a problem a day. <a href="http://projecteuler.net/">ProjectEuler</a> actually fits all three of the criteria above for how to build the skill. The problems are small, the build on one another, and they are math-focused. I&rsquo;ve found another, <a href="http://rosalind.info/problems/list-view/">Rosalind</a>, which is focused on BioInformatics, and seems promising for not quite as math-heavy solutions. Another interesting site is <a href="http://rubyquiz.com/">RubyQuiz</a>, but this one might not be quite as helpful, as many of the quizzes seem to already contain a problem break-down spelled out for the user.</p>
-
-<p>My goal is to look back at the assessment at the end of this course, and inherently know how to break down a problem into it&rsquo;s smallest parts. I hope to marvel at how easily I can solve this problem, and many others &mdash; not through memorizing the solution, but by knowing how to work through the details.</p>
-
-<hr />
-
-<h4>Asides</h4>
-
-<p>I also found <a href="http://www.google.com/edu/computational-thinking/index.html">this resource</a>, provided by Google, for any educators looking to teach kids math through the use of computational thinking. I may go through some of the exercises myself, even if they are for grades 6-12!</p>
-
-<p><a href="https://www.udacity.com/course/cs215">This free course from Udacity</a> also explains algorithms through social networks. I&rsquo;ve started working through it and it seems like it will be helpful.</p>
 ]]></content>
   </entry>
   

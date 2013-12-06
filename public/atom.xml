@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-11-22T11:28:41-07:00</updated>
+  <updated>2013-12-06T09:34:48-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Halfway Home]]></title>
+    <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
+    <updated>2013-12-06T09:05:00-07:00</updated>
+    <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
+    <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
+
+<p>This week we got back at it in full force. We&rsquo;re working on <a href="http://tutorials.jumpstartlab.com/projects/fourth_meal.html#functional-requirements">Fourth Meal</a>, building upon Dinner Dash using a codebase that is different from the last project. My group chose the project I worked on last time, which I am grateful for, because I did not feel I understood all of the parts of it before. We started out by refactoring a few pieces of the code, exploring the implementations, deploying a staging and production site, and writing our user stories in <a href="https://www.pivotaltracker.com/s/projects/968652">Pivotal Tracker</a>. We&rsquo;ve been focused on writing proper user stories, understanding our iterations, and dealing with a &ldquo;real&rdquo; client (&ldquo;real&rdquo; meaning Jeff Casimir, acting (in good character)  a demanding client). Our project includes expanding the original codebase to support multi-tenancy (i.e. multiple restaurants in the system with the ability to shop between them independently). I&rsquo;m enjoying the focus on iterations, and sticking to user stories throughout the development process. I believe it&rsquo;s important to delivering value as quickly as possible in an agile way.</p>
+
+<p>Yesterday, we also started a small side project with <a href="http://yacenter.org/">Young Entrepreneurs</a> to help a group of kids launch their online presence for the small businesses they are working on. We have a different group in this project than for Fourth Meal, and are primarily working on design and listening to client needs. Our clients are two young girls (age 7 and 11) that have launched their own body care products line. They are very excited about their products, and it amazes me at how professional they acted for their ages. We had a great brainstorming session with them, and I&rsquo;m looking forward to sharing our ideas and wireframes with them next week for their input.</p>
+
+<p>Halfway through the course, I&rsquo;m feeling excited about my progress and the ways I&rsquo;ve grown along the way. I&rsquo;m excited to see where I stand at the end of the course, and how I continue to progress at my first job out of gSchool. I feel that my ability to collaborate with other developers has vastly improved. Prior to gSchool, I was always a lone coder &mdash; this was not by choice, but due to the work styles of the previous workplaces. I&rsquo;m starting to get better at articulating my thoughts verbally during pair programming sessions, explaining why something makes sense in my head without taking over someone&rsquo;s keyboard, and articulating when I&rsquo;m stuck on a piece of functionality and the thought process behind what I&rsquo;m trying to accomplish and the things I&rsquo;ve already tried that didn&rsquo;t seem to work.</p>
+
+<p>I&rsquo;m excited to continue working on Fourth Meal with my group members, and seeing where we can take this project by the deadline. It will be interesting to see if we have estimated our iterations correctly, and to see if keeping a close eye on Tracker will help us reach our goals and deliver a great final product.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>

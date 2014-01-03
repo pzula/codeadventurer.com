@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2013-12-06T09:34:48-07:00</updated>
+  <updated>2014-01-03T09:32:45-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[56 days until takeoff]]></title>
+    <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
+    <updated>2014-01-03T09:05:00-07:00</updated>
+    <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
+    <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
+
+<p>Before that day comes, I still have work to do. As I&rsquo;m reading Sandi Metz&rsquo;s book, <a href="http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330/ref=sr_1_1?ie=UTF8&amp;qid=1388765519&amp;sr=8-1&amp;keywords=practical+object-oriented+design+in+ruby">Practical Object Oriented Design in Ruby</a>, I see that I can improve on the way I think about and execute the design of applications. I&rsquo;m excited to work through the book, and apply the lessons in my projects.</p>
+
+<p>I&rsquo;m also attending <a href="http://codemash.org">CodeMash</a> this upcoming week and will begin looking for companies where I would make a good fit. I&rsquo;m planning on returning to Ohio after graduation, and would like to see what sort of opportunities are available. Thanks to my instructors, I already have a few connections to meet with next week to discuss the job climate in the Cleveland area. I&rsquo;m excited to talk to them and get to know other Rubyists in Ohio.</p>
+
+<p>While I&rsquo;m at CodeMash, I&rsquo;ll be missing work time on our current project, FeedEngine, which is all about APIs. I&rsquo;ll be doing my best to communicate with my group, and contribute where I can without interfering with the overall progress. It will be interesting to see if I can integrate lessons from the conference into the project as well.</p>
+
+<p>I&rsquo;m also excited for our upcoming project focused on Service-Oriented Architecture, and finally our Mastery project. I received some fun hardware for Christmas and hope to use it in my final project to integrate my passion for technology with my passion for agriculture.</p>
+
+<p>On a final note, my mentor, Matt Rogers, has been a tremendous resource. His help and understanding has really helped me grow as a developer. I applaud his ability to find relevant open-source work to help explain new concepts, or reinforce the ones I did not understand well. He has been diligent in following along the curriculum, asking me about the projects I am working on, and helping me understand where improvements can be made. I am very grateful for his time and his passion for mentoring. Without his help, I wouldn&rsquo;t have made as much learning progress in the last project as I had. Thank you, Matt!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
@@ -93,28 +112,6 @@
 <p>Overall, I was extremely satisfied with where we got with our project because I felt that we built it well, communicated with each other clearly, and have a solid foundation to build upon when we choose to revisit the project.</p>
 
 <p>To see the project in action, you can visit George&rsquo;s <a href="https://github.com/Egogre/CloneWarz">GitHub repository</a>, clone the project, run <code>bundle</code>, then run <code>rackup</code> in your terminal, and visit your localhost for a peek at the project. At localhost/admin, you can view our CMS functionality. Make sure to take a look at our test suite, and run the tests by running the <code>rake</code> command in your terminal. Then marvel at the beautiful rainbow of passing tests!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
-    <link href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
-    <updated>2013-10-28T09:22:00-06:00</updated>
-    <id>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
-    <content type="html"><![CDATA[<p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
-
-<p>After building through IdeaBox on our own, we presented the projects on Thursday afternoon. It was great to see everybody&rsquo;s work, and see how far they got in the project, learn about their &ldquo;a-ha!&rdquo; moments, and also hear about pain points. It was great to see a project starting to turn out differently &mdash; I&rsquo;m sure as the course progresses, we will end up with vastly different projects than in the first third of the course.</p>
-
-<p>On Friday, we all left the classroom and Galvanize to have an all-day code retreat. We made our way to the <a href="http://www.rivernorthart.com/">RiNo</a> part of Denver and spent the day inside of <a href="https://www.facebook.com/thesourcedenver">The Source</a>, a rehabbed warehouse-turned-young-money-shopping-facility. (I&rsquo;m probably totally wrong, but that&rsquo;s the best way I can describe it). We spent the day pairing in 30 minute time blocks, switching partners after every time block, and working on the same problem from scratch in a different way. In the morning, we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/beer">Beer Song</a> problem spec, and in the afternoon we worked through the <a href="https://github.com/JumpstartLab/code_retreat/tree/master/robot">Robot</a> spec. Each was interesting in it&rsquo;s own way, and both tested fundamentals &mdash; working with strings, or working with arrays and hashes.</p>
-
-<p>It was exciting to work with so many different classmates, and come up with so many different solutions, based on different contraints. I learned about how to build a program with no conditional statements (since <code>if</code> is not object oriented), learned about traversing through an array using modulo math, and various other amazing tidbits. I had a lot of fun, learned a bunch, and left at the end of the day completely exhausted, but mentally invigorated. I hope that I can continue to participate in code retreats beyond gSchool &mdash; it seems like an amazing way to keep developers sharp and practice different pairing techniques.</p>
-
-<p>I&rsquo;m really enjoying being back in web territory. I have a foundational understanding some things already, so I can focus on testing the applications, using Ruby, and building things in a TDD (or BDD) fashion. I definitely like Sinatra, and that it&rsquo;s lightweight enough that you can choose your own design pattern, your own database ORM, and pretty much everything inbetween. In contrast, I started playing with Rails for the first time last week, and I&rsquo;m not sure how I feel about how much work it does for the developer. I&rsquo;m sure I&rsquo;ll change my mind once I know how to build everything from scratch really well and don&rsquo;t want to always do it myself, but for now I enjoy learning how to implement all of the pieces.</p>
-
-<hr />
-
-<p><strong><em>Side note:</em></strong>
-* My reason for liking the idea of BDD comes from the various times I&rsquo;ve been bitten by not having a way to test the entire experience from a user perspective. Our workload at my previous position was so high that often the developers would run through scenarios at a high level, test that things worked on their own machines, and ship the code to production. Often, many things went wrong in this process, sometimes after the client had already seen the problems themselves. We had started out with QA testers, but over time the people in the company that did QA on development projects were eventually reassigned to other things, leaving the developers without dedicated QA resources, and no time to do testing themselves. I would have loved to be able to do BDD back then, but then again, I&rsquo;m just learning about it now! I think I might give this approach a shot in a future project at gSchool, just to see how it differs from starting with unit tests first.</p>
 ]]></content>
   </entry>
   

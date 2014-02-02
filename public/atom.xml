@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-01-11T14:59:04-07:00</updated>
+  <updated>2014-02-01T20:36:06-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -14,26 +14,143 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Beautiful, Dynamic Database Seeding Scripts]]></title>
+    <link href="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
+    <updated>2014-02-01T18:54:00-05:00</updated>
+    <id>http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</id>
+    <content type="html"><![CDATA[<p>In our current Rails project, my team is building <a href="http://github.com/freshfinder">FreshFinder</a>, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are using in our application, prior to user contributions, is data that we are pulling from <a href="http://data.gov">Data.gov</a>&rsquo;s Excel spreadsheet of USDA Farmer&rsquo;s Market Data. <!-- more -->A spreadsheet?? Yes. A spreadsheet. Because although they have a publicly-accessible API for the data, there are only two possible calls to this API, both of which do not contain all of the information otherwise contained in the Excel file.</p>
+
+<p>Armed with the <code>CSV</code> Ruby library, some regex, some string splitting, and gsubbing, my team and I have been normalizing the data from the spreadsheet to build out a publically-accessible, RESTful API for our application&rsquo;s frontend to consume. While building it out, it makes sense to seed the database with real data from the spreadsheet, so I&rsquo;ve been learning a lot about building beautiful, dynamic seed scripts for Rails.</p>
+
+<p>The first thing to consider is that although when you run <code>rake db:seed</code>, you&rsquo;re calling upon the <code>/db/seed.rb</code> file in Rails, you aren&rsquo;t constrained to just using this file. In my seed file, I <code>require</code> the files which contain the classes and methods I need access to, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require './db/seeds/market_seeder'
+</span><span class='line'>require './db/seeds/product_seeder'
+</span><span class='line'>
+</span><span class='line'>ProductSeeder.seed
+</span><span class='line'>MarketSeeder.seed(100)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see in the code above, I then call the <code>seed</code> method on both the <code>ProductSeeder</code> and the <code>MarketSeeder</code> classes. But before I ever even got to the point of calling these two methods in my <code>seeds.rb</code>, I wrote some tests, and I recommend you do the same.</p>
+
+<p>It&rsquo;s important to remember that seed files are just POR, Plain Old Ruby, and that testing them is just like testing any other Ruby code that you produce. In my <code>spec</code> folder, I created a subfolder called <code>seeds</code> and built out the <a href="https://github.com/FreshFinder/to-the-market-api/blob/master/spec/seeds/market_seeder_spec.rb"><code>market_seeder_spec.rb</code></a> file to test parsing the CSV file and to expect changes to the database upon running it.</p>
+
+<p>When we talked about what we wanted our seeder to do, we had two things that were important to us: the first was that we could dynamically control how many items got seeded into the database. This was important because we didn&rsquo;t want to be building and testing our mapping and search functionality with the full 8,200 farmer&rsquo;s markets records during the first week of development. The second thing that was important to us was getting feedback during the seeding process, which usually means outputting to the screen a piece of information for each object seeded with a <code>puts</code> statement. Each of these things presented a new way of thinking about seeding data for us.</p>
+
+<p>To create a dynamic seeding process from our parsed CSV file, we accept an optional parameter in our <code>seed</code> method that takes a number and injects it into a range that gets run on the collection that builds each market, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil})
+</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
+</span><span class='line'>  if number
+</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line)}
+</span><span class='line'>  else
+</span><span class='line'>    data.collect {|line| build_markets(line)}
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The next piece of functionality, outputting the name of each market as each market was built with the <code>build_markets</code> method, was as simple as using a <code>puts</code> statement. However, the <code>puts</code> would output to the string even when a test was running, which quickly cluttered up test feedback. Thankfully, earlier in the week Katrina Owen had shown me a really neat concept I hadn&rsquo;t thought about before &mdash; that you could change what <code>puts</code> is being executed on, and in turn, change where the string gets captured.</p>
+
+<p>The way this is done is to define your output parameter, and set the default to <code>STDOUT</code>, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil, out = STDOUT)
+</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
+</span><span class='line'>  if number
+</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line, out)}
+</span><span class='line'>  else
+</span><span class='line'>    data.collect {|line| build_markets(line, out)}
+</span><span class='line'>  end
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>def self.build_markets(line, out)
+</span><span class='line'> m = Market.create!(:fmid =&gt; line[:fmid], :name =&gt; line[:marketname])
+</span><span class='line'> out.puts line[:marketname]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You may be thinking, ok, so you&rsquo;re telling <code>puts</code> to run as a method on <code>STDOUT</code>, that&rsquo;s no different than it&rsquo;s default functionality. True. So in your test suite, you&rsquo;re going to require <code>StringIO</code>, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require 'stringio'
+</span><span class='line'>
+</span><span class='line'>describe "Seeding a market" do
+</span><span class='line'>  before :each do
+</span><span class='line'>    @out = StringIO.new
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  it "changes the count on the Market database when seeded" do
+</span><span class='line'>    expect(Market.count).to eq 0
+</span><span class='line'>    expect { MarketSeeder.seed(2, @out) }.to change{Market.count}.by 2
+</span><span class='line'>  end
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By piping <code>puts</code> to <code>StringIO</code>, you are capturing the feedback instead of outputting it to the string during testing, and thus relieved of the noise while running your specs.</p>
+
+<p>After building our seed scripts for the first time using this method, I&rsquo;ve had a much better experience than when I used to shovel everything straight into the <code>db/seeds.rb</code> file. My code is easier to read, shorter, and has a better seperation of concerns. I encourage you to give it a try, and let me know any other tricks to creating great seeds scripts!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
     <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
-    <updated>2014-01-11T14:30:00-07:00</updated>
+    <updated>2014-01-11T14:30:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
-    <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attendended at at waterpark.</p>
+    <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
-<p>The conference was interesting. I met a lot of people from the surrounding states that worked in many different fields, but over and over again I heard people repeat the same mantra, or some rendition of it &mdash; &ldquo;.Net for pay, Ruby for play&rdquo;. This was interesting to me, because although I knew I&rsquo;d be returning to Ohio after gSchool, I hadn&rsquo;t looked into the job opportunities available before I accepted a slot in the class. I doubt if it would have changed my mind to know that locally there are only a handful of companies that work with Ruby, because I was very adament about learning test driven development in a language that has a strong culture of testing.</p>
+<p>The conference was interesting. I met a lot of people from the surrounding states that worked in many different fields, but over and over again I heard people repeat the same mantra, or some rendition of it &mdash; &ldquo;.Net for pay, Ruby for play&rdquo;. This was interesting to me, because although I knew I&rsquo;d be returning to Ohio after gSchool, I hadn&rsquo;t looked into the job opportunities available before I accepted a slot in the class. I doubt if it would have changed my mind to know that locally there are only a handful of companies that work with Ruby, because I was very adamant about learning test driven development in a language that has a strong culture of testing.</p>
 
-<p>Regardless, the first two days of the conference are called &ldquo;Precompiler&rdquo; days, where multiple half-day or whole-day workshops are run on different topics. I took the opportunity to learn about hacking on flying robots with Jim Weirich on Tuesday, and used his library, <a href="http://github.com/jimweirich/argus">Argus</a>, along with the <a href="https://github.com/hybridgroup/artoo">Artoo</a> library, to control an <a href="http://ardrone2.parrot.com">Ardrone</a> using <a href="http://leapmotion.com">LeapMotion</a>. I got to work with two other Ruby developers, Joel Byler and Ashton, while hacking &amp; discovering our way around the intracacies and mishaps of working with hardware and concurrent connections in Ruby. On the second Precompiler day, I worked with Arduino and beginning electronics, and had the opportunity to pair with some more brilliant, curious programmers to think about hardware hacking in ways I had not explored before. I learned new debugging tricks, and made connections between my basic circuitry knowledge and programming those interactions with Processing.</p>
+<p>Regardless, the first two days of the conference are called &ldquo;Precompiler&rdquo; days, where multiple half-day or whole-day workshops are run on different topics. I took the opportunity to learn about hacking on flying robots with Jim Weirich on Tuesday, and used his library, <a href="http://github.com/jimweirich/argus">Argus</a>, along with the <a href="https://github.com/hybridgroup/artoo">Artoo</a> library, to control an <a href="http://ardrone2.parrot.com">Ardrone</a> using <a href="http://leapmotion.com">LeapMotion</a>. I got to work with two other Ruby developers, Joel Byler and Ashton, while hacking &amp; discovering our way around the intricacies and mishaps of working with hardware and concurrent connections in Ruby. On the second Precompiler day, I worked with Arduino and beginning electronics, and had the opportunity to pair with some more brilliant, curious programmers to think about hardware hacking in ways I had not explored before. I learned new debugging tricks, and made connections between my basic circuitry knowledge and programming those interactions with Processing.</p>
 
 <p>The final two days of the conference were more typical conference track sessions. I spent a good bit of time in the Javascript tracks, made a bit of progress in understanding Ember applications, and learned new concepts about concurrency in Ruby from <a href="http://twitter.com/jerrydantonio">Jerry D&#8217;Antonio</a>. I came away with new things to research and incorporate into future projects, and a great appreciation for the conference organizers. Over 2,000 people came together to learn new things, experiment with new tech, and share their experiences together, and all of it went smoothly from an attendee standpoint.</p>
 
-<p>I&rsquo;m heading back to Denver to dive full-swing into our API project, and look forward to incorporating some Javascript techniques I learned about into the project.</p>
+<p>I&rsquo;m heading back to Denver to dive full-swing into our API project, and look forward to incorporating some Javascript techniques I learned about into the project. Although we&rsquo;re all thinking about where we&rsquo;re going to end up after gSchool, I want to finish my time there strong, and continue the full-time learning and experimentation while we&rsquo;re all still together.</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
     <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
-    <updated>2014-01-03T09:05:00-07:00</updated>
+    <updated>2014-01-03T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
@@ -52,7 +169,7 @@
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
     <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
-    <updated>2013-12-06T09:05:00-07:00</updated>
+    <updated>2013-12-06T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
     <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
 
@@ -69,7 +186,7 @@
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
     <link href="http://codeadventurer.com/2013/11/22/dinner-dash"/>
-    <updated>2013-11-22T11:07:00-07:00</updated>
+    <updated>2013-11-22T11:07:00-05:00</updated>
     <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
     <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
 
@@ -87,7 +204,7 @@
   <entry>
     <title type="html"><![CDATA[Dashing Down the Rails]]></title>
     <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
-    <updated>2013-11-08T10:13:00-07:00</updated>
+    <updated>2013-11-08T10:13:00-05:00</updated>
     <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
     <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
 
@@ -104,7 +221,7 @@
   <entry>
     <title type="html"><![CDATA[Running Rails with PostgreSQL locally]]></title>
     <link href="http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
-    <updated>2013-11-02T13:18:00-06:00</updated>
+    <updated>2013-11-02T13:18:00-04:00</updated>
     <id>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
     <content type="html"><![CDATA[<p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. <!-- more --></p>
 
@@ -155,7 +272,7 @@
   <entry>
     <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>
     <link href="http://codeadventurer.com/2013/11/01/scraping-a-website"/>
-    <updated>2013-11-01T09:12:00-06:00</updated>
+    <updated>2013-11-01T09:12:00-04:00</updated>
     <id>http://codeadventurer.com/2013/11/01/scraping-a-website</id>
     <content type="html"><![CDATA[<p>This week, we started a quick-turnaround project in Sinatra called <a href="http://tutorials.jumpstartlab.com/projects/clone_wars.html">Clone Wars</a>. Our challenge was to pick one of five local businesses, build a CMS for their existing types of content, and then scrape their existing website into our database &mdash; all in three days. <!-- more --></p>
 
@@ -186,7 +303,7 @@
   <entry>
     <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
     <link href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
-    <updated>2013-10-28T09:22:00-06:00</updated>
+    <updated>2013-10-28T09:22:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
     <content type="html"><![CDATA[<p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
 
@@ -208,7 +325,7 @@
   <entry>
     <title type="html"><![CDATA[Naming Your Weakness]]></title>
     <link href="http://codeadventurer.com/2013/10/26/naming-your-weakness"/>
-    <updated>2013-10-26T13:28:00-06:00</updated>
+    <updated>2013-10-26T13:28:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/26/naming-your-weakness</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we had our first assessment. We were offered a problem, in this case, the <a href="http://tutorials.jumpstartlab.com/academy/workshops/scrabble.html">building blocks of the Scrabble game</a>, which included a short guide <!-- more -->that informed us of some of the API decisions based on the expected input and output of the program, and we sat down with one of our three instructors for 40 minutes, while they watched and listened to us work through the problem.</p>
 
@@ -251,7 +368,7 @@
   <entry>
     <title type="html"><![CDATA[Back to the land of HTTP requests]]></title>
     <link href="http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests"/>
-    <updated>2013-10-18T08:58:00-06:00</updated>
+    <updated>2013-10-18T08:58:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</id>
     <content type="html"><![CDATA[<p>This week, we started using Sinatra to build a web application. At the start of the week, we built <a href="http://tutorials.jumpstartlab.com/projects/web_guesser.html">WebGuesser</a>, a random-number guessing site <!--more -->that allows for a user to guess the number, and gives feedback on how close they are. <a href="http://agile-peak-6795.herokuapp.com/">My version</a> has a few bugs. For instance, if two people are accessing the site at the same time and playing, each person&rsquo;s guess counts towards the total, so you may only guess once or twice and be presented with a &ldquo;Too many guesses&rdquo; message. This can easily be solved with session cookies, but I haven&rsquo;t gotten around to refactoring yet. I&rsquo;m sure I&rsquo;ll get a chance to come back and make that short project better.</p>
 
@@ -268,7 +385,7 @@
   <entry>
     <title type="html"><![CDATA[A week of focus is worth a thousand projects]]></title>
     <link href="http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
-    <updated>2013-10-11T09:01:00-06:00</updated>
+    <updated>2013-10-11T09:01:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
 
@@ -293,7 +410,7 @@
   <entry>
     <title type="html"><![CDATA[Turtles & Mentors]]></title>
     <link href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
-    <updated>2013-10-04T20:41:00-06:00</updated>
+    <updated>2013-10-04T20:41:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
     <content type="html"><![CDATA[<p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
 
@@ -356,7 +473,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Learning from the Community]]></title>
     <link href="http://codeadventurer.com/2013/09/29/learning-from-the-community"/>
-    <updated>2013-09-29T18:40:00-06:00</updated>
+    <updated>2013-09-29T18:40:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/29/learning-from-the-community</id>
     <content type="html"><![CDATA[<p>This past week of gSchool, we got our first outside-of-the-classroom introductions to the Ruby community by attending <a href="http://rockymtnruby.com/">Rocky Mountain Ruby Conf</a><!-- more -->, and also by having a personal session with <a href="https://github.com/wayneeseguin">Wayne E. Seguin</a>, the original creator of RVM.</p>
 
@@ -373,7 +490,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
     <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
-    <updated>2013-09-20T09:04:00-06:00</updated>
+    <updated>2013-09-20T09:04:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
     <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
 
@@ -400,7 +517,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Review: The Carolina Morning Zen Office Floor Desk]]></title>
     <link href="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office"/>
-    <updated>2013-09-10T22:02:00-06:00</updated>
+    <updated>2013-09-10T22:02:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</id>
     <content type="html"><![CDATA[<p>In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting <strong>yourself</strong> ready to work. In a series of posts, I will cover tools beyond your computer that can help you be a better developer.</p>
 
@@ -446,7 +563,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Getting a New Development Environment Up &amp; Running on Mac OSX]]></title>
     <link href="http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx"/>
-    <updated>2013-09-05T21:14:00-06:00</updated>
+    <updated>2013-09-05T21:14:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
     <content type="html"><![CDATA[<p>Getting a new computer can be fun, but it also means a lot of work. Between running into bugs, new versions of software running amok, and documentation from various sources on the big, bad internet just not lining up, it can quickly go from being fun to just being plain frustrating.</p>
 
@@ -552,7 +669,7 @@ Run this in your terminal: <code>ln -s "/Applications/Sublime Text 2.app/Content
   <entry>
     <title type="html"><![CDATA[On a Quest for Awesome]]></title>
     <link href="http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome"/>
-    <updated>2013-09-02T17:41:00-06:00</updated>
+    <updated>2013-09-02T17:41:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome</id>
     <content type="html"><![CDATA[<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>
 

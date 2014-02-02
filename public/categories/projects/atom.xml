@@ -4,7 +4,7 @@
   <title><![CDATA[Category: projects | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/projects/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-01-11T14:59:04-07:00</updated>
+  <updated>2014-02-01T20:36:06-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
     <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
-    <updated>2013-09-20T09:04:00-06:00</updated>
+    <updated>2013-09-20T09:04:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
     <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
 

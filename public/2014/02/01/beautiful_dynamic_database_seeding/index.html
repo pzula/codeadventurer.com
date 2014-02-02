@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Beautiful, Dynamic Database Seeding Scripts - Code Adventurer</title>
+  <meta name="author" content="Persa Zula">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="In our current Rails project, my team is building FreshFinder, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Code Adventurer" />
+  <meta name="og:title" content="Beautiful, Dynamic Database Seeding Scripts" />
+  <meta name="og:description" content="In our current Rails project, my team is building FreshFinder, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
+  <meta name="url" content="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding">
+  
+  <meta name="subject" content="rails"/>
+  <meta name="category" content="rails"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43642331-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">Code Adventurer</a>
+    <ul class="nav">
+      <li><a href="/blog/archives">All Posts</a></li>
+      
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://persazula.com">
+          Portfolio
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:codeadventurer.com" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Beautiful, Dynamic Database Seeding Scripts</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/pzula04?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-01T18:54:00-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/categories/rails/'>rails</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In our current Rails project, my team is building <a href="http://github.com/freshfinder">FreshFinder</a>, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are using in our application, prior to user contributions, is data that we are pulling from <a href="http://data.gov">Data.gov</a>&rsquo;s Excel spreadsheet of USDA Farmer&rsquo;s Market Data. <!-- more -->A spreadsheet?? Yes. A spreadsheet. Because although they have a publicly-accessible API for the data, there are only two possible calls to this API, both of which do not contain all of the information otherwise contained in the Excel file.</p>
+
+<p>Armed with the <code>CSV</code> Ruby library, some regex, some string splitting, and gsubbing, my team and I have been normalizing the data from the spreadsheet to build out a publically-accessible, RESTful API for our application&rsquo;s frontend to consume. While building it out, it makes sense to seed the database with real data from the spreadsheet, so I&rsquo;ve been learning a lot about building beautiful, dynamic seed scripts for Rails.</p>
+
+<p>The first thing to consider is that although when you run <code>rake db:seed</code>, you&rsquo;re calling upon the <code>/db/seed.rb</code> file in Rails, you aren&rsquo;t constrained to just using this file. In my seed file, I <code>require</code> the files which contain the classes and methods I need access to, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require './db/seeds/market_seeder'
+</span><span class='line'>require './db/seeds/product_seeder'
+</span><span class='line'>
+</span><span class='line'>ProductSeeder.seed
+</span><span class='line'>MarketSeeder.seed(100)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see in the code above, I then call the <code>seed</code> method on both the <code>ProductSeeder</code> and the <code>MarketSeeder</code> classes. But before I ever even got to the point of calling these two methods in my <code>seeds.rb</code>, I wrote some tests, and I recommend you do the same.</p>
+
+<p>It&rsquo;s important to remember that seed files are just POR, Plain Old Ruby, and that testing them is just like testing any other Ruby code that you produce. In my <code>spec</code> folder, I created a subfolder called <code>seeds</code> and built out the <a href="https://github.com/FreshFinder/to-the-market-api/blob/master/spec/seeds/market_seeder_spec.rb"><code>market_seeder_spec.rb</code></a> file to test parsing the CSV file and to expect changes to the database upon running it.</p>
+
+<p>When we talked about what we wanted our seeder to do, we had two things that were important to us: the first was that we could dynamically control how many items got seeded into the database. This was important because we didn&rsquo;t want to be building and testing our mapping and search functionality with the full 8,200 farmer&rsquo;s markets records during the first week of development. The second thing that was important to us was getting feedback during the seeding process, which usually means outputting to the screen a piece of information for each object seeded with a <code>puts</code> statement. Each of these things presented a new way of thinking about seeding data for us.</p>
+
+<p>To create a dynamic seeding process from our parsed CSV file, we accept an optional parameter in our <code>seed</code> method that takes a number and injects it into a range that gets run on the collection that builds each market, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil})
+</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
+</span><span class='line'>  if number
+</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line)}
+</span><span class='line'>  else
+</span><span class='line'>    data.collect {|line| build_markets(line)}
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The next piece of functionality, outputting the name of each market as each market was built with the <code>build_markets</code> method, was as simple as using a <code>puts</code> statement. However, the <code>puts</code> would output to the string even when a test was running, which quickly cluttered up test feedback. Thankfully, earlier in the week Katrina Owen had shown me a really neat concept I hadn&rsquo;t thought about before &mdash; that you could change what <code>puts</code> is being executed on, and in turn, change where the string gets captured.</p>
+
+<p>The way this is done is to define your output parameter, and set the default to <code>STDOUT</code>, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil, out = STDOUT)
+</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
+</span><span class='line'>  if number
+</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line, out)}
+</span><span class='line'>  else
+</span><span class='line'>    data.collect {|line| build_markets(line, out)}
+</span><span class='line'>  end
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>def self.build_markets(line, out)
+</span><span class='line'> m = Market.create!(:fmid =&gt; line[:fmid], :name =&gt; line[:marketname])
+</span><span class='line'> out.puts line[:marketname]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You may be thinking, ok, so you&rsquo;re telling <code>puts</code> to run as a method on <code>STDOUT</code>, that&rsquo;s no different than it&rsquo;s default functionality. True. So in your test suite, you&rsquo;re going to require <code>StringIO</code>, like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require 'stringio'
+</span><span class='line'>
+</span><span class='line'>describe "Seeding a market" do
+</span><span class='line'>  before :each do
+</span><span class='line'>    @out = StringIO.new
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  it "changes the count on the Market database when seeded" do
+</span><span class='line'>    expect(Market.count).to eq 0
+</span><span class='line'>    expect { MarketSeeder.seed(2, @out) }.to change{Market.count}.by 2
+</span><span class='line'>  end
+</span><span class='line'>end
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>By piping <code>puts</code> to <code>StringIO</code>, you are capturing the feedback instead of outputting it to the string during testing, and thus relieved of the noise while running your specs.</p>
+
+<p>After building our seed scripts for the first time using this method, I&rsquo;ve had a much better experience than when I used to shovel everything straight into the <code>db/seeds.rb</code> file. My code is easier to read, shorter, and has a better seperation of concerns. I encourage you to give it a try, and let me know any other tricks to creating great seeds scripts!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/pzula04?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-01T18:54:00-05:00" pubdate data-updated="true">Feb 1<span>st</span>, 2014</time>
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/categories/rails/'>rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding" data-via="pzula" data-counturl="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/2014/01/11/mashing-code-at-codemash" title="Previous Post: Mashing Code at CodeMash">&laquo; Mashing Code at CodeMash</a>
+    
+    
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>recent posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/2014/02/01/beautiful_dynamic_database_seeding">Beautiful, Dynamic Database Seeding Scripts</a>
+        </li>
+      
+        <li>
+          <a href="/2014/01/11/mashing-code-at-codemash">Mashing Code at CodeMash</a>
+        </li>
+      
+        <li>
+          <a href="/2014/01/03/56-days-until-takeoff">56 days until takeoff</a>
+        </li>
+      
+        <li>
+          <a href="/2013/12/06/halfway-home">Halfway Home</a>
+        </li>
+      
+        <li>
+          <a href="/2013/11/22/dinner-dash">Dinner Dash, Battleship & Javascript</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">archives</a></h2>
+  </div>
+  <div class="span6">
+    
+<h2>recent public projects</h2>
+<dl id="gh_repos" class="dl-horizontal" data-github-user="pzula" data-github-repo-count="0" data-github-skip-forks="true">
+  <dd class="loading">Status updating...</dd>
+</dl>
+<script src="/javascripts/github.js" type="text/javascript"> </script>
+<script src="/javascripts/libs/jXHR.js" type="text/javascript"> </script>
+
+
+  </div>
+  <div class="span3">
+    
+
+<a class="twitter-timeline"  href="https://twitter.com/pzula"  data-widget-id="376519805634760704">Tweets by @pzula</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+  </div>
+</div>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Code Adventurer</a>
+  - Copyright &copy; 2014 - Persa Zula
+</p>
+<p class="pull-right">
+  
+    <span>Designed by <a href="http://blog.hyfather.com" target="_blank">Nikhil
+  Mungel</a>. Based on <a href="https://github.com/sevenadrian/foxslide"
+  target="_blank">foxslide</a>.</span><br/>
+  
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a>.
+  </span>
+  <span>
+    Cover photo
+    by <a href="http://www.flickr.com/photos/pietroizzo/7933032106/"
+    target="_blank">Pietro Izzo</a>.
+  </span>
+</p>
+
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'codeadventurer';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding';
+        var disqus_url = 'http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

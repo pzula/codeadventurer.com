@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-02-01T20:36:06-05:00</updated>
+  <updated>2014-02-07T10:11:08-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
     <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
-    <updated>2014-01-11T14:30:00-05:00</updated>
+    <updated>2014-01-11T14:30:00-07:00</updated>
     <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
     <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
@@ -33,7 +33,7 @@
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
     <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
-    <updated>2014-01-03T09:05:00-05:00</updated>
+    <updated>2014-01-03T09:05:00-07:00</updated>
     <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
@@ -52,7 +52,7 @@
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
     <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
-    <updated>2013-12-06T09:05:00-05:00</updated>
+    <updated>2013-12-06T09:05:00-07:00</updated>
     <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
     <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
 
@@ -69,7 +69,7 @@
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
     <link href="http://codeadventurer.com/2013/11/22/dinner-dash"/>
-    <updated>2013-11-22T11:07:00-05:00</updated>
+    <updated>2013-11-22T11:07:00-07:00</updated>
     <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
     <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
 
@@ -87,7 +87,7 @@
   <entry>
     <title type="html"><![CDATA[Dashing Down the Rails]]></title>
     <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
-    <updated>2013-11-08T10:13:00-05:00</updated>
+    <updated>2013-11-08T10:13:00-07:00</updated>
     <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
     <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
 

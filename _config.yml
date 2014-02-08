@@ -4,7 +4,7 @@
 
 url: http://codeadventurer.com
 title: Code Adventurer
-subtitle: Findings along the way to becoming a Ruby master
+subtitle: The Journey to Software Crafts(wo)manship
 author: Persa Zula
 simple_search: http://google.com/search
 description: "Persa analyzes what it means to be a modern web developer, tools of the trade, and web developer culture from the perspective of a designer-turned-programmer"
@@ -49,7 +49,6 @@ rdiscount:
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
-pagination_dir:   # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 

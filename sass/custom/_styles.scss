@@ -386,10 +386,16 @@ body {
     }
   }
 
+  // ----- widgets --------
+
+  #footer-widgets {
+    margin-bottom: 15px;
+  }
+
   // ----- blog footer -----
 
   > footer {
-    @extend .margin-bottom-larger;
+    margin-bottom: 1.618rem;
     clear: both;
 
     p {

@@ -3,13 +3,9 @@
 
 
 /* TEAM */
-  Owner: Adrian Artiles
-  Site: http://AdrianArtiles.com
-  Twitter: @AdrianArtiles
-
-  UX Designer: Adrian Artiles
-  Site: http://AdrianArtiles.com
-  Twitter: @AdrianArtiles
+  Owner: Persa Zula
+  Site: http://persazula.com
+  Twitter: @pzula
 
 /* SITE */
   Standards: HTML5, CSS3

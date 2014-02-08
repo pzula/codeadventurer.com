@@ -1,9 +1,10 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
 {% include head.html %}
-<nav role="navigation">{% include navigation.html %}</nav>
+{% include custom/header.html %}
+{% include navigation.html %}
 <div class="wrapper_single">
   <div class="container">
-    <article class="span8 offset2 article-format role="article">
+    <article class="span8 offset2 article-format" role="article">
       <div role="div">
         {% if page.title %}
         <header>
@@ -31,5 +32,4 @@
     </article>
   </div>
 </div>
-{% include footer.html %}
 {% include after_footer.html %}

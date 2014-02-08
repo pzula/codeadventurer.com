@@ -23,7 +23,6 @@
   
   <link rel="canonical" href="http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests">
   <link href="/favicon.png" rel="icon">
-  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
   <meta name="og:type" content="website" />
@@ -38,8 +37,9 @@
   
   <meta name="distribution" content="global">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
 
   
   <script type="text/javascript">
@@ -58,9 +58,18 @@
 </head>
 
 <body   >
-  <nav role="navigation"><div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="/">Code Adventurer</a>
+
+  <header role="banner">
+  <hgroup>
+    <h1><a href="/">Code Adventurer</a></h1>
+    
+    <h2>Findings along the way to becoming a Ruby master</h2>
+    
+  </hgroup>
+</header>
+
+
+  <nav role="navigation">
     <ul class="nav">
       <li><a href="/blog/archives">All Posts</a></li>
       
@@ -76,23 +85,26 @@
         </a>
       </li>
       
-    </ul>
-    <ul class="nav" data-subscription="rss">
-      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      <li>
+        <a href="http://feeds.feedburner.com/CodeAdventurer">
+          Subscribe
+        </a>
+      </li>
       
     </ul>
+
       
-    <form class="navbar-form" action="http://google.com/search" method="get">
+    <form action="http://google.com/search" method="get">
       <fieldset role="search">
         <input type="hidden" name="q" value="site:codeadventurer.com" />
-        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+        <input class="search" type="text" name="query" results="0" placeholder="Search" x-webkit-speech />
       </fieldset>
     </form>
       
     
-  </div>
-</div>
 </nav>
+
+
   <div class="wrapper_single">
     <div class="container">
       <article class="span8 offset2" role="article">
@@ -112,7 +124,7 @@
     <span class="byline author vcard">by <a href="https://plus.google.com/pzula04?rel=author"><span class="fn">Persa Zula</span></a></span>
   
 
- - 
+
         
 
 
@@ -125,10 +137,10 @@
   
 
 
-<time datetime="2013-10-18T08:58:00-06:00" pubdate data-updated="true">Oct 18<span>th</span>, 2013</time> - 
+<time datetime="2013-10-18T08:58:00-06:00" pubdate data-updated="true">Oct 18<span>th</span>, 2013</time> •
         
 
-posted in
+published in
 <span class="categories">
   
     <a class='category' href='/categories/journey/'>journey</a>
@@ -180,7 +192,7 @@ posted in
 <time datetime="2013-10-18T08:58:00-06:00" pubdate data-updated="true">Oct 18<span>th</span>, 2013</time>
       
 
-posted in
+published in
 <span class="categories">
   
     <a class='category' href='/categories/journey/'>journey</a>
@@ -229,6 +241,10 @@ posted in
     <ul class="recent_posts">
       
         <li>
+          <a href="/2014/02/07/lessons-learned-as-a-budding-programmer">Lessons Learned as a Budding Programmer</a>
+        </li>
+      
+        <li>
           <a href="/2014/02/01/beautiful_dynamic_database_seeding">Beautiful, Dynamic Database Seeding Scripts</a>
         </li>
       
@@ -244,17 +260,13 @@ posted in
           <a href="/2013/12/06/halfway-home">Halfway Home</a>
         </li>
       
-        <li>
-          <a href="/2013/11/22/dinner-dash">Dinner Dash, Battleship & Javascript</a>
-        </li>
-      
     </ul>
     <h2><a href="/blog/archives">archives</a></h2>
   </div>
   <div class="span6">
     
 <h2>recent public projects</h2>
-<dl id="gh_repos" class="dl-horizontal" data-github-user="pzula" data-github-repo-count="0" data-github-skip-forks="true">
+<dl id="gh_repos" class="dl-horizontal" data-github-user="pzula" data-github-repo-count="5" data-github-skip-forks="true">
   <dd class="loading">Status updating...</dd>
 </dl>
 <script src="/javascripts/github.js" type="text/javascript"> </script>
@@ -282,18 +294,8 @@ posted in
   - Copyright &copy; 2014 - Persa Zula
 </p>
 <p class="pull-right">
-  
-    <span>Designed by <a href="http://blog.hyfather.com" target="_blank">Nikhil
-  Mungel</a>. Based on <a href="https://github.com/sevenadrian/foxslide"
-  target="_blank">foxslide</a>.</span><br/>
-  
   <span>
-    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a>.
-  </span>
-  <span>
-    Cover photo
-    by <a href="http://www.flickr.com/photos/pietroizzo/7933032106/"
-    target="_blank">Pietro Izzo</a>.
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a> and <a href="https://github.com/vladigleba/readify" target="_blank">Readify</a>.
   </span>
 </p>
 

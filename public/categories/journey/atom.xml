@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-02-07T10:11:08-07:00</updated>
+  <updated>2014-02-07T18:40:49-07:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Lessons Learned as a Budding Programmer]]></title>
+    <link href="http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
+    <updated>2014-02-07T10:12:00-07:00</updated>
+    <id>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
+    <content type="html"><![CDATA[<h2>A little background</h2>
+
+<p>I wasn&rsquo;t new to computers five months ago when I started gSchool, a 6-month intensive &amp; immersive course in learning Ruby and Ruby on Rails, but I might as well had been.</p>
+
+<p>I had spent the previous six years as a web designer who had a knack for getting things to work right. I had set up VPS servers, built up content management systems, and even began building lead generation systems from scratch in PHP with MySQL backends. I had heard acronymns like OO and MVC, but really didn&rsquo;t know how to program in an object-oriented way, or why models, views, and controllers even mattered. I came to gSchool thinking I would naturally be a top student, as I had been in other courses and programs. I quickly realized this wasn&rsquo;t the case, but it took me some time to come to terms with that. Looking back on the last five months I think I know why, and hope to be able to help others learning how to program understand what is happening if they come across similar frustrations.</p>
+
+<h2>A different way of thinking</h2>
+
+<p>If you aren&rsquo;t coming from a background like engineering or law, it may be that you aren&rsquo;t used to thinking in a way that is conducive to writing computer programs. A quick check to see if you might be naturally inclined to breaking down a problem into it&rsquo;s smallest logical parts is to pull out a <a href="http://www.griffonprep.com/logicgame.html">LSAT logic game</a> and spend some time trying to figure it out. Did you get the right answers? Then you might not have the same struggles I had. Throughout grade school, whenever I saw one of these word problems, I shuddered and usually froze. I never got the right answer. It wasn&rsquo;t until my interview with Katrina to join gSchool that I had finally understood how to solve these problems. I had always tried to solve these problems all in my head without writing anything down or drawing a chart.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
@@ -81,23 +98,6 @@
 <p>This week. we&rsquo;ve been working on JavaScript. It&rsquo;s been great to see how you can test JavaScript using Jasmine, and I&rsquo;ve started to fill in some of the holes in my previous JavaScript knowledge. The best part of the week when we went back to our Dinner Dash projects and started integrating the things we had learned into our projects by updating our cart data with ajax, generating JSON with Rails, and giving live feedback to users purchasing products. The changes we started to implement really began to make the projects shine, and made them feel more like modern web applications.</p>
 
 <p>Overall, on the next project, I&rsquo;d like to integrate more wire framing, a more thought-out user interface, and a bit more of JavaScript to make the project feel more solid.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dashing Down the Rails]]></title>
-    <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
-    <updated>2013-11-08T10:13:00-07:00</updated>
-    <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
-    <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
-
-<p>I can imagine what a contrast this is for people who learn as little Ruby as possible in order to get by using all the magic that Rails provides. I think that if I didn&rsquo;t know about the internals of how it worked, I would likely end up in the same boat as when I was hacking things together in Drupal. I have often heard that it is best to know Ruby before working with Rails, and now having experience with both Ruby, and Sinatra, I can see the differences between what Rails provides, and what the language itself does for me, which I think is very important for anyone using any framework.</p>
-
-<p>Our current project is called <a href="http://tutorials.jumpstartlab.com/projects/dinner_dash.html">Dinner Dash</a>, and the task at hand is to build an online ordering system for a restaurant. My group has been working with MiniTest, RackTest &amp; Capybara to use a BDD-style approach to the project, and we have also been using PivotalTracker to track our progress, combined with <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> to keep ourselves organized. My mentor works for PivotalLabs, and was very helpful in giving me a few more tips on how to use PivotalTracker to map through our user stories and scheduling our work and expectations.</p>
-
-<p>At the beginning of this project, I was having a hard time mapping my prior knowledge of SQL queries and database relationships to ActiveRecord, but now I have a better grasp on it thanks to two sessions with two different people that helped me understand what was happening. My mentor, Brian Rose from PivotalLabs, helped me understand the entity relationship diagram of our current application by installing the <code>rails-erd</code> gem into our project and generating a PDF of our relationships for me. This was helpful to see, and his explanations helped immensely. I also sat with Jorge and we drew a few diagrams with carefully placed labels to map out a new many-to-many relationship I was creating, and now I think I have a good hold on the whole <code>belongs_to</code>, <code>has_many</code>, <code>is_one_of</code> structure.</p>
-
-<p>I think that besides structuring models, views, and controllers well and understanding ActiveRecord, knowing all of the work that Rails can do might take a little time to learn and master &mdash; but overall I&rsquo;m enjoying working with it. My goals for this project are to get my feet wet with Rails, and start to understand where it can lift some of the burden of common tasks when building applications.</p>
 ]]></content>
   </entry>
   

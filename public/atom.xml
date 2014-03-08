@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-02-08T09:12:24-07:00</updated>
+  <updated>2014-03-08T11:40:19-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -14,9 +14,42 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Value of Mentorship]]></title>
+    <link href="http://codeadventurer.com/2014/02/21/the-value-of-mentorship"/>
+    <updated>2014-02-21T13:46:00-05:00</updated>
+    <id>http://codeadventurer.com/2014/02/21/the-value-of-mentorship</id>
+    <content type="html"><![CDATA[<p>When making the decision to start a new career, you might find yourself a little lost. This can lead to a lot of online searches, reading articles and books on the subject at hand, and trying to understand quite a bit of contradictory advice. Instead of more online searches and questions posted to forums, the best investment you can make is in finding a mentor to help you through the maze. Throughout my journey, I&rsquo;ve come across great mentors, and have been starting to see patterns that emerge during a mentorship that make the relationship valuable and fulfilling for both parties.</p>
+
+<h2>An unintended mentorship</h2>
+
+<p>Although I had been interested in building websites from the age of 12, the thought of becoming a graphic designer had never crossed my mind as a pathway to web design when it came time to choose a degree. This changed after I had met my best friend&rsquo;s girlfriend, <a href="http://www.bethsteffel.com/">Beth Steffel</a>, a senior studying graphic design at the University of Akron.</p>
+
+<p>Beth was easy to talk to, and we shared similar taste in art and design. I&rsquo;d spend time at her apartment, peppering her with questions, leafing through her books, and getting miniature lessons in design. Although we became good friends, I consider Beth my first mentor. Her patience, support, and encouragement led me to follow in her footsteps and join the Myers School of Art with a focus on graphic design, an invaluable decision for my career path.</p>
+
+<h2>Being a mentee requires time and focus</h2>
+
+<p>Throughout college, I was exposed to many talented professors that taught us invaluable lessons in design, but I didn&rsquo;t form tight mentor relationships with any of them. Looking back, I don&rsquo;t think it was the fault of the school or the professors, but more-so my situation. I supported myself throughout school, and would dash off from class to my various jobs, working 30 or more hours a week. I didn&rsquo;t have the time to focus on becoming the best designer that I could be, my focus was survival.</p>
+
+<p>Over the years, I have found that the best mentorship situations arise when both parties take time to foster the relationship. Taking the time to ask well-formed questions, asking for actionable feedback, and constantly working towards improvement are the best ways to utilize the time of someone that has offered to help you.</p>
+
+<h2>The characteristics of a good mentor</h2>
+
+<p>When I wanted to try my hand at organic farming, I lived in a community of many smart, experienced farmers. They offered advice, support, and positions ranging from field hand to farm manager. Each of the farmers I worked with were mentors to me. They answered my questions with patience, they were interested in my progress and experiments, and they taught me (through conversations and first-hand experience) about agriculture, biology, animal husbandry, and human relationships.</p>
+
+<p>Mentors are interested in answering your questions. They may not know the answers to everything, but they have many resources that they can reach out to in order to help you find the answers. Mentors are patient. They don&rsquo;t talk down to you, or make you feel inferior because the questions you ask are the mark of a &lsquo;n00b&rsquo;. They will help you understand tough concepts, whether it&rsquo;s by asking you questions to lead you to a discovery, drawing a chart, or breaking a problem down into smaller pieces. Mentors break down the barriers between novices and themselves. They present themselves as people, not as gods, and make you feel comfortable and welcomed under their guidance. Most important of all, a good mentor is one that wants you to succeed.</p>
+
+<h2>Carrying on the tradition</h2>
+
+<p>In the field of programming, we are constantly being mentored, whether we realize it or not. At gSchool, we had  a structured mentoring program. I was lucky enough to be paired with <a href="http://mattr.info/">Matt Rogers</a>, co-maintainer of Jekyll and Lead Engineer at <a href="http://hireology.com">Hireology</a>. Throughout the last 12 weeks of gSchool, we paired remotely almost weekly. We worked on  open-source projects like Jekyll and Tracks, and when I had questions about projects, we&rsquo;d pivot to my specific issues. It worked extremely well to be on a structured meeting schedule. Beyond our weekly meetings, Matt would send me check-in notes and ask about how things were going, whether it was the job hunt, VPS server setup, or meetings with instructors. He was in tune with what was going on during gSchool, and it was great to have a sounding board for ideas and questions that came out of our classwork and projects. I know that his mentorship helped me become a better programmer and will continue to help me grow in the future.</p>
+
+<p>Matt&rsquo;s mantra during my mentorship has been that he has learned a lot in his life, and he hopes that his legacy is not the knowledge that he has gained or the programs that he has written, but the people that he has helped along the way. I&rsquo;ve been very lucky to have an abundance of people around me willing to help, regardless of the endeavor. I&rsquo;m adopting Matt&rsquo;s mantra, and would love to help you or someone you know become a better programmer through mentorship. <a href="http://twitter.com/pzula">Let me know</a> if you&rsquo;d like to spend some time pairing and learning together!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Lessons Learned as a Budding Programmer]]></title>
     <link href="http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
-    <updated>2014-02-07T10:12:00-07:00</updated>
+    <updated>2014-02-07T10:12:00-05:00</updated>
     <id>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
     <content type="html"><![CDATA[<h2>A little background</h2>
 
@@ -58,7 +91,7 @@
   <entry>
     <title type="html"><![CDATA[Beautiful, Dynamic Database Seeding Scripts]]></title>
     <link href="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
-    <updated>2014-02-01T18:54:00-07:00</updated>
+    <updated>2014-02-01T18:54:00-05:00</updated>
     <id>http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</id>
     <content type="html"><![CDATA[<p>In our current Rails project, my team is building <a href="http://github.com/freshfinder">FreshFinder</a>, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are using in our application, prior to user contributions, is data that we are pulling from <a href="http://data.gov">Data.gov</a>&rsquo;s Excel spreadsheet of USDA Farmer&rsquo;s Market Data. <!-- more -->A spreadsheet?? Yes. A spreadsheet. Because although they have a publicly-accessible API for the data, there are only two possible calls to this API, both of which do not contain all of the information otherwise contained in the Excel file.</p>
 
@@ -175,7 +208,7 @@
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
     <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
-    <updated>2014-01-11T14:30:00-07:00</updated>
+    <updated>2014-01-11T14:30:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
     <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
@@ -192,7 +225,7 @@
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
     <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
-    <updated>2014-01-03T09:05:00-07:00</updated>
+    <updated>2014-01-03T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
@@ -211,7 +244,7 @@
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
     <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
-    <updated>2013-12-06T09:05:00-07:00</updated>
+    <updated>2013-12-06T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
     <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
 
@@ -228,7 +261,7 @@
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
     <link href="http://codeadventurer.com/2013/11/22/dinner-dash"/>
-    <updated>2013-11-22T11:07:00-07:00</updated>
+    <updated>2013-11-22T11:07:00-05:00</updated>
     <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
     <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
 
@@ -246,7 +279,7 @@
   <entry>
     <title type="html"><![CDATA[Dashing Down the Rails]]></title>
     <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
-    <updated>2013-11-08T10:13:00-07:00</updated>
+    <updated>2013-11-08T10:13:00-05:00</updated>
     <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
     <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
 
@@ -263,7 +296,7 @@
   <entry>
     <title type="html"><![CDATA[Running Rails with PostgreSQL locally]]></title>
     <link href="http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
-    <updated>2013-11-02T13:18:00-06:00</updated>
+    <updated>2013-11-02T13:18:00-04:00</updated>
     <id>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
     <content type="html"><![CDATA[<p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. <!-- more --></p>
 
@@ -314,7 +347,7 @@
   <entry>
     <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>
     <link href="http://codeadventurer.com/2013/11/01/scraping-a-website"/>
-    <updated>2013-11-01T09:12:00-06:00</updated>
+    <updated>2013-11-01T09:12:00-04:00</updated>
     <id>http://codeadventurer.com/2013/11/01/scraping-a-website</id>
     <content type="html"><![CDATA[<p>This week, we started a quick-turnaround project in Sinatra called <a href="http://tutorials.jumpstartlab.com/projects/clone_wars.html">Clone Wars</a>. Our challenge was to pick one of five local businesses, build a CMS for their existing types of content, and then scrape their existing website into our database &mdash; all in three days. <!-- more --></p>
 
@@ -345,7 +378,7 @@
   <entry>
     <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
     <link href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
-    <updated>2013-10-28T09:22:00-06:00</updated>
+    <updated>2013-10-28T09:22:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
     <content type="html"><![CDATA[<p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
 
@@ -367,7 +400,7 @@
   <entry>
     <title type="html"><![CDATA[Naming Your Weakness]]></title>
     <link href="http://codeadventurer.com/2013/10/26/naming-your-weakness"/>
-    <updated>2013-10-26T13:28:00-06:00</updated>
+    <updated>2013-10-26T13:28:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/26/naming-your-weakness</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we had our first assessment. We were offered a problem, in this case, the <a href="http://tutorials.jumpstartlab.com/academy/workshops/scrabble.html">building blocks of the Scrabble game</a>, which included a short guide <!-- more -->that informed us of some of the API decisions based on the expected input and output of the program, and we sat down with one of our three instructors for 40 minutes, while they watched and listened to us work through the problem.</p>
 
@@ -410,7 +443,7 @@
   <entry>
     <title type="html"><![CDATA[Back to the land of HTTP requests]]></title>
     <link href="http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests"/>
-    <updated>2013-10-18T08:58:00-06:00</updated>
+    <updated>2013-10-18T08:58:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</id>
     <content type="html"><![CDATA[<p>This week, we started using Sinatra to build a web application. At the start of the week, we built <a href="http://tutorials.jumpstartlab.com/projects/web_guesser.html">WebGuesser</a>, a random-number guessing site <!--more -->that allows for a user to guess the number, and gives feedback on how close they are. <a href="http://agile-peak-6795.herokuapp.com/">My version</a> has a few bugs. For instance, if two people are accessing the site at the same time and playing, each person&rsquo;s guess counts towards the total, so you may only guess once or twice and be presented with a &ldquo;Too many guesses&rdquo; message. This can easily be solved with session cookies, but I haven&rsquo;t gotten around to refactoring yet. I&rsquo;m sure I&rsquo;ll get a chance to come back and make that short project better.</p>
 
@@ -427,7 +460,7 @@
   <entry>
     <title type="html"><![CDATA[A week of focus is worth a thousand projects]]></title>
     <link href="http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
-    <updated>2013-10-11T09:01:00-06:00</updated>
+    <updated>2013-10-11T09:01:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
 
@@ -452,7 +485,7 @@
   <entry>
     <title type="html"><![CDATA[Turtles & Mentors]]></title>
     <link href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
-    <updated>2013-10-04T20:41:00-06:00</updated>
+    <updated>2013-10-04T20:41:00-04:00</updated>
     <id>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
     <content type="html"><![CDATA[<p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
 
@@ -515,7 +548,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Learning from the Community]]></title>
     <link href="http://codeadventurer.com/2013/09/29/learning-from-the-community"/>
-    <updated>2013-09-29T18:40:00-06:00</updated>
+    <updated>2013-09-29T18:40:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/29/learning-from-the-community</id>
     <content type="html"><![CDATA[<p>This past week of gSchool, we got our first outside-of-the-classroom introductions to the Ruby community by attending <a href="http://rockymtnruby.com/">Rocky Mountain Ruby Conf</a><!-- more -->, and also by having a personal session with <a href="https://github.com/wayneeseguin">Wayne E. Seguin</a>, the original creator of RVM.</p>
 
@@ -532,7 +565,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
     <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
-    <updated>2013-09-20T09:04:00-06:00</updated>
+    <updated>2013-09-20T09:04:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
     <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
 
@@ -559,7 +592,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Review: The Carolina Morning Zen Office Floor Desk]]></title>
     <link href="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office"/>
-    <updated>2013-09-10T22:02:00-06:00</updated>
+    <updated>2013-09-10T22:02:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</id>
     <content type="html"><![CDATA[<p>In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting <strong>yourself</strong> ready to work. In a series of posts, I will cover tools beyond your computer that can help you be a better developer.</p>
 
@@ -605,7 +638,7 @@ all of the requirements that I realized that starting at the top of the list wou
   <entry>
     <title type="html"><![CDATA[Getting a New Development Environment Up &amp; Running on Mac OSX]]></title>
     <link href="http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx"/>
-    <updated>2013-09-05T21:14:00-06:00</updated>
+    <updated>2013-09-05T21:14:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
     <content type="html"><![CDATA[<p>Getting a new computer can be fun, but it also means a lot of work. Between running into bugs, new versions of software running amok, and documentation from various sources on the big, bad internet just not lining up, it can quickly go from being fun to just being plain frustrating.</p>
 
@@ -711,7 +744,7 @@ Run this in your terminal: <code>ln -s "/Applications/Sublime Text 2.app/Content
   <entry>
     <title type="html"><![CDATA[On a Quest for Awesome]]></title>
     <link href="http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome"/>
-    <updated>2013-09-02T17:41:00-06:00</updated>
+    <updated>2013-09-02T17:41:00-04:00</updated>
     <id>http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome</id>
     <content type="html"><![CDATA[<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>
 

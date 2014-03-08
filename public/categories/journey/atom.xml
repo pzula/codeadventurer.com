@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-02-08T09:12:24-07:00</updated>
+  <updated>2014-03-08T11:40:19-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -14,9 +14,42 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Value of Mentorship]]></title>
+    <link href="http://codeadventurer.com/2014/02/21/the-value-of-mentorship"/>
+    <updated>2014-02-21T13:46:00-05:00</updated>
+    <id>http://codeadventurer.com/2014/02/21/the-value-of-mentorship</id>
+    <content type="html"><![CDATA[<p>When making the decision to start a new career, you might find yourself a little lost. This can lead to a lot of online searches, reading articles and books on the subject at hand, and trying to understand quite a bit of contradictory advice. Instead of more online searches and questions posted to forums, the best investment you can make is in finding a mentor to help you through the maze. Throughout my journey, I&rsquo;ve come across great mentors, and have been starting to see patterns that emerge during a mentorship that make the relationship valuable and fulfilling for both parties.</p>
+
+<h2>An unintended mentorship</h2>
+
+<p>Although I had been interested in building websites from the age of 12, the thought of becoming a graphic designer had never crossed my mind as a pathway to web design when it came time to choose a degree. This changed after I had met my best friend&rsquo;s girlfriend, <a href="http://www.bethsteffel.com/">Beth Steffel</a>, a senior studying graphic design at the University of Akron.</p>
+
+<p>Beth was easy to talk to, and we shared similar taste in art and design. I&rsquo;d spend time at her apartment, peppering her with questions, leafing through her books, and getting miniature lessons in design. Although we became good friends, I consider Beth my first mentor. Her patience, support, and encouragement led me to follow in her footsteps and join the Myers School of Art with a focus on graphic design, an invaluable decision for my career path.</p>
+
+<h2>Being a mentee requires time and focus</h2>
+
+<p>Throughout college, I was exposed to many talented professors that taught us invaluable lessons in design, but I didn&rsquo;t form tight mentor relationships with any of them. Looking back, I don&rsquo;t think it was the fault of the school or the professors, but more-so my situation. I supported myself throughout school, and would dash off from class to my various jobs, working 30 or more hours a week. I didn&rsquo;t have the time to focus on becoming the best designer that I could be, my focus was survival.</p>
+
+<p>Over the years, I have found that the best mentorship situations arise when both parties take time to foster the relationship. Taking the time to ask well-formed questions, asking for actionable feedback, and constantly working towards improvement are the best ways to utilize the time of someone that has offered to help you.</p>
+
+<h2>The characteristics of a good mentor</h2>
+
+<p>When I wanted to try my hand at organic farming, I lived in a community of many smart, experienced farmers. They offered advice, support, and positions ranging from field hand to farm manager. Each of the farmers I worked with were mentors to me. They answered my questions with patience, they were interested in my progress and experiments, and they taught me (through conversations and first-hand experience) about agriculture, biology, animal husbandry, and human relationships.</p>
+
+<p>Mentors are interested in answering your questions. They may not know the answers to everything, but they have many resources that they can reach out to in order to help you find the answers. Mentors are patient. They don&rsquo;t talk down to you, or make you feel inferior because the questions you ask are the mark of a &lsquo;n00b&rsquo;. They will help you understand tough concepts, whether it&rsquo;s by asking you questions to lead you to a discovery, drawing a chart, or breaking a problem down into smaller pieces. Mentors break down the barriers between novices and themselves. They present themselves as people, not as gods, and make you feel comfortable and welcomed under their guidance. Most important of all, a good mentor is one that wants you to succeed.</p>
+
+<h2>Carrying on the tradition</h2>
+
+<p>In the field of programming, we are constantly being mentored, whether we realize it or not. At gSchool, we had  a structured mentoring program. I was lucky enough to be paired with <a href="http://mattr.info/">Matt Rogers</a>, co-maintainer of Jekyll and Lead Engineer at <a href="http://hireology.com">Hireology</a>. Throughout the last 12 weeks of gSchool, we paired remotely almost weekly. We worked on  open-source projects like Jekyll and Tracks, and when I had questions about projects, we&rsquo;d pivot to my specific issues. It worked extremely well to be on a structured meeting schedule. Beyond our weekly meetings, Matt would send me check-in notes and ask about how things were going, whether it was the job hunt, VPS server setup, or meetings with instructors. He was in tune with what was going on during gSchool, and it was great to have a sounding board for ideas and questions that came out of our classwork and projects. I know that his mentorship helped me become a better programmer and will continue to help me grow in the future.</p>
+
+<p>Matt&rsquo;s mantra during my mentorship has been that he has learned a lot in his life, and he hopes that his legacy is not the knowledge that he has gained or the programs that he has written, but the people that he has helped along the way. I&rsquo;ve been very lucky to have an abundance of people around me willing to help, regardless of the endeavor. I&rsquo;m adopting Matt&rsquo;s mantra, and would love to help you or someone you know become a better programmer through mentorship. <a href="http://twitter.com/pzula">Let me know</a> if you&rsquo;d like to spend some time pairing and learning together!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Lessons Learned as a Budding Programmer]]></title>
     <link href="http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
-    <updated>2014-02-07T10:12:00-07:00</updated>
+    <updated>2014-02-07T10:12:00-05:00</updated>
     <id>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
     <content type="html"><![CDATA[<h2>A little background</h2>
 
@@ -58,7 +91,7 @@
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
     <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
-    <updated>2014-01-11T14:30:00-07:00</updated>
+    <updated>2014-01-11T14:30:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
     <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
@@ -75,7 +108,7 @@
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
     <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
-    <updated>2014-01-03T09:05:00-07:00</updated>
+    <updated>2014-01-03T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
@@ -94,7 +127,7 @@
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
     <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
-    <updated>2013-12-06T09:05:00-07:00</updated>
+    <updated>2013-12-06T09:05:00-05:00</updated>
     <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
     <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
 
@@ -105,24 +138,6 @@
 <p>Halfway through the course, I&rsquo;m feeling excited about my progress and the ways I&rsquo;ve grown along the way. I&rsquo;m excited to see where I stand at the end of the course, and how I continue to progress at my first job out of gSchool. I feel that my ability to collaborate with other developers has vastly improved. Prior to gSchool, I was always a lone coder &mdash; this was not by choice, but due to the work styles of the previous workplaces. I&rsquo;m starting to get better at articulating my thoughts verbally during pair programming sessions, explaining why something makes sense in my head without taking over someone&rsquo;s keyboard, and articulating when I&rsquo;m stuck on a piece of functionality and the thought process behind what I&rsquo;m trying to accomplish and the things I&rsquo;ve already tried that didn&rsquo;t seem to work.</p>
 
 <p>I&rsquo;m excited to continue working on Fourth Meal with my group members, and seeing where we can take this project by the deadline. It will be interesting to see if we have estimated our iterations correctly, and to see if keeping a close eye on Tracker will help us reach our goals and deliver a great final product.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
-    <link href="http://codeadventurer.com/2013/11/22/dinner-dash"/>
-    <updated>2013-11-22T11:07:00-07:00</updated>
-    <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
-    <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
-
-<p><img src="/images/dinner_dash.png" title="Platable" alt="Platable" />
-<a href="http://platable.herokuapp.com">(See Platable on Heroku)</a></p>
-
-<p>At the end of last week, we had our second code retreat. We worked through a few 50-minute sessions to build <a href="https://github.com/JumpstartLab/code_retreat">Battleship</a> under different constraints. Unlike our last code retreat, where the scope was much smaller and tests were provided to help guide the design of the API, this time there were only instructions of how the gameplay works. Although the problem is very interesting, it was frustrating to keep switching the context of which piece of the game we were building, and it did not seem like any of my pairs and I got remotely close to solving the piece at hand before we had to delete our code and start over on a new part of the game. However, the exercise has definitely piqued my interest, and I plan on revisiting Battleship on my own to try to build it as a CLI.</p>
-
-<p>This week. we&rsquo;ve been working on JavaScript. It&rsquo;s been great to see how you can test JavaScript using Jasmine, and I&rsquo;ve started to fill in some of the holes in my previous JavaScript knowledge. The best part of the week when we went back to our Dinner Dash projects and started integrating the things we had learned into our projects by updating our cart data with ajax, generating JSON with Rails, and giving live feedback to users purchasing products. The changes we started to implement really began to make the projects shine, and made them feel more like modern web applications.</p>
-
-<p>Overall, on the next project, I&rsquo;d like to integrate more wire framing, a more thought-out user interface, and a bit more of JavaScript to make the project feel more solid.</p>
 ]]></content>
   </entry>
   

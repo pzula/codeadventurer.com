@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/rails/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-02-08T09:12:24-07:00</updated>
+  <updated>2014-03-08T11:40:19-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[Beautiful, Dynamic Database Seeding Scripts]]></title>
     <link href="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
-    <updated>2014-02-01T18:54:00-07:00</updated>
+    <updated>2014-02-01T18:54:00-05:00</updated>
     <id>http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</id>
     <content type="html"><![CDATA[<p>In our current Rails project, my team is building <a href="http://github.com/freshfinder">FreshFinder</a>, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are using in our application, prior to user contributions, is data that we are pulling from <a href="http://data.gov">Data.gov</a>&rsquo;s Excel spreadsheet of USDA Farmer&rsquo;s Market Data. <!-- more -->A spreadsheet?? Yes. A spreadsheet. Because although they have a publicly-accessible API for the data, there are only two possible calls to this API, both of which do not contain all of the information otherwise contained in the Excel file.</p>
 
@@ -117,7 +117,7 @@ end</p>
   <entry>
     <title type="html"><![CDATA[Running Rails with PostgreSQL locally]]></title>
     <link href="http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
-    <updated>2013-11-02T13:18:00-06:00</updated>
+    <updated>2013-11-02T13:18:00-04:00</updated>
     <id>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
     <content type="html"><![CDATA[<p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. <!-- more --></p>
 

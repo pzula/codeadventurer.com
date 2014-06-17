@@ -4,7 +4,7 @@
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-03-15T12:41:25-04:00</updated>
+  <updated>2014-06-17T08:13:04-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My First 100 Days as a Software Engineer]]></title>
+    <link href="http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
+    <updated>2014-06-17T07:58:00-04:00</updated>
+    <id>http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
+    <content type="html"><![CDATA[<p>Today marks 100 days* since my first day as a software engineer at Hireology, and it&rsquo;s been an amazing experience.</p>
+
+<p>A week before I officially became a software engineer, I packed up my apartment in Denver, shipped some bigger things home, packed the rest of my life in a suitcase and hopped back on a plane to Akron, Ohio.</p>
+
+<p>I had done it &mdash; I had learned as much as I could in the six months that I attended gSchool with my fellow classmates, and leveled up my game in building things on the web. I learned test-driven development, service oriented architecture, modular design and so many more things. And now, I had a week to reorganize my life, and start my job as a remote engineer on a product team.</p>
+
+<!-- more -->
+
+
+<p>I was excited, and I was nervous. I had seen parts of the code base during my interview process, and I had heard some of the other engineers talk about things I hadn&rsquo;t touched yet, like cucumber, mocking and stubbing, and services that encapsulated domain logic away from your models. Would I be able to catch on and hit the ground running? Or was I going to weigh down this small team of five?</p>
+
+<p>I was very fortunate to have a friend and mentor already on the team. Matt, my mentor from my gSchool days, had been at Hireology since the fall. He was my onboarding buddy during my first week, and he helped me get my machine configured with our tools and codebase, got all of my various accounts set up, and got me familiar with the workflow. Margot, our product manager, already had a list of cards for me to work on in Trello. By 5pm on Monday, I had made my first commits and opened my first pull request against the codebase. I was thrilled! My fears of being a junior developer were unfounded, and I was in the race!</p>
+
+<p>During the first few weeks, I was the hotfix team. The other engineers were wrapping up features for the end of the quarter, and we had some bugs that crept out from under the legacy codebase that needed wrangled. I got really familiar with using Ack and ctags to explore the codebase and dive deeper into methods that I needed to examine. In a short period of time, I became familiar with the main portions of the application, and started to learn where things lived. I fixed real problems in the application, and got to feel a real sense of purpose on the team.</p>
+
+<p>Before the month was over, the whole engineering team flew to Chicago to plan out the next quarter of work. We all brainstormed together to flesh out feature stories with user personas, and although I was the newest member of the team, I got to participate. I was amazed to find that by the end of the week, many of the ideas I contributed to or collaborated on became a part of the product roadmap for the next quarter. Having that sort of involvement so early on made me even more excited about the team I was working with. This was what I had been looking for in a career &mdash; a way to contribute meaningfully to a product that helped people get things done.</p>
+
+<p>The start of the quarter launched the following week, and we worked through pointing stories and assigning features. I found out that I would be working on something besides bugfixes, and once again that nervous excitement was upon me. I was in charge of rewriting and improving how the application dealt with cancellation, reactivation, and standby of accounts in our system and with our payment integration. I was going to be influencing <strong>every user</strong> in our system, and also a portion of our revenue. Me? In charge of how money changes hands? Wow.</p>
+
+<p>Since the end of April, I&rsquo;ve been working steadily on this reimplementation. Through the mentorship of my coworkers, I have learned:</p>
+
+<ul>
+<li>how to collaborate remotely</li>
+<li>how to write cucumber step definitions</li>
+<li>how to use <a href="https://github.com/adomokos/light-service">LightService</a> to create organizers around small actions that house business logic</li>
+<li>how to write custom validations</li>
+<li>how to stop using <code>rails g</code> for anything</li>
+<li>how to know the difference between a mock and a stub</li>
+<li>how to write database-independent tests</li>
+<li>how to make a latte</li>
+<li>where to find the best animated gifs</li>
+<li>that the best coworkers you can have hack late at night with you in the hotel lobby</li>
+<li>and so many other things that have made this a blast</li>
+</ul>
+
+
+<p>By the end of this week, I&rsquo;m going to be submitting the last of the pull requests for my feature. By the start of next month, this new implementation will be used by customers all over the country (and Canada too!) The code is shiny, wrapped up in actions and organizers with concise names, the logic backed by unit tests and cucumber features for end-to-end assurance, and every bit of code has had many pairs of eyes on it, helpful bits given to me by everyone on the team through comments on the pull requests, and helpful pairing sessions when I was stuck.</p>
+
+<p>This quarter has been a wild ride. That week between moving from Denver back home, I had no idea what the first 100 days would hold for me as a junior developer. I thought perhaps I would be on the QA team for months before I would be trusted with anything this substantial, and I am so glad I was wrong. This level of responsibility, and this level of trust that the team has given me has empowered me to push my learning to a new level and get more acclimated with our coding conventions and practices. This team has become a part of me, and I have happily become a part of the team that I&rsquo;ll never forget &mdash; because the first 100 days is just the beginning of the rest of my career.</p>
+
+<p>(*Including weekends and a holiday; otherwise, I&rsquo;ve been actively committing code to the codebase for 71 days)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Value of Mentorship]]></title>
@@ -124,23 +173,6 @@
 <p>I&rsquo;m also excited for our upcoming project focused on Service-Oriented Architecture, and finally our Mastery project. I received some fun hardware for Christmas and hope to use it in my final project to integrate my passion for technology with my passion for agriculture.</p>
 
 <p>On a final note, my mentor, Matt Rogers, has been a tremendous resource. His help and understanding has really helped me grow as a developer. I applaud his ability to find relevant open-source work to help explain new concepts, or reinforce the ones I did not understand well. He has been diligent in following along the curriculum, asking me about the projects I am working on, and helping me understand where improvements can be made. I am very grateful for his time and his passion for mentoring. Without his help, I wouldn&rsquo;t have made as much learning progress in the last project as I had. Thank you, Matt!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Halfway Home]]></title>
-    <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
-    <updated>2013-12-06T09:05:00-05:00</updated>
-    <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
-    <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
-
-<p>This week we got back at it in full force. We&rsquo;re working on <a href="http://tutorials.jumpstartlab.com/projects/fourth_meal.html#functional-requirements">Fourth Meal</a>, building upon Dinner Dash using a codebase that is different from the last project. My group chose the project I worked on last time, which I am grateful for, because I did not feel I understood all of the parts of it before. We started out by refactoring a few pieces of the code, exploring the implementations, deploying a staging and production site, and writing our user stories in <a href="https://www.pivotaltracker.com/s/projects/968652">Pivotal Tracker</a>. We&rsquo;ve been focused on writing proper user stories, understanding our iterations, and dealing with a &ldquo;real&rdquo; client (&ldquo;real&rdquo; meaning Jeff Casimir, acting (in good character)  a demanding client). Our project includes expanding the original codebase to support multi-tenancy (i.e. multiple restaurants in the system with the ability to shop between them independently). I&rsquo;m enjoying the focus on iterations, and sticking to user stories throughout the development process. I believe it&rsquo;s important to delivering value as quickly as possible in an agile way.</p>
-
-<p>Yesterday, we also started a small side project with <a href="http://yacenter.org/">Young Entrepreneurs</a> to help a group of kids launch their online presence for the small businesses they are working on. We have a different group in this project than for Fourth Meal, and are primarily working on design and listening to client needs. Our clients are two young girls (age 7 and 11) that have launched their own body care products line. They are very excited about their products, and it amazes me at how professional they acted for their ages. We had a great brainstorming session with them, and I&rsquo;m looking forward to sharing our ideas and wireframes with them next week for their input.</p>
-
-<p>Halfway through the course, I&rsquo;m feeling excited about my progress and the ways I&rsquo;ve grown along the way. I&rsquo;m excited to see where I stand at the end of the course, and how I continue to progress at my first job out of gSchool. I feel that my ability to collaborate with other developers has vastly improved. Prior to gSchool, I was always a lone coder &mdash; this was not by choice, but due to the work styles of the previous workplaces. I&rsquo;m starting to get better at articulating my thoughts verbally during pair programming sessions, explaining why something makes sense in my head without taking over someone&rsquo;s keyboard, and articulating when I&rsquo;m stuck on a piece of functionality and the thought process behind what I&rsquo;m trying to accomplish and the things I&rsquo;ve already tried that didn&rsquo;t seem to work.</p>
-
-<p>I&rsquo;m excited to continue working on Fourth Meal with my group members, and seeing where we can take this project by the deadline. It will be interesting to see if we have estimated our iterations correctly, and to see if keeping a close eye on Tracker will help us reach our goals and deliver a great final product.</p>
 ]]></content>
   </entry>
   

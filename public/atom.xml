@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-03-15T12:41:25-04:00</updated>
+  <updated>2014-06-17T08:13:04-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My First 100 Days as a Software Engineer]]></title>
+    <link href="http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
+    <updated>2014-06-17T07:58:00-04:00</updated>
+    <id>http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
+    <content type="html"><![CDATA[<p>Today marks 100 days* since my first day as a software engineer at Hireology, and it&rsquo;s been an amazing experience.</p>
+
+<p>A week before I officially became a software engineer, I packed up my apartment in Denver, shipped some bigger things home, packed the rest of my life in a suitcase and hopped back on a plane to Akron, Ohio.</p>
+
+<p>I had done it &mdash; I had learned as much as I could in the six months that I attended gSchool with my fellow classmates, and leveled up my game in building things on the web. I learned test-driven development, service oriented architecture, modular design and so many more things. And now, I had a week to reorganize my life, and start my job as a remote engineer on a product team.</p>
+
+<!-- more -->
+
+
+<p>I was excited, and I was nervous. I had seen parts of the code base during my interview process, and I had heard some of the other engineers talk about things I hadn&rsquo;t touched yet, like cucumber, mocking and stubbing, and services that encapsulated domain logic away from your models. Would I be able to catch on and hit the ground running? Or was I going to weigh down this small team of five?</p>
+
+<p>I was very fortunate to have a friend and mentor already on the team. Matt, my mentor from my gSchool days, had been at Hireology since the fall. He was my onboarding buddy during my first week, and he helped me get my machine configured with our tools and codebase, got all of my various accounts set up, and got me familiar with the workflow. Margot, our product manager, already had a list of cards for me to work on in Trello. By 5pm on Monday, I had made my first commits and opened my first pull request against the codebase. I was thrilled! My fears of being a junior developer were unfounded, and I was in the race!</p>
+
+<p>During the first few weeks, I was the hotfix team. The other engineers were wrapping up features for the end of the quarter, and we had some bugs that crept out from under the legacy codebase that needed wrangled. I got really familiar with using Ack and ctags to explore the codebase and dive deeper into methods that I needed to examine. In a short period of time, I became familiar with the main portions of the application, and started to learn where things lived. I fixed real problems in the application, and got to feel a real sense of purpose on the team.</p>
+
+<p>Before the month was over, the whole engineering team flew to Chicago to plan out the next quarter of work. We all brainstormed together to flesh out feature stories with user personas, and although I was the newest member of the team, I got to participate. I was amazed to find that by the end of the week, many of the ideas I contributed to or collaborated on became a part of the product roadmap for the next quarter. Having that sort of involvement so early on made me even more excited about the team I was working with. This was what I had been looking for in a career &mdash; a way to contribute meaningfully to a product that helped people get things done.</p>
+
+<p>The start of the quarter launched the following week, and we worked through pointing stories and assigning features. I found out that I would be working on something besides bugfixes, and once again that nervous excitement was upon me. I was in charge of rewriting and improving how the application dealt with cancellation, reactivation, and standby of accounts in our system and with our payment integration. I was going to be influencing <strong>every user</strong> in our system, and also a portion of our revenue. Me? In charge of how money changes hands? Wow.</p>
+
+<p>Since the end of April, I&rsquo;ve been working steadily on this reimplementation. Through the mentorship of my coworkers, I have learned:</p>
+
+<ul>
+<li>how to collaborate remotely</li>
+<li>how to write cucumber step definitions</li>
+<li>how to use <a href="https://github.com/adomokos/light-service">LightService</a> to create organizers around small actions that house business logic</li>
+<li>how to write custom validations</li>
+<li>how to stop using <code>rails g</code> for anything</li>
+<li>how to know the difference between a mock and a stub</li>
+<li>how to write database-independent tests</li>
+<li>how to make a latte</li>
+<li>where to find the best animated gifs</li>
+<li>that the best coworkers you can have hack late at night with you in the hotel lobby</li>
+<li>and so many other things that have made this a blast</li>
+</ul>
+
+
+<p>By the end of this week, I&rsquo;m going to be submitting the last of the pull requests for my feature. By the start of next month, this new implementation will be used by customers all over the country (and Canada too!) The code is shiny, wrapped up in actions and organizers with concise names, the logic backed by unit tests and cucumber features for end-to-end assurance, and every bit of code has had many pairs of eyes on it, helpful bits given to me by everyone on the team through comments on the pull requests, and helpful pairing sessions when I was stuck.</p>
+
+<p>This quarter has been a wild ride. That week between moving from Denver back home, I had no idea what the first 100 days would hold for me as a junior developer. I thought perhaps I would be on the QA team for months before I would be trusted with anything this substantial, and I am so glad I was wrong. This level of responsibility, and this level of trust that the team has given me has empowered me to push my learning to a new level and get more acclimated with our coding conventions and practices. This team has become a part of me, and I have happily become a part of the team that I&rsquo;ll never forget &mdash; because the first 100 days is just the beginning of the rest of my career.</p>
+
+<p>(*Including weekends and a holiday; otherwise, I&rsquo;ve been actively committing code to the codebase for 71 days)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Value of Mentorship]]></title>
@@ -741,35 +790,6 @@ Run this in your terminal: <code>ln -s "/Applications/Sublime Text 2.app/Content
 <h2>After all that…</h2>
 
 <p>I definitely recommend <a href="http://support.apple.com/kb/ht1553">creating a backup image of your machine</a> in this state, because it all takes a lot of work. Keep you image in a safe space, because you never know when you&rsquo;re going to need it!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[On a Quest for Awesome]]></title>
-    <link href="http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome"/>
-    <updated>2013-09-02T17:41:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome</id>
-    <content type="html"><![CDATA[<p>Two summers ago, after forays into organic farming and yurt living, I found myself in a really cool position at the Ohio State University <a href="http://www.oardc.ohio-state.edu/amp/">Agricultural Ecosystem Management Program</a> <!-- more --> that combined many things I was passionate about: building usable web systems, building community, and local agriculture. I was helping  make changes to <a href="http://localfoodsystems.org">Local Food Systems</a>, a website that helps connect entreprenuers with the food system (and those who run it) to help spawn new businesses based on the stream of goods and services in that system. I was working in <a href="http://drupal.org">Drupal</a>, and helped guide user experience and user interface decisions and changes in the three months that I was there on a half-time contract.</p>
-
-<p>When the end of August came, I was sad to find out that this awesome job could not become a full-time endeavor because there were no new grants for the project, and neither could my half-time contract be extended. That same week, I was contacted by an internal recruiter for <a href="http://fathomdelivers.com">Fathom</a>, a digital marketing and analytics agency closer to where I had just moved, and began the conversation of becoming a full time web developer there.</p>
-
-<p>Within a few weeks I was working for Fathom, building a lot of frontends to landing pages and microsites that were mostly used in email marketing and pay-per-click campaigns. In my first few weeks at Fathom, the Twitter-sphere was abuzz about <a href="http://www.gschool.it">gSchool</a>, a 6 month web development program in Denver, Colorado. I checked out the website, read a little bit about it, and thought to myself, &ldquo;Wow, it&rsquo;d be so great to learn web development from the pros, but who has the time to spend 6 months not earning a paycheck?&rdquo; I was intrigued by Ruby and thought it would be great to learn someday, but I moved on, back to my frontends, and back to my spaghetti PHP.</p>
-
-<p>During my year at Fathom, I started getting more interested in Ruby, Test Driven Development, and Agile methodology, but the work we were doing on the web development team was rigid. But we sold our products well, and we had jam-packed development schedules. There was no time to explore or implement the things I was reading about, the things that I so desperately wanted to learn.</p>
-
-<p>I thought I could fit in new learning by starting a <a href="http://codeforamerica.org">Code for America</a> Brigade in my town, dubbed <a href="http://codeforsummitcounty.org">Code for Summit County</a>, and organizing an event for the <a href="http://ndoch.org">National Day of Civic Hacking</a> locally, called <a href="http://hackNEO.org">HackNEO</a>, (which brought together over 30 local developers, designers, park lovers, and community memeber to hack on park data). As I worked and organized, I realized that if I was going to continue to be a leader, my learning needed a serious turbo boost to propel me forward past the bad habits I had acquired through self-teaching and a lack of a programming mentor.</p>
-
-<p>I started exploring the option of attending one of those developer bootcamps that I had heard about. I needed a time and a place to focus on learning, without interruption. I researched all of them, read what students had to say about them, and thought about applying to them. But I wasn&rsquo;t sure if I could do it. I had a life at home &ndash; three months (the average of these bootcamps) was a long time away from everything that needed my attention &ndash; family, chickens, my cat, my job…</p>
-
-<p><strong>And then it all boiled down to making a pros and cons list.</strong></p>
-
-<p>An honest, hard look at the opportunity cost, as well as the ways doing this now would pay off for the rest of my career, brought me to one conclusion: <strong>Just do it.</strong></p>
-
-<p>My focus was being close to home, in Chicago or New York at the bootcamps available there, when suddenly, seemingly out of the blue, <a href="https://twitter.com/steveklabnik/">Steve Klabnik</a> tweeted an application deadline reminder for gSchool. I had been following Steve on Twitter for a while, but hadn&rsquo;t realized he was an instructor for <a href="http://jumpstartlab.com">Jumpstart Lab</a>, the company that runs gSchool. I took another hard look at gSchool, and completed the application. I didn&rsquo;t think I stood a chance.</p>
-
-<p>Fast-forward to today, and here I am, writing this post in Denver, Colorado. Next week we start gSchool[1], the second class that gSchool will graduate, and my coding adventures will continue. I will have experienced mentors helping me understand the tough spots, pushing me to the next level, and helping me unlearn bad habits, learn a new language, and build the skills needed to bring to life the ideas that have been gnawing at me for years.</p>
-
-<p>I plan to document the journey so that others may have a map to guide them.</p>
 ]]></content>
   </entry>
   

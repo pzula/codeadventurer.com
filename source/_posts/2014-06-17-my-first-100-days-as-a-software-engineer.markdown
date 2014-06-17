@@ -43,3 +43,5 @@ By the end of this week, I'm going to be submitting the last of the pull request
 This quarter has been a wild ride. That week between moving from Denver back home, I had no idea what the first 100 days would hold for me as a junior developer. I thought perhaps I would be on the QA team for months before I would be trusted with anything this substantial, and I am so glad I was wrong. This level of responsibility, and this level of trust that the team has given me has empowered me to push my learning to a new level and get more acclimated with our coding conventions and practices. This team has become a part of me, and I have happily become a part of the team that I'll never forget -- because the first 100 days is just the beginning of the rest of my career.
 
 (*Including weekends and a holiday; otherwise, I've been actively committing code to the codebase for 71 days)
+
+> Special thanks to everyone that has helped me in this journey -- [gSchool](http://gschool.it), [JumpstartLab](http://jumpstartlab.com), [Turing](http://turing.io), my fellow classmates, my mentors, and my family and friends. I couldn't have done it without you!

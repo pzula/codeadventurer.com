@@ -113,6 +113,73 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/2014/06/23/build-your-own-api-data-vacuum-with-sinatra">Build Your Own API Data Vaccum With Sinatra, Redis, and MongoDB</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-23T20:57:00-04:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2014</time> •
+        
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/api/'>api</a>, <a class='category' href='/categories/mongodb/'>mongodb</a>, <a class='category' href='/categories/redis/'>redis</a>, <a class='category' href='/categories/sidekiq/'>sidekiq</a>, <a class='category' href='/categories/sinatra/'>sinatra</a>, <a class='category' href='/categories/tutorial/'>tutorial</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>After setting up a SparkCore device (an internet-connected, Arduino-like device) to report the temperature and humidity in my greenhouse, I had one problem: persistance of the data. The SparkCore can transmit data via their SparkCloud API if you assign a variable for it in your Arduino code, and so I had a place where the data was constantly being transmitted. However, since the SparkCore itself has very limited memory capabilities, and since the only thing the SparkCloud itself does it provide a JSON-formatted API, I needed to figure out how to periodically ping the API and scoop up the data into a database.</p>
+
+<p>This didn&rsquo;t seem like a job for the heft of Rails, so I started with Sinatra. My goals were to create something that others could reuse, improve upon, and deploy easily. Below I&rsquo;ll outline how to build your own API-slurping app from scratch. If you&rsquo;d rather just grab the code and hack on it, you can find it on GitHub at <a href="https://github.com/pzula/greenhouse-watchman">https://github.com/pzula/greenhouse-watchman</a>.The evolution of the project is evident through the <a href="https://github.com/pzula/greenhouse-watchman/commits/master">commit log</a>, so you can see how I started building up from a few simple files to a more organized solution.</p>
+
+<p>In this walkthrough, I&rsquo;ll be showing you how I built a simple Sinatra app with Redis and MongoDB to suck out data from and API and store it in a database for use in a data visualization project.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/2014/06/23/build-your-own-api-data-vacuum-with-sinatra">Read on &rarr;</a>
+    </footer>
+  
+
+
+</div>
+
+        </article>
+        
+        
+        <article>
+          <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/2014/06/17/my-first-100-days-as-a-software-engineer">My First 100 Days as a Software Engineer</a></h1>
     
     
@@ -662,67 +729,6 @@ published in
   
     <footer>
       <a rel="full-article" href="/2013/11/08/dashing-down-the-rails">Read on &rarr;</a>
-    </footer>
-  
-
-
-</div>
-
-        </article>
-        
-        
-        <article>
-          <div class="article-format">
-
-  <header>
-    
-      <h1 class="entry-title"><a href="/2013/11/02/running-rails-with-postgresql-locally">Running Rails With PostgreSQL Locally</a></h1>
-    
-    
-      <p class="meta">
-        
-  
-
-
-  
-    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
-  
-
-
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-02T13:18:00-04:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time> •
-        
-
-published in
-<span class="categories">
-  
-    <a class='category' href='/categories/rails/'>rails</a>
-  
-</span>
-
-
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/2013/11/02/running-rails-with-postgresql-locally">Read on &rarr;</a>
     </footer>
   
 

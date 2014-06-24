@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mongodb | Code Adventurer]]></title>
+  <link href="http://codeadventurer.com/categories/mongodb/atom.xml" rel="self"/>
+  <link href="http://codeadventurer.com/"/>
+  <updated>2014-06-23T21:08:11-04:00</updated>
+  <id>http://codeadventurer.com/</id>
+  <author>
+    <name><![CDATA[Persa Zula]]></name>
+    <email><![CDATA[persa@persazula.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Build Your Own API Data Vaccum with Sinatra, Redis, and MongoDB]]></title>
+    <link href="http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra"/>
+    <updated>2014-06-23T20:57:00-04:00</updated>
+    <id>http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra</id>
+    <content type="html"><![CDATA[<p>After setting up a SparkCore device (an internet-connected, Arduino-like device) to report the temperature and humidity in my greenhouse, I had one problem: persistance of the data. The SparkCore can transmit data via their SparkCloud API if you assign a variable for it in your Arduino code, and so I had a place where the data was constantly being transmitted. However, since the SparkCore itself has very limited memory capabilities, and since the only thing the SparkCloud itself does it provide a JSON-formatted API, I needed to figure out how to periodically ping the API and scoop up the data into a database.</p>
+
+<p>This didn&rsquo;t seem like a job for the heft of Rails, so I started with Sinatra. My goals were to create something that others could reuse, improve upon, and deploy easily. Below I&rsquo;ll outline how to build your own API-slurping app from scratch. If you&rsquo;d rather just grab the code and hack on it, you can find it on GitHub at <a href="https://github.com/pzula/greenhouse-watchman">https://github.com/pzula/greenhouse-watchman</a>.The evolution of the project is evident through the <a href="https://github.com/pzula/greenhouse-watchman/commits/master">commit log</a>, so you can see how I started building up from a few simple files to a more organized solution.</p>
+
+<p>In this walkthrough, I&rsquo;ll be showing you how I built a simple Sinatra app with Redis and MongoDB to suck out data from and API and store it in a database for use in a data visualization project.</p>
+
+<!-- more -->
+
+
+<h2>Figure out what data you are trying to store</h2>
+
+<p>For this project, I know that I have a few simple things that I want to store: temperature and humidity readings, along with the time of each reading. Each of these pieces of data have their own API endpoint that I can access in order to read the data. My endpoints look like this: <code>https://api.spark.io/v1/devices/myDeviceID/temperature?access_token=myAccessToken</code> and <code>https://api.spark.io/v1/devices/myDeviceID/humidity?access_token=myAccessToken</code> Explore your situation, and modify the instructions below to better suit your needs.</p>
+
+<h2>Ruby version</h2>
+
+<p>I&rsquo;m using Ruby 2.1.2 for this tutorial, and all of the latest versions on <a href="http://rubygems.org">RubyGems</a> as of this writing for this walkthrough. You can find installation instructions for getting your machine set up with <a href="http://tutorials.jumpstartlab.com/topics/environment/environment.html">this tutorial from JumpstartLab</a>. Be sure to have Bundler installed (you can install it with <code>gem install bundler</code> once your Ruby environment is all set up).</p>
+
+<h2>Start with a clean slate</h2>
+
+<p>Create a new folder for this project, as it will contain quite a few files by the end.</p>
+
+<h2>Install MongoDB and Redis on your system</h2>
+
+<p>Assuming a Mac OSX system, using homebrew:
+<code>brew install mongodb</code> and then follow the instructions output to the terminal to launch it.
+<code>brew install redis</code>, and then follow the instructions output to the terminal to launch it.
+Both will need to be running for this project.</p>
+
+<h2>Set up your Gemfile with Sinatra, MongoDB, and Mongoid</h2>
+
+<p>First things first: You&rsquo;re going to need a few gems to get you off the ground running.
+Create a <code>Gemfile</code> file, and add the following to it:</p>
+
+<p>```
+source &ldquo;<a href="https://rubygems.org">https://rubygems.org</a>&rdquo;
+ruby &ldquo;2.1.2&rdquo;</p>
+
+<p>gem &lsquo;sinatra&rsquo;</p>
+
+<p>gem &lsquo;bson&rsquo;
+gem &lsquo;mongo&rsquo;
+gem &lsquo;mongoid&rsquo;
+```</p>
+
+<p>MongoDB uses <code>bson</code>, which is short for Binary JSON for data representation. We&rsquo;ll also be using the Mongoid gem as our Object-Document-Mapper (ODM). You can think of it as an interface to the database that is similar to how ActiveRecord is used to interact with MySQL and PostgreSQL databases.</p>
+
+<p>Run <code>bundle install</code> to get all of the gems and dependencies installed, and we&rsquo;ll be ready to get started.</p>
+
+<p>Next we&rsquo;ll get our Mongoid configuration all set up. You&rsquo;ll need a file named <code>mongoid.yml</code>. This file will look like this to start with:</p>
+
+<p>```
+development:
+  sessions:</p>
+
+<pre><code>default:
+  database: greenhouse_watchman
+  hosts:
+    - localhost:27017
+</code></pre>
+
+<p>```</p>
+
+<p>We&rsquo;ll create a simple file called <code>application.rb</code>. This file will look like this:</p>
+
+<p>```
+require &lsquo;sinatra&rsquo;
+require &lsquo;mongoid&rsquo;
+require &lsquo;json&rsquo;</p>
+
+<p>get &lsquo;/add-data&rsquo; do
+  Humididty.create(date: Time.now, reading: 46.8)
+  Temperature.create(date: Time.now, reading: 87.2)
+  &lsquo;Great! You triggered fake data creation!&rsquo;
+end</p>
+
+<p>get &lsquo;/data.json&rsquo; do
+  content_type :json
+  all_data = Temperature.all + Humidity.all
+  all_data.to_json
+end</p>
+
+<p>class Humidity
+  include Mongoid::Document</p>
+
+<p>  field :date, type: Time
+  field :reading, type: Float
+end</p>
+
+<p>class Temperature
+  include Mongoid::Document</p>
+
+<p>  field :date, type: Time
+  field :reading, type: Float
+end
+```</p>
+
+<p>Now, if you save that file, and load your app with the following command in the same folder as the file: <code>bundle exec ruby application.rb</code>, you will have started your server.
+You can now visit <code>http://localhost:4567/add-data</code> to trigger the addition of one fake temperature reading and one fake humidity reading. If you then visit <code>http://localhost:4567/data.json</code>, you should see both readings output in a JSON format in your browser if everything is hooked up correctly. Awesome! We have our NoSQL data store hooked up properly, and we can write and read from it using Mongoid!</p>
+
+<h2>Get the data with a background worker</h2>
+
+<p>Next, we&rsquo;re going to install Sidekiq as our background job processor. Sidekiq works with Redis to process your queue. We&rsquo;re going to be scheduling our background workers to go visit the API we want to suck data from, and allow the worker to process the response and store it in our database. By doing this in the background, none of our site visitors will have to wait for the data to be fetched from the API, and also we won&rsquo;t need to always have a browser window open to tell our server to go get the data periodically. It will all happen in the background, even as we sleep. (Well, as long as our server is running!)</p>
+
+<p>We&rsquo;re also going to be using Faraday for our HTTP requests. Faraday gives us a simple interface to use HTTP requests in Ruby, so we&rsquo;ll add it as a dependency.</p>
+
+<p>Add Sidekiq to your Gemfile like so: <code>gem 'sidekiq'</code>, and add Faraday with <code>gem 'faraday'</code> and then run <code>bundle install</code> to get your new gem and dependencies.
+Now, at the top of you <code>application.rb</code> file, add these requirements:</p>
+
+<p><code>
+require 'sidekiq'
+require 'redis'
+require 'faraday'
+</code></p>
+
+<p>Now we&rsquo;ll add a worker that will go get the data for us when it is invoked. In the bottom of the same file, you can add this new class:</p>
+
+<p>```
+class APIWorker
+  include Sidekiq::Worker</p>
+
+<p>  $redis = Redis.new</p>
+
+<p>  def perform(msg = &ldquo;get_api_data&rdquo;)</p>
+
+<pre><code>$redis.lpush(msg, store_data)
+</code></pre>
+
+<p>  end</p>
+
+<p>  def store_data</p>
+
+<pre><code>get_data("temperature", yourDeviceIDHere, yourAccessTokenHere)
+get_data("humidity", yourDeviceIDHere, yourAccessTokenHere)
+</code></pre>
+
+<p>  end</p>
+
+<p>  def get_data(spark_var, device_id, access_token)</p>
+
+<pre><code>request_url = "https://api.spark.io/v1/devices/" + device_id + "/" + spark_var  + "?access_token=" + access_token
+response = Faraday.get(request_url)
+
+parsed_response = JSON.parse(response.body)
+
+spark_var_to_model(spark_var).create(date: parsed_response['coreInfo']['last_heard'], reading: parsed_response['result'])
+</code></pre>
+
+<p>  end</p>
+
+<p>  def spark_var_to_model(var)</p>
+
+<pre><code>Module.const_get(var.capitalize)
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p>Now every time the <code>APIWorker</code> is called, <code>get_data</code> will get the data from our <code>request_url</code>, parse the response body as <code>JSON</code>, and insert the data appropriately from the JSON hash to our database. <code>spark_var_to_model</code> capitalizes our <code>spark_var</code> and creates the appropiate syntax to call our respective model, whether it is <code>Temperature</code> or <code>Humidity</code>.</p>
+
+<p>Now, we&rsquo;ll need something to trigger our worker. Let&rsquo;s add another route to the <code>application.rb</code> file:</p>
+
+<p><code>
+get '/work' do
+  SparkcoreWorker.perform_async
+end
+</code>
+In a new terminal window, make sure to start up Sidekiq with this command: <code>bundle exec sidekiq -r ./application.rb</code></p>
+
+<p>If we start our server up again with <code>ruby application.rb</code> in a new terminal window, and visit our new route at <code>http://localhost:4567/work</code>, it will trigger our background job. How do we know if it worked? If we provided the correct <code>device_id</code> and <code>access_token</code> in the <code>perform</code> method above, it should have done it&rsquo;s job. We should see new data at <code>http://localhost:4567/data.json</code>, along with the dummy data we created previously.</p>
+
+<p>If you&rsquo;re not sure your background jobs are working, you can look at the Sidekiq web interface. We&rsquo;re going to add a <code>Rake</code> task to allow you to start the Sidekiq GUI easily. Here you&rsquo;ll be able to see if background jobs have failed or have been processed. Create a new file with the filename: <code>Rakefile</code>, and add the following to it:</p>
+
+<p><code>
+task :monitor do
+  require 'sidekiq/web'
+  app = Sidekiq::Web
+  app.set :environment, :production
+  app.set :bind, '0.0.0.0'
+  app.set :port, 9494
+  app.run!
+end
+</code></p>
+
+<p>After you save it, you can run <code>bundle exec rake monitor</code> and visit the URL at <code>http://localhost:9494/sidekiq</code> to monitor the jobs. If any have failed and need to be retried, you can restart the failed job from here.</p>
+
+<h2>Schedule the jobs</h2>
+
+<p>Now that we have our background job hooked up, there&rsquo;s one thing missing: it&rsquo;s being triggered by us manually visiting a route on our site. This isn&rsquo;t very efficient for data collection, so instead we&rsquo;re going to have to schedule our background job to run periodically on it&rsquo;s own. For that, we&rsquo;ll use the <code>Clockwork</code> gem.</p>
+
+<p>In your Gemfile, add <code>gem 'clockwork'</code>, and run <code>bundle install</code> to get your new gem and dependencies.
+Then, add another require statement in <code>application.rb</code> like so: <code>require 'clockwork'</code></p>
+
+<p>Then, at the bottom of the file, add this code to set up Clockwork:</p>
+
+<p>```
+module Clockwork
+  handler do |job|</p>
+
+<pre><code>puts "Running #{job}"
+</code></pre>
+
+<p>  end</p>
+
+<p>  every(2.minutes, &lsquo;apiworker.job&rsquo;) { APIWorker.perform_async }
+end
+```</p>
+
+<p>After you save the file, you can start a third terminal window and get Clockwork running by executing: <code>clockwork application.rb</code>. If everything went well, you&rsquo;ll be getting new data pulled down from the API every 2 minutes, and stored into your database!</p>
+
+<p>In the next blog post, I&rsquo;ll be showing you how to deploy this simple app to Heroku. If you have any questions, let me know <a href="http://www.twitter.com/pzula">@pzula</a> on Twitter!</p>
+]]></content>
+  </entry>
+  
+</feed>

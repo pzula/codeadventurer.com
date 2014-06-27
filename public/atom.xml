@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-06-27T14:59:43-04:00</updated>
+  <updated>2014-06-27T18:09:40-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -51,7 +51,7 @@ Both will need to be running for this project.</p>
 <p>First things first: You&rsquo;re going to need a few gems to get you off the ground running.
 Create a <code>Gemfile</code> file, and add the following to it:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -59,14 +59,15 @@ Create a <code>Gemfile</code> file, and add the following to it:</p>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source "https://rubygems.org"
-</span><span class='line'>ruby "2.1.2"
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+</span><span class='line'><span class="n">ruby</span> <span class="s2">&quot;2.1.2&quot;</span>
 </span><span class='line'>
-</span><span class='line'>gem 'sinatra'
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
 </span><span class='line'>
-</span><span class='line'>gem 'bson'
-</span><span class='line'>gem 'mongo'
-</span><span class='line'>gem 'mongoid'</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;bson&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;mongo&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;mongoid&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>MongoDB uses <code>bson</code>, which is short for Binary JSON for data representation. We&rsquo;ll also be using the Mongoid gem as our Object-Document-Mapper (ODM). You can think of it as an interface to the database that is similar to how ActiveRecord is used to interact with MySQL and PostgreSQL databases.</p>
@@ -75,18 +76,19 @@ Create a <code>Gemfile</code> file, and add the following to it:</p>
 
 <p>Next we&rsquo;ll get our Mongoid configuration all set up. You&rsquo;ll need a file named <code>mongoid.yml</code>. This file will look like this to start with:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>development:
-</span><span class='line'>  sessions:
-</span><span class='line'>    default:
-</span><span class='line'>      database: greenhouse_watchman
-</span><span class='line'>      hosts:
-</span><span class='line'>        - localhost:27017</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">development</span><span class="p">:</span>
+</span><span class='line'>  <span class="ss">sessions</span><span class="p">:</span>
+</span><span class='line'>    <span class="ss">default</span><span class="p">:</span>
+</span><span class='line'>      <span class="ss">database</span><span class="p">:</span> <span class="n">greenhouse_watchman</span>
+</span><span class='line'>      <span class="ss">hosts</span><span class="p">:</span>
+</span><span class='line'>        <span class="o">-</span> <span class="ss">localhost</span><span class="p">:</span><span class="mi">27017</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>We&rsquo;ll create a simple file called <code>application.rb</code>. This file will look like this:</p>

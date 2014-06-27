@@ -33,7 +33,7 @@ Both will need to be running for this project.
 First things first: You're going to need a few gems to get you off the ground running.
 Create a `Gemfile` file, and add the following to it:
 
-```
+```ruby
 source "https://rubygems.org"
 ruby "2.1.2"
 
@@ -50,7 +50,7 @@ Run `bundle install` to get all of the gems and dependencies installed, and we'l
 
 Next we'll get our Mongoid configuration all set up. You'll need a file named `mongoid.yml`. This file will look like this to start with:
 
-```
+```ruby
 development:
   sessions:
     default:
@@ -105,7 +105,7 @@ We're also going to be using Faraday for our HTTP requests. Faraday gives us a s
 Add Sidekiq to your Gemfile like so: `gem 'sidekiq'`, and add Faraday with `gem 'faraday'` and then run `bundle install` to get your new gem and dependencies.
 Now, at the top of you `application.rb` file, add these requirements:
 
-```
+```ruby
 require 'sidekiq'
 require 'redis'
 require 'faraday'
@@ -113,7 +113,7 @@ require 'faraday'
 
 Now we'll add a worker that will go get the data for us when it is invoked. In the bottom of the same file, you can add this new class:
 
-```
+```ruby
 class APIWorker
   include Sidekiq::Worker
 
@@ -147,7 +147,7 @@ Now every time the `APIWorker` is called, `get_data` will get the data from our 
 
 Now, we'll need something to trigger our worker. Let's add another route to the `application.rb` file:
 
-```
+```ruby
 get '/work' do
   SparkcoreWorker.perform_async
 end
@@ -158,7 +158,7 @@ If we start our server up again with `ruby application.rb` in a new terminal win
 
 If you're not sure your background jobs are working, you can look at the Sidekiq web interface. We're going to add a `Rake` task to allow you to start the Sidekiq GUI easily. Here you'll be able to see if background jobs have failed or have been processed. Create a new file with the filename: `Rakefile`, and add the following to it:
 
-```
+```ruby
 task :monitor do
   require 'sidekiq/web'
   app = Sidekiq::Web
@@ -180,7 +180,7 @@ Then, add another require statement in `application.rb` like so: `require 'clock
 
 Then, at the bottom of the file, add this code to set up Clockwork:
 
-```
+```ruby
 module Clockwork
   handler do |job|
     puts "Running #{job}"

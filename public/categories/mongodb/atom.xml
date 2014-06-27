@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mongodb | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/mongodb/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-06-27T14:59:43-04:00</updated>
+  <updated>2014-06-27T18:09:40-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -51,7 +51,7 @@ Both will need to be running for this project.</p>
 <p>First things first: You&rsquo;re going to need a few gems to get you off the ground running.
 Create a <code>Gemfile</code> file, and add the following to it:</p>
 
-<p>```
+<p>```ruby
 source &ldquo;<a href="https://rubygems.org">https://rubygems.org</a>&rdquo;
 ruby &ldquo;2.1.2&rdquo;</p>
 
@@ -68,7 +68,7 @@ gem &lsquo;mongoid&rsquo;
 
 <p>Next we&rsquo;ll get our Mongoid configuration all set up. You&rsquo;ll need a file named <code>mongoid.yml</code>. This file will look like this to start with:</p>
 
-<p>```
+<p>```ruby
 development:
   sessions:</p>
 
@@ -126,7 +126,7 @@ You can now visit <code>http://localhost:4567/add-data</code> to trigger the add
 <p>Add Sidekiq to your Gemfile like so: <code>gem 'sidekiq'</code>, and add Faraday with <code>gem 'faraday'</code> and then run <code>bundle install</code> to get your new gem and dependencies.
 Now, at the top of you <code>application.rb</code> file, add these requirements:</p>
 
-<p><code>
+<p><code>ruby
 require 'sidekiq'
 require 'redis'
 require 'faraday'
@@ -134,7 +134,7 @@ require 'faraday'
 
 <p>Now we&rsquo;ll add a worker that will go get the data for us when it is invoked. In the bottom of the same file, you can add this new class:</p>
 
-<p>```
+<p>```ruby
 class APIWorker
   include Sidekiq::Worker</p>
 
@@ -180,7 +180,7 @@ end
 
 <p>Now, we&rsquo;ll need something to trigger our worker. Let&rsquo;s add another route to the <code>application.rb</code> file:</p>
 
-<p><code>
+<p><code>ruby
 get '/work' do
   SparkcoreWorker.perform_async
 end
@@ -191,7 +191,7 @@ In a new terminal window, make sure to start up Sidekiq with this command: <code
 
 <p>If you&rsquo;re not sure your background jobs are working, you can look at the Sidekiq web interface. We&rsquo;re going to add a <code>Rake</code> task to allow you to start the Sidekiq GUI easily. Here you&rsquo;ll be able to see if background jobs have failed or have been processed. Create a new file with the filename: <code>Rakefile</code>, and add the following to it:</p>
 
-<p><code>
+<p><code>ruby
 task :monitor do
   require 'sidekiq/web'
   app = Sidekiq::Web
@@ -213,7 +213,7 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 
 <p>Then, at the bottom of the file, add this code to set up Clockwork:</p>
 
-<p>```
+<p>```ruby
 module Clockwork
   handler do |job|</p>
 

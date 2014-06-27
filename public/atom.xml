@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-06-23T21:08:11-04:00</updated>
+  <updated>2014-06-27T14:59:43-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -91,7 +91,7 @@ Create a <code>Gemfile</code> file, and add the following to it:</p>
 
 <p>We&rsquo;ll create a simple file called <code>application.rb</code>. This file will look like this:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -120,35 +120,36 @@ Create a <code>Gemfile</code> file, and add the following to it:</p>
 <span class='line-number'>27</span>
 <span class='line-number'>28</span>
 <span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'sinatra'
-</span><span class='line'>require 'mongoid'
-</span><span class='line'>require 'json'
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;mongoid&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;json&#39;</span>
 </span><span class='line'>
-</span><span class='line'>get '/add-data' do
-</span><span class='line'>  Humididty.create(date: Time.now, reading: 46.8)
-</span><span class='line'>  Temperature.create(date: Time.now, reading: 87.2)
-</span><span class='line'>  'Great! You triggered fake data creation!'
-</span><span class='line'>end
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/add-data&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">Humididty</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="ss">date</span><span class="p">:</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="ss">reading</span><span class="p">:</span> <span class="mi">46</span><span class="o">.</span><span class="mi">8</span><span class="p">)</span>
+</span><span class='line'>  <span class="no">Temperature</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="ss">date</span><span class="p">:</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span><span class="p">,</span> <span class="ss">reading</span><span class="p">:</span> <span class="mi">87</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+</span><span class='line'>  <span class="s1">&#39;Great! You triggered fake data creation!&#39;</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>get '/data.json' do
-</span><span class='line'>  content_type :json
-</span><span class='line'>  all_data = Temperature.all + Humidity.all
-</span><span class='line'>  all_data.to_json
-</span><span class='line'>end
+</span><span class='line'><span class="n">get</span> <span class="s1">&#39;/data.json&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">content_type</span> <span class="ss">:json</span>
+</span><span class='line'>  <span class="n">all_data</span> <span class="o">=</span> <span class="no">Temperature</span><span class="o">.</span><span class="n">all</span> <span class="o">+</span> <span class="no">Humidity</span><span class="o">.</span><span class="n">all</span>
+</span><span class='line'>  <span class="n">all_data</span><span class="o">.</span><span class="n">to_json</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>class Humidity
-</span><span class='line'>  include Mongoid::Document
+</span><span class='line'><span class="k">class</span> <span class="nc">Humidity</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">Mongoid</span><span class="p">:</span><span class="ss">:Document</span>
 </span><span class='line'>
-</span><span class='line'>  field :date, type: Time
-</span><span class='line'>  field :reading, type: Float
-</span><span class='line'>end
+</span><span class='line'>  <span class="n">field</span> <span class="ss">:date</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="no">Time</span>
+</span><span class='line'>  <span class="n">field</span> <span class="ss">:reading</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="nb">Float</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>class Temperature
-</span><span class='line'>  include Mongoid::Document
+</span><span class='line'><span class="k">class</span> <span class="nc">Temperature</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">Mongoid</span><span class="p">:</span><span class="ss">:Document</span>
 </span><span class='line'>
-</span><span class='line'>  field :date, type: Time
-</span><span class='line'>  field :reading, type: Float
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>  <span class="n">field</span> <span class="ss">:date</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="no">Time</span>
+</span><span class='line'>  <span class="n">field</span> <span class="ss">:reading</span><span class="p">,</span> <span class="ss">type</span><span class="p">:</span> <span class="nb">Float</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Now, if you save that file, and load your app with the following command in the same folder as the file: <code>bundle exec ruby application.rb</code>, you will have started your server.
@@ -163,17 +164,18 @@ You can now visit <code>http://localhost:4567/add-data</code> to trigger the add
 <p>Add Sidekiq to your Gemfile like so: <code>gem 'sidekiq'</code>, and add Faraday with <code>gem 'faraday'</code> and then run <code>bundle install</code> to get your new gem and dependencies.
 Now, at the top of you <code>application.rb</code> file, add these requirements:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'sidekiq'
-</span><span class='line'>require 'redis'
-</span><span class='line'>require 'faraday'</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;sidekiq&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;redis&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;faraday&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Now we&rsquo;ll add a worker that will go get the data for us when it is invoked. In the bottom of the same file, you can add this new class:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -200,45 +202,47 @@ Now, at the top of you <code>application.rb</code> file, add these requirements:
 <span class='line-number'>25</span>
 <span class='line-number'>26</span>
 <span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class APIWorker
-</span><span class='line'>  include Sidekiq::Worker
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">APIWorker</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="ss">Sidekiq</span><span class="p">:</span><span class="ss">:Worker</span>
 </span><span class='line'>
-</span><span class='line'>  $redis = Redis.new
+</span><span class='line'>  <span class="vg">$redis</span> <span class="o">=</span> <span class="no">Redis</span><span class="o">.</span><span class="n">new</span>
 </span><span class='line'>
-</span><span class='line'>  def perform(msg = "get_api_data")
-</span><span class='line'>    $redis.lpush(msg, store_data)
-</span><span class='line'>  end
+</span><span class='line'>  <span class="k">def</span> <span class="nf">perform</span><span class="p">(</span><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;get_api_data&quot;</span><span class="p">)</span>
+</span><span class='line'>    <span class="vg">$redis</span><span class="o">.</span><span class="n">lpush</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">store_data</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  def store_data
-</span><span class='line'>    get_data("temperature", yourDeviceIDHere, yourAccessTokenHere)
-</span><span class='line'>    get_data("humidity", yourDeviceIDHere, yourAccessTokenHere)
-</span><span class='line'>  end
+</span><span class='line'>  <span class="k">def</span> <span class="nf">store_data</span>
+</span><span class='line'>    <span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;temperature&quot;</span><span class="p">,</span> <span class="n">yourDeviceIDHere</span><span class="p">,</span> <span class="n">yourAccessTokenHere</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;humidity&quot;</span><span class="p">,</span> <span class="n">yourDeviceIDHere</span><span class="p">,</span> <span class="n">yourAccessTokenHere</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  def get_data(spark_var, device_id, access_token)
-</span><span class='line'>    request_url = "https://api.spark.io/v1/devices/" + device_id + "/" + spark_var  + "?access_token=" + access_token
-</span><span class='line'>    response = Faraday.get(request_url)
+</span><span class='line'>  <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">spark_var</span><span class="p">,</span> <span class="n">device_id</span><span class="p">,</span> <span class="n">access_token</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">request_url</span> <span class="o">=</span> <span class="s2">&quot;https://api.spark.io/v1/devices/&quot;</span> <span class="o">+</span> <span class="n">device_id</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">spark_var</span>  <span class="o">+</span> <span class="s2">&quot;?access_token=&quot;</span> <span class="o">+</span> <span class="n">access_token</span>
+</span><span class='line'>    <span class="n">response</span> <span class="o">=</span> <span class="no">Faraday</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_url</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>    parsed_response = JSON.parse(response.body)
+</span><span class='line'>    <span class="n">parsed_response</span> <span class="o">=</span> <span class="no">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
 </span><span class='line'>
-</span><span class='line'>    spark_var_to_model(spark_var).create(date: parsed_response['coreInfo']['last_heard'], reading: parsed_response['result'])
-</span><span class='line'>  end
+</span><span class='line'>    <span class="n">spark_var_to_model</span><span class="p">(</span><span class="n">spark_var</span><span class="p">)</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="ss">date</span><span class="p">:</span> <span class="n">parsed_response</span><span class="o">[</span><span class="s1">&#39;coreInfo&#39;</span><span class="o">][</span><span class="s1">&#39;last_heard&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">reading</span><span class="p">:</span> <span class="n">parsed_response</span><span class="o">[</span><span class="s1">&#39;result&#39;</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  def spark_var_to_model(var)
-</span><span class='line'>    Module.const_get(var.capitalize)
-</span><span class='line'>  end
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">spark_var_to_model</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
+</span><span class='line'>    <span class="no">Module</span><span class="o">.</span><span class="n">const_get</span><span class="p">(</span><span class="n">var</span><span class="o">.</span><span class="n">capitalize</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Now every time the <code>APIWorker</code> is called, <code>get_data</code> will get the data from our <code>request_url</code>, parse the response body as <code>JSON</code>, and insert the data appropriately from the JSON hash to our database. <code>spark_var_to_model</code> capitalizes our <code>spark_var</code> and creates the appropiate syntax to call our respective model, whether it is <code>Temperature</code> or <code>Humidity</code>.</p>
 
 <p>Now, we&rsquo;ll need something to trigger our worker. Let&rsquo;s add another route to the <code>application.rb</code> file:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>get '/work' do
-</span><span class='line'>  SparkcoreWorker.perform_async
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">get</span> <span class="s1">&#39;/work&#39;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="no">SparkcoreWorker</span><span class="o">.</span><span class="n">perform_async</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>In a new terminal window, make sure to start up Sidekiq with this command: <code>bundle exec sidekiq -r ./application.rb</code></p>
@@ -247,7 +251,7 @@ Now, at the top of you <code>application.rb</code> file, add these requirements:
 
 <p>If you&rsquo;re not sure your background jobs are working, you can look at the Sidekiq web interface. We&rsquo;re going to add a <code>Rake</code> task to allow you to start the Sidekiq GUI easily. Here you&rsquo;ll be able to see if background jobs have failed or have been processed. Create a new file with the filename: <code>Rakefile</code>, and add the following to it:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -255,14 +259,15 @@ Now, at the top of you <code>application.rb</code> file, add these requirements:
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>task :monitor do
-</span><span class='line'>  require 'sidekiq/web'
-</span><span class='line'>  app = Sidekiq::Web
-</span><span class='line'>  app.set :environment, :production
-</span><span class='line'>  app.set :bind, '0.0.0.0'
-</span><span class='line'>  app.set :port, 9494
-</span><span class='line'>  app.run!
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">task</span> <span class="ss">:monitor</span> <span class="k">do</span>
+</span><span class='line'>  <span class="nb">require</span> <span class="s1">&#39;sidekiq/web&#39;</span>
+</span><span class='line'>  <span class="n">app</span> <span class="o">=</span> <span class="ss">Sidekiq</span><span class="p">:</span><span class="ss">:Web</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">set</span> <span class="ss">:environment</span><span class="p">,</span> <span class="ss">:production</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">set</span> <span class="ss">:bind</span><span class="p">,</span> <span class="s1">&#39;0.0.0.0&#39;</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">set</span> <span class="ss">:port</span><span class="p">,</span> <span class="mi">9494</span>
+</span><span class='line'>  <span class="n">app</span><span class="o">.</span><span class="n">run!</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>After you save it, you can run <code>bundle exec rake monitor</code> and visit the URL at <code>http://localhost:9494/sidekiq</code> to monitor the jobs. If any have failed and need to be retried, you can restart the failed job from here.</p>
@@ -276,20 +281,21 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 
 <p>Then, at the bottom of the file, add this code to set up Clockwork:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>module Clockwork
-</span><span class='line'>  handler do |job|
-</span><span class='line'>    puts "Running #{job}"
-</span><span class='line'>  end
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">module</span> <span class="nn">Clockwork</span>
+</span><span class='line'>  <span class="n">handler</span> <span class="k">do</span> <span class="o">|</span><span class="n">job</span><span class="o">|</span>
+</span><span class='line'>    <span class="nb">puts</span> <span class="s2">&quot;Running </span><span class="si">#{</span><span class="n">job</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  every(2.minutes, 'apiworker.job') { APIWorker.perform_async }
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>  <span class="n">every</span><span class="p">(</span><span class="mi">2</span><span class="o">.</span><span class="n">minutes</span><span class="p">,</span> <span class="s1">&#39;apiworker.job&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="no">APIWorker</span><span class="o">.</span><span class="n">perform_async</span> <span class="p">}</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>After you save the file, you can start a third terminal window and get Clockwork running by executing: <code>clockwork application.rb</code>. If everything went well, you&rsquo;ll be getting new data pulled down from the API every 2 minutes, and stored into your database!</p>
@@ -438,16 +444,16 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 
 <p>The first thing to consider is that although when you run <code>rake db:seed</code>, you&rsquo;re calling upon the <code>/db/seed.rb</code> file in Rails, you aren&rsquo;t constrained to just using this file. In my seed file, I <code>require</code> the files which contain the classes and methods I need access to, like so:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require './db/seeds/market_seeder'
-</span><span class='line'>require './db/seeds/product_seeder'
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;./db/seeds/market_seeder&#39;</span>
+</span><span class='line'><span class="nb">require</span> <span class="s1">&#39;./db/seeds/product_seeder&#39;</span>
 </span><span class='line'>
-</span><span class='line'>ProductSeeder.seed
-</span><span class='line'>MarketSeeder.seed(100)
+</span><span class='line'><span class="no">ProductSeeder</span><span class="o">.</span><span class="n">seed</span>
+</span><span class='line'><span class="no">MarketSeeder</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -459,7 +465,7 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 
 <p>To create a dynamic seeding process from our parsed CSV file, we accept an optional parameter in our <code>seed</code> method that takes a number and injects it into a range that gets run on the collection that builds each market, like so:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -467,21 +473,22 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil})
-</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
-</span><span class='line'>  if number
-</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line)}
-</span><span class='line'>  else
-</span><span class='line'>    data.collect {|line| build_markets(line)}
-</span><span class='line'>  end
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">number</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">})</span>
+</span><span class='line'>  <span class="n">data</span> <span class="o">=</span> <span class="no">MarketSeeder</span><span class="o">.</span><span class="n">parse_file</span><span class="p">(</span><span class="s1">&#39;./db/seeds/source/2013_farmers_markets.csv&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">number</span>
+</span><span class='line'>    <span class="n">data</span><span class="o">.</span><span class="n">to_a</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">number</span><span class="o">].</span><span class="n">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="n">build_markets</span><span class="p">(</span><span class="n">line</span><span class="p">)}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">data</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="n">build_markets</span><span class="p">(</span><span class="n">line</span><span class="p">)}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>The next piece of functionality, outputting the name of each market as each market was built with the <code>build_markets</code> method, was as simple as using a <code>puts</code> statement. However, the <code>puts</code> would output to the string even when a test was running, which quickly cluttered up test feedback. Thankfully, earlier in the week Katrina Owen had shown me a really neat concept I hadn&rsquo;t thought about before &mdash; that you could change what <code>puts</code> is being executed on, and in turn, change where the string gets captured.</p>
 
 <p>The way this is done is to define your output parameter, and set the default to <code>STDOUT</code>, like so:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -494,24 +501,25 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>def self.seed(number = nil, out = STDOUT)
-</span><span class='line'>  data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
-</span><span class='line'>  if number
-</span><span class='line'>    data.to_a[0...number].collect {|line| build_markets(line, out)}
-</span><span class='line'>  else
-</span><span class='line'>    data.collect {|line| build_markets(line, out)}
-</span><span class='line'>  end
-</span><span class='line'>end
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">seed</span><span class="p">(</span><span class="n">number</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">out</span> <span class="o">=</span> <span class="no">STDOUT</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">data</span> <span class="o">=</span> <span class="no">MarketSeeder</span><span class="o">.</span><span class="n">parse_file</span><span class="p">(</span><span class="s1">&#39;./db/seeds/source/2013_farmers_markets.csv&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">number</span>
+</span><span class='line'>    <span class="n">data</span><span class="o">.</span><span class="n">to_a</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="n">number</span><span class="o">].</span><span class="n">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="n">build_markets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">out</span><span class="p">)}</span>
+</span><span class='line'>  <span class="k">else</span>
+</span><span class='line'>    <span class="n">data</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="n">build_markets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">out</span><span class="p">)}</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>def self.build_markets(line, out)
-</span><span class='line'> m = Market.create!(:fmid =&gt; line[:fmid], :name =&gt; line[:marketname])
-</span><span class='line'> out.puts line[:marketname]
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">build_markets</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">out</span><span class="p">)</span>
+</span><span class='line'> <span class="n">m</span> <span class="o">=</span> <span class="no">Market</span><span class="o">.</span><span class="n">create!</span><span class="p">(</span><span class="ss">:fmid</span> <span class="o">=&gt;</span> <span class="n">line</span><span class="o">[</span><span class="ss">:fmid</span><span class="o">]</span><span class="p">,</span> <span class="ss">:name</span> <span class="o">=&gt;</span> <span class="n">line</span><span class="o">[</span><span class="ss">:marketname</span><span class="o">]</span><span class="p">)</span>
+</span><span class='line'> <span class="n">out</span><span class="o">.</span><span class="n">puts</span> <span class="n">line</span><span class="o">[</span><span class="ss">:marketname</span><span class="o">]</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>You may be thinking, ok, so you&rsquo;re telling <code>puts</code> to run as a method on <code>STDOUT</code>, that&rsquo;s no different than it&rsquo;s default functionality. True. So in your test suite, you&rsquo;re going to require <code>StringIO</code>, like so:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -523,18 +531,18 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>require 'stringio'
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;stringio&#39;</span>
 </span><span class='line'>
-</span><span class='line'>describe "Seeding a market" do
-</span><span class='line'>  before :each do
-</span><span class='line'>    @out = StringIO.new
-</span><span class='line'>  end
+</span><span class='line'><span class="n">describe</span> <span class="s2">&quot;Seeding a market&quot;</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">before</span> <span class="ss">:each</span> <span class="k">do</span>
+</span><span class='line'>    <span class="vi">@out</span> <span class="o">=</span> <span class="no">StringIO</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'>  <span class="k">end</span>
 </span><span class='line'>
-</span><span class='line'>  it "changes the count on the Market database when seeded" do
-</span><span class='line'>    expect(Market.count).to eq 0
-</span><span class='line'>    expect { MarketSeeder.seed(2, @out) }.to change{Market.count}.by 2
-</span><span class='line'>  end
-</span><span class='line'>end
+</span><span class='line'>  <span class="n">it</span> <span class="s2">&quot;changes the count on the Market database when seeded&quot;</span> <span class="k">do</span>
+</span><span class='line'>    <span class="n">expect</span><span class="p">(</span><span class="no">Market</span><span class="o">.</span><span class="n">count</span><span class="p">)</span><span class="o">.</span><span class="n">to</span> <span class="n">eq</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="n">expect</span> <span class="p">{</span> <span class="no">MarketSeeder</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="vi">@out</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">to</span> <span class="n">change</span><span class="p">{</span><span class="no">Market</span><span class="o">.</span><span class="n">count</span><span class="p">}</span><span class="o">.</span><span class="n">by</span> <span class="mi">2</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

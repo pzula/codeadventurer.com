@@ -61,7 +61,7 @@ development:
 
 We'll create a simple file called `application.rb`. This file will look like this:
 
-```
+```ruby
 require 'sinatra'
 require 'mongoid'
 require 'json'

@@ -12,7 +12,7 @@ Armed with the `CSV` Ruby library, some regex, some string splitting, and gsubbi
 
 The first thing to consider is that although when you run `rake db:seed`, you're calling upon the `/db/seed.rb` file in Rails, you aren't constrained to just using this file. In my seed file, I `require` the files which contain the classes and methods I need access to, like so:
 
-```
+```ruby
 require './db/seeds/market_seeder'
 require './db/seeds/product_seeder'
 
@@ -29,7 +29,7 @@ When we talked about what we wanted our seeder to do, we had two things that wer
 
 To create a dynamic seeding process from our parsed CSV file, we accept an optional parameter in our `seed` method that takes a number and injects it into a range that gets run on the collection that builds each market, like so:
 
-```
+```ruby
 def self.seed(number = nil})
   data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
   if number
@@ -44,7 +44,7 @@ The next piece of functionality, outputting the name of each market as each mark
 
 The way this is done is to define your output parameter, and set the default to `STDOUT`, like so:
 
-```
+```ruby
 def self.seed(number = nil, out = STDOUT)
   data = MarketSeeder.parse_file('./db/seeds/source/2013_farmers_markets.csv')
   if number
@@ -62,7 +62,7 @@ end
 
 You may be thinking, ok, so you're telling `puts` to run as a method on `STDOUT`, that's no different than it's default functionality. True. So in your test suite, you're going to require `StringIO`, like so:
 
-```
+```ruby
 require 'stringio'
 
 describe "Seeding a market" do

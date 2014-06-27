@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/rails/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-06-23T21:08:11-04:00</updated>
+  <updated>2014-06-27T14:59:43-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -24,7 +24,7 @@
 
 <p>The first thing to consider is that although when you run <code>rake db:seed</code>, you&rsquo;re calling upon the <code>/db/seed.rb</code> file in Rails, you aren&rsquo;t constrained to just using this file. In my seed file, I <code>require</code> the files which contain the classes and methods I need access to, like so:</p>
 
-<p>```
+<p>```ruby
 require &lsquo;./db/seeds/market_seeder&rsquo;
 require &lsquo;./db/seeds/product_seeder&rsquo;</p>
 
@@ -41,7 +41,7 @@ MarketSeeder.seed(100)</p>
 
 <p>To create a dynamic seeding process from our parsed CSV file, we accept an optional parameter in our <code>seed</code> method that takes a number and injects it into a range that gets run on the collection that builds each market, like so:</p>
 
-<p>```
+<p>```ruby
 def self.seed(number = nil})
   data = MarketSeeder.parse_file(&lsquo;./db/seeds/source/2013_farmers_markets.csv&rsquo;)
   if number</p>
@@ -62,7 +62,7 @@ end
 
 <p>The way this is done is to define your output parameter, and set the default to <code>STDOUT</code>, like so:</p>
 
-<p>```
+<p>```ruby
 def self.seed(number = nil, out = STDOUT)
   data = MarketSeeder.parse_file(&lsquo;./db/seeds/source/2013_farmers_markets.csv&rsquo;)
   if number</p>
@@ -86,7 +86,7 @@ end
 
 <p>You may be thinking, ok, so you&rsquo;re telling <code>puts</code> to run as a method on <code>STDOUT</code>, that&rsquo;s no different than it&rsquo;s default functionality. True. So in your test suite, you&rsquo;re going to require <code>StringIO</code>, like so:</p>
 
-<p>```
+<p>```ruby
 require &lsquo;stringio&rsquo;</p>
 
 <p>describe &ldquo;Seeding a market&rdquo; do

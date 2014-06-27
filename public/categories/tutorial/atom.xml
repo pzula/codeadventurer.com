@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | Code Adventurer]]></title>
   <link href="http://codeadventurer.com/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-06-23T21:08:11-04:00</updated>
+  <updated>2014-06-27T14:59:43-04:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -82,7 +82,7 @@ development:
 
 <p>We&rsquo;ll create a simple file called <code>application.rb</code>. This file will look like this:</p>
 
-<p>```
+<p>```ruby
 require &lsquo;sinatra&rsquo;
 require &lsquo;mongoid&rsquo;
 require &lsquo;json&rsquo;</p>

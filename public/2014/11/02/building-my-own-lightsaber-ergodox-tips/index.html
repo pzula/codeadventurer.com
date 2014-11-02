@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Building My Own Lightsaber: Ergodox Tips - Code Adventurer</title>
+  <meta name="author" content="Persa Zula">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="Building a keyboard can be likened to building a lightsaber. I set off on an adventure, found some plans, and somehow found the confidence to give &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Code Adventurer" />
+  <meta name="og:title" content="Building My Own Lightsaber: Ergodox Tips" />
+  <meta name="og:description" content="Building a keyboard can be likened to building a lightsaber. I set off on an adventure, found some plans, and somehow found the confidence to give &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips"/>
+  <meta name="url" content="http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips">
+  
+  <meta name="subject" content="projects"/>
+  <meta name="category" content="projects"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43642331-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+
+  <header role="banner">
+  <hgroup>
+    <h1><a href="/">Code Adventurer</a></h1>
+    
+    <h2>The Journey to Software Crafts(wo)manship</h2>
+    
+  </hgroup>
+</header>
+
+
+  <nav role="navigation">
+    <ul class="nav">
+      <li><a href="/blog/archives">All Posts</a></li>
+      
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://persazula.com">
+          Portfolio
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://feeds.feedburner.com/CodeAdventurer">
+          Subscribe
+        </a>
+      </li>
+      
+    </ul>
+
+      
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:codeadventurer.com" />
+        <input class="search" type="text" name="query" results="0" placeholder="Search" x-webkit-speech />
+      </fieldset>
+    </form>
+      
+    
+</nav>
+
+
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Building My Own Lightsaber: Ergodox Tips</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-02T11:08:00-05:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time> •
+        
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/projects/'>projects</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Building a keyboard can be likened to building a lightsaber. I set off on an adventure, found some plans, and somehow found the confidence to give it a try.</p>
+
+<p>This is not an endeavor that happens without trepidation. When I first decided to spring for an Ergodox kit on <a href="http://massdrop.com">Massdrop</a>, I knew that I wouldn&rsquo;t be getting the parts in the mail for months. I figured I knew how to do a little soldering (thanks to the <a href="http://concoctory.com/">Concococtory&rsquo;s</a> beginner class), and it wouldn&rsquo;t be a big deal. But once the kit was on my front porch, months later, I started to doubt my abilities to complete this project.</p>
+
+<!-- more -->
+
+
+<p>I opened up the package and found ~100 diodes to be surface-mounted, two PCBs, two USB cables, three LED&rsquo;s, two TRSS connectors, one I/O expanders, an I/O expansion cable, mechanical key switches, keycaps, and a case.</p>
+
+<p>I found the instructions to build the kit online, and got everything in place to begin the process. I messed up on a few counts, but I finished it, and I wanted to provide resources for other people to be able to build their own without as many hiccups as I encountered.</p>
+
+<h2>Things you will need (learned the hard way)</h2>
+
+<h4>1. A Good Soldering Iron</h4>
+
+<p>Before you get your ErgoDox kit, get a <a href="https://www.sparkfun.com/products/10707">50 watt, variable temperature soldering iron</a> from SparkFun</p>
+
+<p>I started this project with a cheap RadioShack soldering iron. It got too hot too fast, and couldn&rsquo;t maintain a reasonable temperature for soldering SMDs onto a PCB. I had to stop construction in order to get a proper variable-temperature iron in the mail.</p>
+
+<h4>2. Soldering and De-soldering consumables</h4>
+
+<p>You&rsquo;re going to need a good, thin solder for the work you will be doing on the Ergodox. <a href="http://www.amazon.com/Amico-0-3mm-Rosin-Solder-Soldering/dp/B008DEYEAW">This one</a> is a good choice.
+You&rsquo;re also going to need a few things to help you when you mess up. I recommend some <a href="https://www.amazon.com/gp/product/B003E48ERU">desoldering wick</a>, and a good <a href="https://www.amazon.com/gp/product/B0089EQGW0">flux pen</a>.</p>
+
+<h4>3. A small electronics tool kit</h4>
+
+<p>The tools I found I got the most use out of for this project were:</p>
+
+<ul>
+<li><a href="http://www.amazon.com/Testors-8942T-Reverse-Action-Tweezers/dp/B003ZD1148">Reverse-action tweezers</a> (used for placing the SMD&rsquo;s)</li>
+<li>Needle-nose pliers</li>
+<li>Wire cutters</li>
+<li>A sharp pocket knife</li>
+<li>Solder sucker</li>
+<li>A magnifying glass, preferably one with a built in light (like <a href="http://www.amazon.com/3-5x12x-Helping-Magnifying-Soldering-Magnifier/dp/B009NOG9TA">this one</a>)</li>
+<li>Voltmeter</li>
+</ul>
+
+
+<h4>4. A workspace</h4>
+
+<ul>
+<li>Big enough to leave everything spread out</li>
+<li>Safe from pets and kids who might want to play with the parts</li>
+<li>Good lighting</li>
+<li>Well-ventilated (for soldering)</li>
+</ul>
+
+
+<h4>5. A few practice projects</h4>
+
+<p>If you are new to soldering (or haven&rsquo;t soldered in a while), it&rsquo;s best to do a little bit of practice before you undertake this.</p>
+
+<p>You should practice both your through-hole soldering, and your surface-mount soldering. SparkFun sells kits for this. This <a href="https://www.sparkfun.com/products/10723">Weevil kit</a> is a great through-hole project (make sure to read the instructions and tips), and the <a href="https://www.sparkfun.com/products/10935">Simon Says</a> project is an excellent surface-mount project to practice with.</p>
+
+<h4>6. Some decent instructional videos</h4>
+
+<p>I found <a href="https://www.youtube.com/watch?v=3NN7UGWYmBY">this video</a> to be helpful for learning how to do SMD soldering without needing more equipment.</p>
+
+<p>I found <a href="https://www.youtube.com/watch?v=tlSY1uaw0GA">this video</a> helpful for learning how to desolder something that you surface-mounted. I had a couple of mishaps throughout the process and needed to use this technique a few times.</p>
+
+<p>I also had a few switched that I needed to replace (due to my own poor soldering jobs, not due to Massdrop&rsquo;s shipment), and needed to know how to desolder the through-hole joints. <a href="https://www.youtube.com/watch?v=Z38WsZFmq8E">Here is a video that is helpful</a> for that task.</p>
+
+<h4>7. Get going!</h4>
+
+<p>Once you get your Massdrop order of parts, make sure you open it and count all of the pieces. I did not do this, and ended up with a few missing parts. It was a few weeks after the drop arrived, however, so I had to aquire the missing parts on my own.</p>
+
+<p>Give yourself at least one weekend to do this project &mdash; after you have taken the time to get all of the things I have listed above, and also after you have practiced your soldering. Make sure you follow the order of instructions in the <a href="https://www.massdrop.com/ext/ergodox/assembly.php">Massdrop assembly instructions</a>, and you should come out on the other side of your weekend with a shiny new keyboard!</p>
+
+<h4>Common Problems</h4>
+
+<p>I encountered a lot of common problems along the way, and I thought I should list them here in case you have similar issues.</p>
+
+<ul>
+<li>Keyboard stops working after pressing a key</li>
+</ul>
+
+
+<p>This is likely due to a diode having a lose connection, or being damaged. Check across diodes with a voltmeter to see if any indicate the connection is not made. Use SMD desoldering skills that you learned to remove the offending diode, and if you removed it cleanly, re-solder the same diode to the board. If you have damaged the diode (either in placing it, or removing it), use a new one to ensure the problem will not persist.</p>
+
+<ul>
+<li>A key is not working when pressed</li>
+</ul>
+
+
+<p>This is likely due to a poor solder job around the key-switch. Flip the board over and check your joint. If it needs to be re-soldered, revisit the de-soldering a through-hole video to get proper instruction on how to remove the part, clean the through-hole, and re-solder the switch. This is often the better option than adding more solder, as the solder can overflow to the other side if you use too much, and cause damage to the board or the switch. There was only one switch I had that was actually malfunctioning after trying to remove and re-solder it. In that case, remove the switch completely using desoldering techniques, and use a spare provided by Massdrop.</p>
+
+<ul>
+<li>An entire column of keys do not work</li>
+</ul>
+
+
+<p>This is likely due to a poor solder job on the Teensy or the I/O expander. Check that every connection point is free of excess solder that may be connecting multiple together. Yes, these are small components, but careful soldering around these two will ensure that you don&rsquo;t run into this problem.</p>
+
+<ul>
+<li>Keys aren&rsquo;t all aligned well, causing issues with the keycaps not sitting in place well.</li>
+</ul>
+
+
+<p>This problem I could have avoided had I had experience with using a PCB and acrylic together. Although the solder on the other side should help keep your key-switches snugly in place (if you placed them in straight), if you ever do any modifications to your key-switches in the future (such as replacing what kind of springs you are using in your Cherry MX keys), you are at risk of damaging your solder job. To prevent this from happening, I recommend using a hot glue gun to place your key-switches in place on the acrylic <strong>before</strong> you place it through the PCB, and <strong>before</strong> you solder your key-switches in place. I&rsquo;m working on a second keyboard project at the moment and realize how much of a difference this makes now.</p>
+
+<h2>The Review</h2>
+
+<p>The Ergodox is a great keyboard for someone who is looking for a do-it-yourself alternative to matrix-style split keyboards. I found it a little difficult to get used to with the blank keycaps, so I joined in on a <a href="http://www.geekhack.org">GeekHack</a> group buy to buy keycaps for the ErgoDox. It took several months to get them, and in that time period I wasn&rsquo;t using the ErgoDox because of the learning curve. Once I got the keycaps, I still felt slow. I put the ErgoDox away for a while, as I wasn&rsquo;t fast enough with it yet to use it daily at work, and I wasn&rsquo;t working on side projects in the evenings. These past few weeks, my Apple Wireless keyboard died, and the only other keyboard I had around was the ErgoDox. I dusted it off, and within a few weeks got better at using it. I&rsquo;m still not fast enough with special characters that I use daily in programming, so it is a bit cumbersome. I feel that with a few months of practice, someone can bring their typing speed back up to par, and with a lot less wrist pain than a traditional keyboard.</p>
+
+<h2>Photos of my project</h2>
+
+<p><img src="/images/ergodox/ergodox_diodes.jpg" alt="Placing diodes using the magnifiying glass" /></p>
+
+<p class="caption">Placing diodes using the magnifying glass</p>
+
+
+<p><img src="/images/ergodox/keyswitches_on_acrylic.jpg" alt="Placing keyswitches on acrylic" /></p>
+
+<p class="caption">Placing keyswitches on acrylic</p>
+
+
+<p><img src="/images/ergodox/keyswitches_and_pcb.jpg" alt="Placing keyswitches on PCB" /></p>
+
+<p class="caption">Placing keyswitches on PCB</p>
+
+
+<p><img src="/images/ergodox/switches_and_diodes.jpg" alt="Soldering of switches" /></p>
+
+<p class="caption">Soldering on switches after the diodes</p>
+
+
+<p><img src="/images/ergodox/missing_keycap.jpg" alt="Finished, with missing keycap" /></p>
+
+<p class="caption">Missing a keycap from the drop</p>
+
+
+<p><img src="/images/ergodox/with_new_keycaps.jpg" alt="Finished, with new keycaps" /></p>
+
+<p class="caption">The Ergodox today</p>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-02T11:08:00-05:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time>
+      
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/projects/'>projects</a>
+  
+</span>
+
+
+    </p>
+    <p class="meta">
+    
+      <a class="basic-alignment left" href="/2014/06/23/build-your-own-api-data-vacuum-with-sinatra" title="Previous Post: Build Your Own API Data Vaccum with Sinatra, Redis, and MongoDB">&laquo; Build Your Own API Data Vaccum with Sinatra, Redis, and MongoDB</a>
+    
+    
+    </p>
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Code Adventurer</a>
+  - Copyright &copy; 2014 - Persa Zula
+</p>
+<p class="pull-right">
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a> and <a href="https://github.com/vladigleba/readify" target="_blank">Readify</a>.
+  </span>
+</p>
+
+  </div>
+</footer>
+<div id="footer-widgets">
+  <div class="container">
+      <a href="http://github.com/pzula">github</a> |
+      <a href="http://twitter.com/pzula">twitter</a>
+  </div>
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'codeadventurer';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips';
+        var disqus_url = 'http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

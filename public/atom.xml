@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-11-02T12:23:37-05:00</updated>
+  <updated>2014-11-11T08:51:25-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Keeping Things DRY Without Complecting: Table Inheritance]]></title>
+    <link href="http://codeadventurer.com/2014/11/11/keeping-things-dry-without-complecting-table-inheritance"/>
+    <updated>2014-11-11T08:49:00-05:00</updated>
+    <id>http://codeadventurer.com/2014/11/11/keeping-things-dry-without-complecting-table-inheritance</id>
+    <content type="html"><![CDATA[<h3>Keeping Things DRY Without Complecting: Table Inheritance</h3>
+
+<p>When dealing with architecture, we find ourselves often dealing with concepts that are similar, yet just slightly different. In an effort to keep our code DRY, we might reach for an abstraction of these concepts all the way down to the data layer, in order to squeeze out more re-use within our codebase. But sometimes, our abstractions can lead to more complexity down the road. I&rsquo;d like to exploire this concept to see how an abstraction can morph over time, and what sort of decisions along the way can help an abstraction become easier or harder to use.</p>
+
+<p>In the following example, we&rsquo;re going to assume that we are building a type of storage and logic system for content types in a small, hosted content-management system.</p>
+
+<p>A content management system can have many kinds of content &mdash; including polls, blog posts, articles, events and so on. When a user opens an account, they are given a few of these default content types to use and customize.</p>
+
+<p>As the engineer, we know that the types of content that our product offers to users will grow as our product grows, so we take a close look at what the content types have in common in order to try to tease out the similarities and build an abstraction that will allow us to easily add more content types in the future.</p>
+
+<p>We find that each kind of content has a lot of the same ideas: we have sections, and each section can have instructions on what to use that section for, and each section can have many different input types.</p>
+
+<p>There could be a problem, though: when a user modifies one of the content types by adding or removing parts, we can end up with data loss if they&rsquo;ve used that content type prior to the modification. By removing the field for author in the future, all prior posts that had an author entry will no longer have that data.</p>
+
+<p>After some thought, we find a way around the problem of data loss. We will have
+Templates for each type of content. The template is where a user can customize
+how they want to be able to use this input form, from naming the template to
+adding, editing and deleting fields and text within sections. Sections can also
+be added, edited, or deleted. Some users might want to have a mood input field in
+their blog posts. Others might want to have a &lsquo;Related Articles&rsquo; section
+available when they add new acticles.  We also want to offer the ability to
+bring back anything that has been removed from the template in the past, so each
+template will have a &lsquo;Deleted&rsquo; section, where inputs and sections can be
+retreived for later use.</p>
+
+<p>However, the Template is only used for storing the structure of how the user
+wants to interact with that type of content. When a user actually wants to
+create a new piece of content, we will duplicate the structure of the Template
+and turn it into a Document. This Document is a snapshot of the Template at that
+point in time, and also contains the data entered by the user (such as an article or a blog post). If the Template for that content types gets modified
+in the future, it will not affect a Document that has been created for that
+content type, because they
+are different objects and the data resides in different tables.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Building My Own Lightsaber: Ergodox Tips]]></title>
@@ -1052,33 +1093,6 @@ all of the requirements that I realized that starting at the top of the list wou
 <p>Learning from the community, regardless of whether it is the Ruby community, or another community in general, is a very interesting experience. If you listen carefully, you hear about the triumphs, the losses, the intersections of people and pride, and the lessons that others have learned. I&rsquo;ve found that it is wise to listen hard during these anecdotes, because those that wore this path before us have made mistakes (or discoveries) that we can benefit from knowing, and hopefully apply to our own individual journeys.</p>
 
 <p><strong>*Pro-tip:</strong> Sit in the front during conferences and presentations. If you have any sense of shame left in you, you won&rsquo;t be as compelled to whip open your laptop or check your phone. And without distractions, there is only one thing left to do: listen to the presentation.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
-    <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
-    <updated>2013-09-20T09:04:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
-    <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
-
-<p>I looked at her in disbelief, explained that this was hours worth of work (even though really it looked like there wasn&rsquo;t much there)… and then complied. And cried a little inside.</p>
-
-<p>Starting with a blank slate, and just two files this time &ndash; one for all of my classes, and one for all of my tests &ndash; I looked at the requirements and started building from the first test case, &ldquo;Happy Path&rdquo;. I had one day left before the project was done, and I was starting to stress out. Why was this so hard? Every class I&rsquo;ve ever taken, every passion I have pursued, has come easily to me. I can memorize insane facts, make connections between farming and management, lead groups, organize events, cook awesome organic meals, fix bicycles, juggle, live in yurts… and this project is the thing that is going to show me who is boss? I couldn&rsquo;t handle it.</p>
-
-<p>With every hour that went by, as some tests failed and somewhere along the way, a few passed, I kept getting more and more frustrated. I started to doubt being ever able to call myself a web developer in the past. If I couldn&rsquo;t get this basic project to work, how was I going to move on to the next one? At 8:30pm the night before the project was due, I had only four methods that could pass tests. I shut my laptop, realized there was no way I could finish in time, and went to sleep.</p>
-
-<p>I awoke at 3:30am from dreams where I was expertly solving Event Reporter, one passing test at a time, and quickly got out my laptop to try to recreate what was I was programming in my dreams. I cranked out the tests, and slowly started realizing that all of it was gibberish. Dream-state me wasn&rsquo;t actually expertly solving anything, although it seemed like it. But, I was awake anyway, so I hit the gym at 4am, got through my workout, and decided to come to gSchool early and try again.</p>
-
-<p>I worked through my code for a little while before Katrina showed up (she has some crazy schedule where she goes to bed at 8pm and gets to work at 5am), and helped me back away from the ledge of jumping off of the programmer cliff. She looked at me and said, &ldquo;Learning is elfin&#8217; hard.&rdquo; Coming from a molecular biologist, I must have actually believed her, because an hour and  half later, after talking through my code and my struggles, I started to feel better about the project (even through I was still nowhere near done).</p>
-
-<p>I&rsquo;m still not done today, but I have an idea of where I&rsquo;m going. Talking with Katrina, Jorge, and Franklin during different pieces, and various colorful feelings ranging from rage to anger to depression to self-hate (gosh, I never knew programming could bring out so much in me) really helped me understand that all of us at gSchool are used to being good at things. And a lot of us are struggling &mdash; not just with the syntax and the TDD mindset, but also with this ego-crushing feeling of failure.</p>
-
-<p>And then I have to remind myself that today is day 10 of gSchool. And there are still five and a half months to go. Two weeks ago, I had never written a test for one of my programs. I&rsquo;ve learned a lot in this time &mdash; not only about Ruby, but about myself, my classmates, and the human spirit.</p>
-
-<p>Thank you, gSchool, for showing me that learning a new programming language can be one of the most amazing things to teach me about myself.</p>
-
-<p>If you&rsquo;re interested in the spiderweb of code I&rsquo;ve been building for this project, you can find my codebase on <a href="https://github.com/pzula/event_reporter">GitHub</a>. Feel free to let me know what you think, either about the code, or about my journey, or about similar experiences you&rsquo;ve had in the comments section.</p>
 ]]></content>
   </entry>
   

@@ -19,9 +19,9 @@ As the engineer, we know that the types of content that our product offers to us
 
 We find that each kind of content has a lot of the same ideas: we have sections, and each section can have instructions on what to use that section for, and each section can have many different input types.
 
-There could be a problem, though: when a user modifies one of the content types by adding or removing parts, we can end up with data loss if they've used that content type prior to the modification. By removing the field for author in the future, all prior posts that had an author entry will no longer have that data.
+There could be a problem, though: when a user modifies one of the content types by adding or removing parts, we can end up with data loss if they've used that content type prior to the modification. For example, by removing the field for author in the future, all prior posts that had an author entry will no longer have that data.
 
-After some thought, we find a way around the problem of data loss. We will have
+After some thought, we find a way around the problem of data loss. We will create
 Templates for each type of content. The template is where a user can customize
 how they want to be able to use this input form, from naming the template to
 adding, editing and deleting fields and text within sections. Sections can also
@@ -35,10 +35,198 @@ retreived for later use.
 However, the Template is only used for storing the structure of how the user
 wants to interact with that type of content. When a user actually wants to
 create a new piece of content, we will duplicate the structure of the Template
-and turn it into a Document. This Document is a snapshot of the Template at that
+and turn it into a Document object. This Document is a snapshot of the Template at that
 point in time, and also contains the data entered by the user (such as an article or a blog post). If the Template for that content types gets modified
 in the future, it will not affect a Document that has been created for that
-content type, because they
-are different objects and the data resides in different tables.
+content type, because they are different objects and the data resides in different tables in our database.
+
+In order to implement the solution, we build up our database migrations and our models. We want to keep things simple from a data perspective, as everything shares the same sort of structure, so we create these migrations and models:
+
+```ruby
+
+class CreateContentTypes < ActiveRecord::Migration
+  def change
+    create_table :content_types do |t|
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```ruby
+
+class CreateContentTemplates < ActiveRecord::Migration
+  def change
+    create_table :content_templates do |t|
+      t.string :name
+      t.integer :content_type_id
+      t.integer :account_id
+      t.integer :created_by_id
+      t.integer :modified_by_id
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```ruby
+
+class CreateContentDocuments < ActiveRecord::Migration
+  def change
+    create_table :content_documents do |t|
+      t.string :name
+      t.integer :content_type_id
+      t.integer :account_id
+      t.integer :user_id
+      t.datetime :published_at
+      t.integer :created_by_id
+      t.integer :modified_by_id
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```ruby
+
+class CreateContentSections < ActiveRecord::Migration
+  def change
+    create_table :content_sections do |t|
+      t.string :name
+      t.integer :created_by_id
+      t.integer :modified_by_id
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```ruby
+
+class CreateContentInputs < ActiveRecord::Migration
+  def change
+    create_table :content_inputs do |t|
+      t.string :description
+      t.integer :content_data_id
+      t.integer :interview_type_id
+      t.integer :account_id
+      t.integer :created_by_id
+      t.integer :modified_by_id
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```ruby
+
+class CreateContentDatas < ActiveRecord::Migration
+  def change
+    create_table :content_datas do |t|
+      t.string :data
+      t.integer :created_by_id
+      t.integer :modified_by_id
+
+      t.timestamps
+    end
+  end
+end
+
+```
+
+```
+class ContentType < ActiveRecord::Base
+
+  POLL_ID = 1
+  BLOG_POST_ID = 2
+  ARTICLE_ID = 3
+
+  scope :poll,      => { find(POLL_ID) }
+  scope :blog_post, => { find(BLOG_POST_ID) }
+  scope :article,   => { find(ARTICLE_ID) }
+
+end
+```
+
+```
+class ContentTemplate < ActiveRecord::Base
+
+  has_many :content_template_sections
+  has_many :content_sections
+
+  belongs_to :content_type
+  belongs_to :account
+  belongs_to :modified_by, :class_name => User
+  belongs_to :created_by, :class_name => User
+
+end
+
+```
+
+```
+class ContentDocument < ActiveRecord::Base
+
+  belongs_to :content_type
+  belongs_to :account
+  belongs_to :modified_by, :class_name => User
+  belongs_to :created_by, :class_name => User
+
+end
+```
+
+```
+class ContentSection < ActiveRecord::Base
+
+  has_many :content_template_sections
+  has_many :content_templates, :through => :content_template_sections
+
+  has_many :content_section_inputs
+  has_many :content_inputs, :through => :content_section_inputs
+
+  belongs_to :created_by, :class_name => User
+
+  amoeba do
+    enable
+    exclude_field [:content_templates, :content_template_sections]
+    clone [:content_inputs]
+  end
+end
+```
+
+```
+class ContentInput
+
+  has_many :content_section_inputs
+  has_many :content_sections, :through => :content_section_inputs
+
+  has_many :content_input_datas
+  has_many :content_datas, :through => :content_input_datas
+
+  belongs_to :account
+  belongs_to :content_type
+
+end
+```
+
+```
+class ContentData
+
+  belongs_to :created_by, :class => User
+  belongs_to :modified_by, :class => User
+
+end
+
+```
 
 

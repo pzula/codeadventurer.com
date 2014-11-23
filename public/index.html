@@ -114,7 +114,7 @@
 
   <header>
     
-      <h1 class="entry-title"><a href="/2014/11/11/keeping-things-dry-without-complecting-table-inheritance">Keeping Things DRY Without Complecting: Table Inheritance</a></h1>
+      <h1 class="entry-title"><a href="/2014/11/22/five-days-of-clojure-immersion">Five Days of Clojure Immersion at ClojureConj</a></h1>
     
     
       <p class="meta">
@@ -139,13 +139,13 @@
   
 
 
-<time datetime="2014-11-11T08:49:00-05:00" pubdate data-updated="true">Nov 11<span>th</span>, 2014</time> •
+<time datetime="2014-11-22T16:24:00-05:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2014</time> •
         
 
 published in
 <span class="categories">
   
-    <a class='category' href='/categories/architecture/'>architecture</a>
+    <a class='category' href='/categories/clojure/'>clojure</a>, <a class='category' href='/categories/clojureconj/'>clojureconj</a>, <a class='category' href='/categories/learning/'>learning</a>
   
 </span>
 
@@ -156,41 +156,14 @@ published in
   </header>
 
 
-  <div class="entry-content"><h3>Keeping Things DRY Without Complecting: Table Inheritance</h3>
+  <div class="entry-content"><p>This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give an overview of my experience as a newcomer to the community, so that anyone else that may have been intimidated by the parens can be inspired to give it a try.</p>
 
-<p>When dealing with architecture, we find ourselves often dealing with concepts that are similar, yet just slightly different. In an effort to keep our code DRY, we might reach for an abstraction of these concepts all the way down to the data layer, in order to squeeze out more re-use within our codebase. But sometimes, our abstractions can lead to more complexity down the road. I&rsquo;d like to exploire this concept to see how an abstraction can morph over time, and what sort of decisions along the way can help an abstraction become easier or harder to use.</p>
-
-<p>In the following example, we&rsquo;re going to assume that we are building a type of storage and logic system for content types in a small, hosted content-management system.</p>
-
-<p>A content management system can have many kinds of content &mdash; including polls, blog posts, articles, events and so on. When a user opens an account, they are given a few of these default content types to use and customize.</p>
-
-<p>As the engineer, we know that the types of content that our product offers to users will grow as our product grows, so we take a close look at what the content types have in common in order to try to tease out the similarities and build an abstraction that will allow us to easily add more content types in the future.</p>
-
-<p>We find that each kind of content has a lot of the same ideas: we have sections, and each section can have instructions on what to use that section for, and each section can have many different input types.</p>
-
-<p>There could be a problem, though: when a user modifies one of the content types by adding or removing parts, we can end up with data loss if they&rsquo;ve used that content type prior to the modification. By removing the field for author in the future, all prior posts that had an author entry will no longer have that data.</p>
-
-<p>After some thought, we find a way around the problem of data loss. We will have
-Templates for each type of content. The template is where a user can customize
-how they want to be able to use this input form, from naming the template to
-adding, editing and deleting fields and text within sections. Sections can also
-be added, edited, or deleted. Some users might want to have a mood input field in
-their blog posts. Others might want to have a &lsquo;Related Articles&rsquo; section
-available when they add new acticles.  We also want to offer the ability to
-bring back anything that has been removed from the template in the past, so each
-template will have a &lsquo;Deleted&rsquo; section, where inputs and sections can be
-retreived for later use.</p>
-
-<p>However, the Template is only used for storing the structure of how the user
-wants to interact with that type of content. When a user actually wants to
-create a new piece of content, we will duplicate the structure of the Template
-and turn it into a Document. This Document is a snapshot of the Template at that
-point in time, and also contains the data entered by the user (such as an article or a blog post). If the Template for that content types gets modified
-in the future, it will not affect a Document that has been created for that
-content type, because they
-are different objects and the data resides in different tables.</p>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/2014/11/22/five-days-of-clojure-immersion">Read on &rarr;</a>
+    </footer>
   
 
 

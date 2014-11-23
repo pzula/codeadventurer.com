@@ -99,10 +99,8 @@
         <lastmod>2014-11-02T12:23:15-05:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://codeadventurer.com/2014/11/11/keeping-things-dry-without-complecting-table-inheritance
-        </loc>
-        <lastmod>2014-11-11T08:49:54-05:00</lastmod>
+        <loc>http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</loc>
+        <lastmod>2014-11-23T09:22:54-05:00</lastmod>
     </url>
     <url>
         <loc>http://codeadventurer.com/about/</loc>
@@ -110,10 +108,10 @@
     </url>
     <url>
         <loc>http://codeadventurer.com/blog/archives/</loc>
-        <lastmod>2014-11-11T08:49:54-05:00</lastmod>
+        <lastmod>2014-11-23T09:22:54-05:00</lastmod>
     </url>
     <url>
         <loc>http://codeadventurer.com/</loc>
-        <lastmod>2014-11-11T08:49:54-05:00</lastmod>
+        <lastmod>2014-11-23T09:22:54-05:00</lastmod>
     </url>
 </urlset>

@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Five Days of Clojure Immersion at ClojureConj - Code Adventurer</title>
+  <meta name="author" content="Persa Zula">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Code Adventurer" />
+  <meta name="og:title" content="Five Days of Clojure Immersion at ClojureConj" />
+  <meta name="og:description" content="This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion"/>
+  <meta name="url" content="http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion">
+  
+  <meta name="subject" content="clojureclojureconjlearning"/>
+  <meta name="category" content="clojureclojureconjlearning"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43642331-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+
+  <header role="banner">
+  <hgroup>
+    <h1><a href="/">Code Adventurer</a></h1>
+    
+    <h2>The Journey to Software Crafts(wo)manship</h2>
+    
+  </hgroup>
+</header>
+
+
+  <nav role="navigation">
+    <ul class="nav">
+      <li><a href="/blog/archives">All Posts</a></li>
+      
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://persazula.com">
+          Portfolio
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://feeds.feedburner.com/CodeAdventurer">
+          Subscribe
+        </a>
+      </li>
+      
+    </ul>
+
+      
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:codeadventurer.com" />
+        <input class="search" type="text" name="query" results="0" placeholder="Search" x-webkit-speech />
+      </fieldset>
+    </form>
+      
+    
+</nav>
+
+
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Five Days of Clojure Immersion at ClojureConj</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-22T16:24:00-05:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2014</time> •
+        
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/clojure/'>clojure</a>, <a class='category' href='/categories/clojureconj/'>clojureconj</a>, <a class='category' href='/categories/learning/'>learning</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give an overview of my experience as a newcomer to the community, so that anyone else that may have been intimidated by the parens can be inspired to give it a try.</p>
+
+<!-- more -->
+
+
+<p>I had originally registered only for the two-day Intro to Clojure training hosted by Cognitect, and had been looking forward to it for months. I had cracked open a book or two about Clojure here or there, and watched some of the <a href="http://www.purelyfunctional.tv/intro-to-clojure">LispCast videos</a> in small jolts, but I hadn&rsquo;t taken the time to just sit down with it for a while and really get immersed. The two-day training session seemed like a good way to get the kick in the pants that I needed to get going with the basics. A few weeks ago, two of my co-workers that had registered for the conference portion could no longer attend. I was fortunate enough to have been able to extend my stay with the support of my CTO, and pick up his ticket to the conj.</p>
+
+<p>After spending Monday traveling, getting used to my surroundings when I arrived, and going on an obligatory tour of downtown DC on a Segway, I settled in for an evening of toying with <a href="https://github.com/tpope/vim-fireplace">vim-fireplace</a>, a plugin that allows for Clojure REPL support inside of vim. I got my environment up and running, and was ready for the first day of class.</p>
+
+<p>When I got to the training session on Tuesday, Kim and <a href="https://twitter.com/lynngrogan">Lynn</a> from Cognitect were super friendly and got me going on my way. All of the files we&rsquo;d be working with, including a leiningen project with last Friday&rsquo;s alpha release of Clojure and other dependencies we&rsquo;d need for the class, were provided to us on a usb drive. <a href="http://twitter.com/puredanger">Alex Miller</a>, of StrangeLoop, LambdaJam, and ClojureWest fame, was our teacher for the course. We spent the first day learning about the REPL, functions, collections, flow control, names and namespaces, a deeper dive into collections, and finally, sequences. Each one of those sections had labs for us to try to solve in the REPL for ourselves, which I felt really helped solidify the concepts for me and helped me get used to the new syntax.</p>
+
+<p>After our first day of class, Cognitect had organized a class dinner together for anyone that wanted to join. It was great to spend some time with our fellow class-mates and learn about the problems they were trying to solve, and why they were interested in using Clojure to solve them. I had excellent conversations with the group, and was also delighted to find out that Stephanie Hickey was taking the Introductory course with us for a fellowship project at her job. After dinner, I headed home to work some of the exercises in our labs, and rest up for the next day full of information.</p>
+
+<p>On day two, we started out the day full-speed with sequence theory. After sequences, we got into transducers, something I&rsquo;m glad we covered before the conference, since there were many references during various talks. From there we moved into polymorphism, concurrency, macros, and core.async. By the end of class, we only had enough time to do a cursory cover of web development in Clojure, but I think that introduction was enough to help me understand the basics. With all of that information in that short of a period of time, I was a little surprised that I was able to keep up with the pace. I think Alex&rsquo;s patience and willingness to answer questions helped immensely in my ability to understand the concepts being presented. That evening, I went home and spent some time looking at some of the various resources that Alex gave us at the end of the class for continued learning, and solving problems on <a href="http://4clojure.com">4clojure</a>.</p>
+
+<p>Throughout the conference, I was happy to have had the course right before attending. I felt like I had the vocabulary to understand the presentations, and that many of them were very approachable armed with that knowledge.</p>
+
+<p>Some of my favorite presentations are already available online (and all will be available at <a href="https://www.youtube.com/watch?v=7lm3K8zVOdY">clojuretv</a>):</p>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=BNkYYYyfF48">Unlocking data-driven systems</a></li>
+<li><a href="https://www.youtube.com/watch?v=4X-1fJm25Ww">The evolution of the Emacs tooling for Clojure</a></li>
+<li><a href="https://www.youtube.com/watch?v=4KqUvG8HPYo">Inside Transducers</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ohuadp9S2hg">Helping voters with Pedestal, Datomic, Om and core.async</a></li>
+<li><a href="https://www.youtube.com/watch?v=7lm3K8zVOdY">Exploring four hidden superpowers of Datomic</a>
+&ndash;<a href="https://www.youtube.com/watch?v=0GzzFeS5cMc"> Making Games at Runtime with Clojure</a></li>
+<li><a href="https://www.youtube.com/watch?v=824yVKUPFjU">Cló: The Algorithms of TeX in Clojure</a></li>
+<li><a href="https://www.youtube.com/watch?v=3oQTSP4FngY">Always Be Composing</a></li>
+<li><a href="https://www.youtube.com/watch?v=6xlyWjqFDWs">Building a Data Pipeline with Clojure and Kafka</a></li>
+</ul>
+
+
+<p>Throughout the conference &mdash; from the presentations, to the hallway track, to my interactions with people after sessions &mdash; I&rsquo;ve observed some very interesting things about the Clojure community as a first-timer.</p>
+
+<p>I was very impressed that everyone was very humble and friendly. I took my introduction courses with Stephanie Hickey, and didn&rsquo;t have a clue until conversations we had much later. I had dinner &mdash; twice &mdash; with authors without knowing that they had written books about Clojure. No one touted themselves as the end-all-be-all of programming, and everyone was super excited and welcoming of my beginner&rsquo;s journey in Clojure. I didn&rsquo;t feel any judgement for showing up to a conference without having really used the language before, and people included me in conversations and answered my questions patiently without sneering at my lack of knowledge.</p>
+
+<p>Throughout the presentations and the conversations I had with others, I found a recurring theme &mdash; everyone was eager to improve. Many talks presented ideas as &ldquo;pretty good, but what can we do better?&rdquo;, and then continued to push through to several iterations of the idea and it&rsquo;s evolution.</p>
+
+<p>It seems that people in this community love what they do, and actively seek to improve on it whenever they can. There are strong ties to the research being done in the computer science world, and it is refreshing to see people pushing on that research, trying to implement it into the language, and reaching new boundaries when putting things into practice.</p>
+
+<p>There is also a healthy, friendly competition. We heard about several different editors for Clojure code, and all of the presentations provided some humor around the competition, without demeaning or demoralizing the other parties. On Saturday, Zach&rsquo;s talk, Always Be Composing, presented ideas and a library that are a different way of dealing with event-driven abstractions than what is offered in <code>core.async</code>, but his presentation and demeanor was one of an openness to explore ideas, not one of righteousness. That is another recurring theme in the community &mdash; in many of the presentations, presenters were soliciting for discussion of the ideas presented; for input and suggestions. This is a different tone than I&rsquo;ve experienced in other communities, wherein a presenter will impart a tone of finality on the subject; that whatever is presented is the final draft.</p>
+
+<p>Another interesting theme I observed was that people were seeking a greater clarity of intent in their projects. Through the proper abstractions, they wanted their programs to communicate well to other humans reading the program. This human-centric design is a theme in other circles as well, but it is inspiring to see these ideas about architecture and design thriving in the Clojure community.</p>
+
+<p>Finally, the most exciting thing I observed was how Rich Hickey, undoubtedly look upon as a leader in the community around the language he invented, is still excited and enthused about it. He comes off as geniunely interested in the ideas of others, and is a thinker himself. He is a thoughtful, positive, and entertaining force in the community; full of energy and ideas, and excited in the potential that as the language grows in use, so will the discoveries around what goes into the core of the language.</p>
+
+<p>It&rsquo;s been an awesome week of Clojure for me, and I&rsquo;m glad to have taken a deep-dive into it. I feel empowered to take my knowledge of the language to the next level and start building projects with it, to learn the nuances of functional thinking, and to experience the focus on data that is prevelant in this community. Kudos to the event organizers, the speakers, the sponsors and the community for helping even the least-experienced attendees feel welcome and involved. I couldn&rsquo;t have asked for a better experience!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-22T16:24:00-05:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2014</time>
+      
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/clojure/'>clojure</a>, <a class='category' href='/categories/clojureconj/'>clojureconj</a>, <a class='category' href='/categories/learning/'>learning</a>
+  
+</span>
+
+
+    </p>
+    <p class="meta">
+    
+      <a class="basic-alignment left" href="/2014/11/02/building-my-own-lightsaber-ergodox-tips" title="Previous Post: Building My Own Lightsaber: Ergodox Tips">&laquo; Building My Own Lightsaber: Ergodox Tips</a>
+    
+    
+    </p>
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Code Adventurer</a>
+  - Copyright &copy; 2014 - Persa Zula
+</p>
+<p class="pull-right">
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a> and <a href="https://github.com/vladigleba/readify" target="_blank">Readify</a>.
+  </span>
+</p>
+
+  </div>
+</footer>
+<div id="footer-widgets">
+  <div class="container">
+      <a href="http://github.com/pzula">github</a> |
+      <a href="http://twitter.com/pzula">twitter</a>
+  </div>
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'codeadventurer';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion';
+        var disqus_url = 'http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

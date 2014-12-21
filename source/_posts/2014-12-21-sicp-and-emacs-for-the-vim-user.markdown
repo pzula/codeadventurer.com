@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SICP and Emacs for the Vim user"
-date: 2014-12-18 20:58
+date: 2014-12-21 11:58
 comments: true
 categories: learning, sicp, functional, emacs, scheme
 ---
@@ -58,3 +58,42 @@ Once you have Emacs up and running, take a look at the help guide that is on the
 ### Install Evil-mode
 
 After you've poked around and used to commands, and your fingers get tired of using C-x for everything, make the decision on whether you're going to stick to purely Emacs, or if you want to the add the vim keybindings layer provided in Evil-mode.
+
+If you're going to install Evil-mode, the instructions [on the site](https://gitorious.org/evil/pages/Home#toc_2) work perfectly, and is everything you need to get going. For the sake of getting you going quickly, the instructions are repeated here:
+
+> Evil lives in a Git repository. To download Evil, do
+> `git clone git://gitorious.org/evil/evil.git`
+> Move Evil to `~/.emacs.d/evil`. Then add the following lines to `~/.emacs`:
+> `(add-to-list 'load-path "~/.emacs.d/evil")
+> `(require 'evil)`
+> `(evil-mode 1)`
+
+Once you've gone through those steps, restart Emacs, and you should happily have access to all of the commands you know from Vim. Open a file with `:e` and you're on your way!
+
+### Now, get to writing Scheme!
+
+After you've gotten familiar with Emacs, you now need to learn how to get Emacs and MIT-Scheme to work with each other. Thankfully, MIT-Scheme has an excellent integration with Emacs, and this is super painless and only requires the memorization of useful commands.
+
+To begin, open a file with the `.scm ` extension. If you are using Evil-mode, just open a file using `:e filename.scm`. If you are using Emacs bindings, you can open a file with `C-x C-f`, enter a filename with the `.scm` extension, and press enter. In the bottom area of the buffer, your mode line should look like this:
+
+```
+----:---F1  filename.scm      (Scheme)--L1--All-------------------------
+```
+
+This indicates that the buffer is now aware of Scheme sytax in this file, and will be sensitive to it if you have any specific linters installed.
+
+Now, you'll want to launch a Scheme intrepreter. If you're coming from the world of tmux and vim, you may be tempted to run the Scheme interpreter in a new tmux shell. But, with Emacs, you can actually run the intrepreter in another buffer inside of Emacs.
+
+To do so, type `M-x run-scheme`. If MIT-Scheme is on your path, this will bring up a new buffer with the mode line looking like so:
+
+```
+----:**-F1  *scheme*     (Inferior Scheme:run)--L10--All------------
+```
+
+New buffers always take over the full screen. If you'd like to have your file and the interpreter run side-by-side (as if you were running tmux and had vim split into one side, and the interpreter split into another), then you can quickly split your screen into two parts using `C-x 2`. Now you have a split with the same buffer on each side. You can open your file with `C-x b filename.scm`, or you can use the vim command `:e filename.scm` to get your file in one of the windows. To switch to the other split, you can use the Emacs command `C-x o`, or the vim command `C-w *direction*`.
+
+Now, to get your file to evaluate in the intepreter, you can use the following command in either buffer `C-c C-l`. This is equivilent to the Scheme command of `(load 'file.scm')`, which also works. Every time you modify and save your Scheme file, you can reload it using those keybindings. If you solely want to evaluate an S-expression, place your cursor underneath the desired expression, and use the following keybinding: `C-x C-e`.
+
+### May the () be with you
+
+Hopefully this walkthrough of how, as a complete newbie, I got Emacs and MIT-Scheme working together is helpful for those coming to it for the first time. In my case, coming from Vim, I felt a little lost at the start of my journey. But after spending an hour or so for a few days playing with it and getting used to the setup, I feel comfortable enough that my tooling will allow me to focus on the content of SICP, more than worrying about the setup. If you have any ideas on how I can improve the setup, or a better way of going about this, please reach out to me! I would love to keep this updated as I learn more.

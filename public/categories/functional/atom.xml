@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: learning, | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/learning/atom.xml" rel="self"/>
+  <title><![CDATA[Category: functional, | Code Adventurer]]></title>
+  <link href="http://codeadventurer.com/categories/functional/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
   <updated>2014-12-21T12:31:26-05:00</updated>
   <id>http://codeadventurer.com/</id>

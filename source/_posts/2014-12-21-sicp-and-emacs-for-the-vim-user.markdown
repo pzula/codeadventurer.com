@@ -10,6 +10,7 @@ categories: learning, sicp, functional, emacs, scheme
 
 [SICP](http://mitpress.mit.edu/sicp/), also known as 'Structure and Interpretation of Computer Programs', is a textbook by Harold Abelson and Gerald Sussman that was written to be used with the Computer Science 100 level course at MIT. For the last two decades, it has been the cornerstone of many student's introduction to how computer programs work. It is one of the few textbooks out there that, although originally written in the 1985, still applies in our field today. Although SICP does teach computer science concepts through the use of Scheme, the language that is being used is not as important as the concepts presented. Many fundamentals courses these days focus more on the language, and this is often cited as the reason why SICP is still relevant. After asking many programmers in several communities what their favorite book is on programming, SICP came up time and time again. As such, I am embarking on the journey to learn and practice through this textbook. But first, I need to get my environment set up. And that's where the interesting findings began!
 
+<!-- more -->
 ### Vim, tmux, racket, and a few other things
 
 On a daily basis, my toolset mainly involves vim, tmux, and bash. I'm fairly efficient in using my tools, and I was eager to get going with my setup so that I could start doing exercises in the book. After some digging around and trying of things, I realized that although my Vim setup is fine with lisp-y languages (due to plugins I installed for use with Clojure), that in-line evaulation and quick access to the REPL was another story. In Clojure, `vim-fireplace` does the heavy lifting of giving you in-line evaluation, and keeping a REPL running in the background. However, when using MIT-Scheme (the language used by the book and in the [MIT Open Courseware course](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/), I thought I could get around this by running a tmux session split with panes for the Scheme REPL itself, and for my editor in the other. I quickly found that the Scheme REPL in tmux misbehaves when using arrow keys, option or alt to navigate around the text. I had also run across a few blog posts that listed struggles using MIT-Scheme with Vim, and in the end many of those folks chose to use Racket instead, for better editor integration. In an effort to stick with MIT-Scheme, I decided to look elsewhere: to Emacs.
@@ -61,12 +62,19 @@ After you've poked around and used to commands, and your fingers get tired of us
 
 If you're going to install Evil-mode, the instructions [on the site](https://gitorious.org/evil/pages/Home#toc_2) work perfectly, and is everything you need to get going. For the sake of getting you going quickly, the instructions are repeated here:
 
-> Evil lives in a Git repository. To download Evil, do
-> `git clone git://gitorious.org/evil/evil.git`
-> Move Evil to `~/.emacs.d/evil`. Then add the following lines to `~/.emacs`:
-> `(add-to-list 'load-path "~/.emacs.d/evil")
-> `(require 'evil)`
-> `(evil-mode 1)`
+ Evil lives in a Git repository. To download Evil, do
+
+ `git clone git://gitorious.org/evil/evil.git`
+
+ Move Evil to `~/.emacs.d/evil`. Then add the following lines to `~/.emacs`:
+
+```
+(add-to-list 'load-path "~/.emacs.d/evil")
+
+(require 'evil)
+
+(evil-mode 1)
+```
 
 Once you've gone through those steps, restart Emacs, and you should happily have access to all of the commands you know from Vim. Open a file with `:e` and you're on your way!
 

@@ -1,24 +1,161 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: learning, | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/learning/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:31:26-05:00</updated>
-  <id>http://codeadventurer.com/</id>
-  <author>
-    <name><![CDATA[Persa Zula]]></name>
-    <email><![CDATA[persa@persazula.com]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>SICP and Emacs for the Vim user - Code Adventurer</title>
+  <meta name="author" content="Persa Zula">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   
-  <entry>
-    <title type="html"><![CDATA[SICP and Emacs for the Vim user]]></title>
-    <link href="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
-    <updated>2014-12-21T11:58:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
-    <content type="html"><![CDATA[<h3>What is SICP?</h3>
+    
+  
+  <meta name="description" content="What is SICP? SICP, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Code Adventurer" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Code Adventurer" />
+  <meta name="og:title" content="SICP and Emacs for the Vim user" />
+  <meta name="og:description" content="What is SICP? SICP, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald &hellip;" />
+  <meta name="og:url" content="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
+  <meta name="url" content="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user">
+  
+  <meta name="subject" content="emacs,functional,learning,schemesicp,"/>
+  <meta name="category" content="emacs,functional,learning,schemesicp,"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43642331-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+
+  <header role="banner">
+  <hgroup>
+    <h1><a href="/">Code Adventurer</a></h1>
+    
+    <h2>The Journey to Software Crafts(wo)manship</h2>
+    
+  </hgroup>
+</header>
+
+
+  <nav role="navigation">
+    <ul class="nav">
+      <li><a href="/blog/archives">All Posts</a></li>
+      
+      <li>
+        <a href="/about">
+          About
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://persazula.com">
+          Portfolio
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://feeds.feedburner.com/CodeAdventurer">
+          Subscribe
+        </a>
+      </li>
+      
+    </ul>
+
+      
+    <form action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:codeadventurer.com" />
+        <input class="search" type="text" name="query" results="0" placeholder="Search" x-webkit-speech />
+      </fieldset>
+    </form>
+      
+    
+</nav>
+
+
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">SICP and Emacs for the Vim User</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-21T11:58:00-05:00" pubdate data-updated="true">Dec 21<span>st</span>, 2014</time> •
+        
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/emacs/'>emacs,</a>, <a class='category' href='/categories/functional/'>functional,</a>, <a class='category' href='/categories/learning/'>learning,</a>, <a class='category' href='/categories/scheme/'>scheme</a>, <a class='category' href='/categories/sicp/'>sicp,</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>What is SICP?</h3>
 
 <p><a href="http://mitpress.mit.edu/sicp/">SICP</a>, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald Sussman that was written to be used with the Computer Science 100 level course at MIT. For the last two decades, it has been the cornerstone of many student&rsquo;s introduction to how computer programs work. It is one of the few textbooks out there that, although originally written in the 1985, still applies in our field today. Although SICP does teach computer science concepts through the use of Scheme, the language that is being used is not as important as the concepts presented. Many fundamentals courses these days focus more on the language, and this is often cited as the reason why SICP is still relevant. After asking many programmers in several communities what their favorite book is on programming, SICP came up time and time again. As such, I am embarking on the journey to learn and practice through this textbook. But first, I need to get my environment set up. And that&rsquo;s where the interesting findings began!</p>
 
@@ -36,7 +173,7 @@
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/pzula">@pzula</a> Don&#39;t forget evil-mode. It&#39;s good!</p>&mdash; Chouser (@chrishouser) <a href="https://twitter.com/chrishouser/status/544713565479788544">December 16, 2014</a></blockquote>
 
 
-<script async src="http://codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>So, having already completely copied the setup from Clojure for the Brave and True, I realized I had no idea how customizations work in Emacs, and my inital attempts at installing Evil-mode were failing me so I blew the entire directory away, re-installed emacs using homebrew, and started fresh in order to get what I needed.</p>
@@ -51,11 +188,12 @@
 
 <p>Then, type <code>scheme</code> in your shell and see if you get a response like so:</p>
 
-<p><code>``
-MIT/GNU Scheme running under OS X
-Type</code>^C' (control-C) followed by `H' to obtain information about interrupts.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MIT/GNU Scheme running under OS X
+</span><span class='line'>Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+</span></code></pre></td></tr></table></div></figure>
 
-<p>```</p>
 
 <p>If so, you&rsquo;re good to proceed to the next step. If not, either try to install via homebrew again, or check your path.</p>
 
@@ -85,13 +223,17 @@ Type</code>^C' (control-C) followed by `H' to obtain information about interrupt
 
 <p> Move Evil to <code>~/.emacs.d/evil</code>. Then add the following lines to <code>~/.emacs</code>:</p>
 
-<p>```
-(add-to-list &lsquo;load-path &ldquo;~/.emacs.d/evil&rdquo;)</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(add-to-list 'load-path "~/.emacs.d/evil")
+</span><span class='line'>
+</span><span class='line'>(require 'evil)
+</span><span class='line'>
+</span><span class='line'>(evil-mode 1)</span></code></pre></td></tr></table></div></figure>
 
-<p>(require &lsquo;evil)</p>
-
-<p>(evil-mode 1)
-```</p>
 
 <p>Once you&rsquo;ve gone through those steps, restart Emacs, and you should happily have access to all of the commands you know from Vim. Open a file with <code>:e</code> and you&rsquo;re on your way!</p>
 
@@ -101,9 +243,9 @@ Type</code>^C' (control-C) followed by `H' to obtain information about interrupt
 
 <p>To begin, open a file with the <code>.scm</code> extension. If you are using Evil-mode, just open a file using <code>:e filename.scm</code>. If you are using Emacs bindings, you can open a file with <code>C-x C-f</code>, enter a filename with the <code>.scm</code> extension, and press enter. In the bottom area of the buffer, your mode line should look like this:</p>
 
-<p><code>
-----:---F1  filename.scm      (Scheme)--L1--All-------------------------
-</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>----:---F1  filename.scm      (Scheme)--L1--All-------------------------</span></code></pre></td></tr></table></div></figure>
+
 
 <p>This indicates that the buffer is now aware of Scheme sytax in this file, and will be sensitive to it if you have any specific linters installed.</p>
 
@@ -111,9 +253,9 @@ Type</code>^C' (control-C) followed by `H' to obtain information about interrupt
 
 <p>To do so, type <code>M-x run-scheme</code>. If MIT-Scheme is on your path, this will bring up a new buffer with the mode line looking like so:</p>
 
-<p><code>
-----:**-F1  *scheme*     (Inferior Scheme:run)--L10--All------------
-</code></p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>----:**-F1  *scheme*     (Inferior Scheme:run)--L10--All------------</span></code></pre></td></tr></table></div></figure>
+
 
 <p>New buffers always take over the full screen. If you&rsquo;d like to have your file and the interpreter run side-by-side (as if you were running tmux and had vim split into one side, and the interpreter split into another), then you can quickly split your screen into two parts using <code>C-x 2</code>. Now you have a split with the same buffer on each side. You can open your file with <code>C-x b filename.scm</code>, or you can use the vim command <code>:e filename.scm</code> to get your file in one of the windows. To switch to the other split, you can use the Emacs command <code>C-x o</code>, or the vim command <code>C-w *direction*</code>.</p>
 
@@ -122,7 +264,124 @@ Type</code>^C' (control-C) followed by `H' to obtain information about interrupt
 <h3>May the () be with you</h3>
 
 <p>Hopefully this walkthrough of how, as a complete newbie, I got Emacs and MIT-Scheme working together is helpful for those coming to it for the first time. In my case, coming from Vim, I felt a little lost at the start of my journey. But after spending an hour or so for a few days playing with it and getting used to the setup, I feel comfortable enough that my tooling will allow me to focus on the content of SICP, more than worrying about the setup. If you have any ideas on how I can improve the setup, or a better way of going about this, please reach out to me! I would love to keep this updated as I learn more.</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-</feed>
+
+
+  
+    <span class="byline author vcard">by <a href="https://plus.google.com/103689363303129064704?rel=author"><span class="fn">Persa Zula</span></a></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-21T11:58:00-05:00" pubdate data-updated="true">Dec 21<span>st</span>, 2014</time>
+      
+
+published in
+<span class="categories">
+  
+    <a class='category' href='/categories/emacs/'>emacs,</a>, <a class='category' href='/categories/functional/'>functional,</a>, <a class='category' href='/categories/learning/'>learning,</a>, <a class='category' href='/categories/scheme/'>scheme</a>, <a class='category' href='/categories/sicp/'>sicp,</a>
+  
+</span>
+
+
+    </p>
+    <p class="meta">
+    
+      <a class="basic-alignment left" href="/2014/11/22/five-days-of-clojure-immersion" title="Previous Post: Five Days of Clojure Immersion at ClojureConj">&laquo; Five Days of Clojure Immersion at ClojureConj</a>
+    
+    
+    </p>
+  </footer>
+
+</div>
+
+        
+          <div class="article-format">
+            <h1>Comments</h1>
+            <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+          </div>
+        
+      </article>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Code Adventurer</a>
+  - Copyright &copy; 2014 - Persa Zula
+</p>
+<p class="pull-right">
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a> and <a href="https://github.com/vladigleba/readify" target="_blank">Readify</a>.
+  </span>
+</p>
+
+  </div>
+</footer>
+<div id="footer-widgets">
+  <div class="container">
+      <a href="http://github.com/pzula">github</a> |
+      <a href="http://twitter.com/pzula">twitter</a>
+  </div>
+</div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+      var disqus_shortname = 'codeadventurer';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user';
+        var disqus_url = 'http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>

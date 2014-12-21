@@ -4,7 +4,7 @@
   <title><![CDATA[Code Adventurer]]></title>
   <link href="http://codeadventurer.com/atom.xml" rel="self"/>
   <link href="http://codeadventurer.com/"/>
-  <updated>2014-11-23T09:22:59-05:00</updated>
+  <updated>2014-12-21T12:31:26-05:00</updated>
   <id>http://codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SICP and Emacs for the Vim user]]></title>
+    <link href="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
+    <updated>2014-12-21T11:58:00-05:00</updated>
+    <id>http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
+    <content type="html"><![CDATA[<h3>What is SICP?</h3>
+
+<p><a href="http://mitpress.mit.edu/sicp/">SICP</a>, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald Sussman that was written to be used with the Computer Science 100 level course at MIT. For the last two decades, it has been the cornerstone of many student&rsquo;s introduction to how computer programs work. It is one of the few textbooks out there that, although originally written in the 1985, still applies in our field today. Although SICP does teach computer science concepts through the use of Scheme, the language that is being used is not as important as the concepts presented. Many fundamentals courses these days focus more on the language, and this is often cited as the reason why SICP is still relevant. After asking many programmers in several communities what their favorite book is on programming, SICP came up time and time again. As such, I am embarking on the journey to learn and practice through this textbook. But first, I need to get my environment set up. And that&rsquo;s where the interesting findings began!</p>
+
+<!-- more -->
+
+
+<h3>Vim, tmux, racket, and a few other things</h3>
+
+<p>On a daily basis, my toolset mainly involves vim, tmux, and bash. I&rsquo;m fairly efficient in using my tools, and I was eager to get going with my setup so that I could start doing exercises in the book. After some digging around and trying of things, I realized that although my Vim setup is fine with lisp-y languages (due to plugins I installed for use with Clojure), that in-line evaulation and quick access to the REPL was another story. In Clojure, <code>vim-fireplace</code> does the heavy lifting of giving you in-line evaluation, and keeping a REPL running in the background. However, when using MIT-Scheme (the language used by the book and in the <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/">MIT Open Courseware course</a>, I thought I could get around this by running a tmux session split with panes for the Scheme REPL itself, and for my editor in the other. I quickly found that the Scheme REPL in tmux misbehaves when using arrow keys, option or alt to navigate around the text. I had also run across a few blog posts that listed struggles using MIT-Scheme with Vim, and in the end many of those folks chose to use Racket instead, for better editor integration. In an effort to stick with MIT-Scheme, I decided to look elsewhere: to Emacs.</p>
+
+<h3>Emacs: A different beast</h3>
+
+<p>With Emacs, you have an entire environment. Different from Vim, you can run entire programs within Emacs. I accidently began an IRC client in there. You can even play a game of tetris using <code>M-x tetris</code>. Having never seen someone use Emacs, when I first downloaded it on Monday, I was in for a surprise. I spent a little time with the main tutorial (similar to vimtutor in Vim, but for Emacs), and began to familiarize myself with the main concepts. But I felt clumsy when editing code. I have so much muscle memory build up around Vim, and that would be hard to un-learn while playing with a new language and learning other new concepts. So I recalled that <a href="http://twitter.com/chrishouser">Chris Houser</a> mentioned at dinner during ClojureConj that Evil-mode (the vim keybinding compatability package for Emacs) was pretty good, and he even re-stated it in a tweet when I was getting started:</p>
+
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/pzula">@pzula</a> Don&#39;t forget evil-mode. It&#39;s good!</p>&mdash; Chouser (@chrishouser) <a href="https://twitter.com/chrishouser/status/544713565479788544">December 16, 2014</a></blockquote>
+
+
+<script async src="http://codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>So, having already completely copied the setup from Clojure for the Brave and True, I realized I had no idea how customizations work in Emacs, and my inital attempts at installing Evil-mode were failing me so I blew the entire directory away, re-installed emacs using homebrew, and started fresh in order to get what I needed.</p>
+
+<p>Your mileage may vary, depending on how you&rsquo;ve set up your system, but I decided to outline the steps I took in order to create an environment where I, as a vim user, could effectively get around Emacs using MIT-Scheme (on OSX) and have everything I need at my fingertips for working through the problems in SICP. For those experienced in these things (Emacs and such), I welcome feedback and corrections along the way. I&rsquo;m only 4 days young in the environment! (And thank you to Chris Houser for the encouragement and quick walkthrough!)</p>
+
+<h3>Get MIT-Scheme</h3>
+
+<p>The best way I found to get MIT-Scheme in a format that doesn&rsquo;t need modification for Emacs is using homebrew:</p>
+
+<p><code>brew update &amp;&amp; brew install mit-scheme</code></p>
+
+<p>Then, type <code>scheme</code> in your shell and see if you get a response like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>MIT/GNU Scheme running under OS X
+</span><span class='line'>Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If so, you&rsquo;re good to proceed to the next step. If not, either try to install via homebrew again, or check your path.</p>
+
+<h3>Next, get some Emacs!</h3>
+
+<p>I installed Emacs via homebrew as well. The first time around, I went to the Emacs wiki and downloaded the executable OSX <code>.app</code>, but I live and breath in my terminal, so I chose to remove that version and reinstall via homebrew as well:</p>
+
+<p><code>brew install emacs</code></p>
+
+<p>This will get you the latest version of Emacs. You should now be able to run it from your terminal using <code>emacs</code>. If something fails, either try to reinstall via homebrew, or check your paths.</p>
+
+<p>Once you have Emacs up and running, take a look at the help guide that is on the splash page. Then, print out the guide below and keep it handy during this journey!</p>
+
+<h3>Print out this reference guide to Emacs</h3>
+
+<p><a href="http://www.ic.unicamp.br/~helio/disciplinas/MC102/Emacs_Reference_Card.pdf">GNU Emacs Reference Guide</a> &mdash; You won&rsquo;t need it all of the time, but there are times when your vim keybindings won&rsquo;t get you what you want!</p>
+
+<h3>Install Evil-mode</h3>
+
+<p>After you&rsquo;ve poked around and used to commands, and your fingers get tired of using C-x for everything, make the decision on whether you&rsquo;re going to stick to purely Emacs, or if you want to the add the vim keybindings layer provided in Evil-mode.</p>
+
+<p>If you&rsquo;re going to install Evil-mode, the instructions <a href="https://gitorious.org/evil/pages/Home#toc_2">on the site</a> work perfectly, and is everything you need to get going. For the sake of getting you going quickly, the instructions are repeated here:</p>
+
+<p> Evil lives in a Git repository. To download Evil, do</p>
+
+<p> <code>git clone git://gitorious.org/evil/evil.git</code></p>
+
+<p> Move Evil to <code>~/.emacs.d/evil</code>. Then add the following lines to <code>~/.emacs</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>(add-to-list 'load-path "~/.emacs.d/evil")
+</span><span class='line'>
+</span><span class='line'>(require 'evil)
+</span><span class='line'>
+</span><span class='line'>(evil-mode 1)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once you&rsquo;ve gone through those steps, restart Emacs, and you should happily have access to all of the commands you know from Vim. Open a file with <code>:e</code> and you&rsquo;re on your way!</p>
+
+<h3>Now, get to writing Scheme!</h3>
+
+<p>After you&rsquo;ve gotten familiar with Emacs, you now need to learn how to get Emacs and MIT-Scheme to work with each other. Thankfully, MIT-Scheme has an excellent integration with Emacs, and this is super painless and only requires the memorization of useful commands.</p>
+
+<p>To begin, open a file with the <code>.scm</code> extension. If you are using Evil-mode, just open a file using <code>:e filename.scm</code>. If you are using Emacs bindings, you can open a file with <code>C-x C-f</code>, enter a filename with the <code>.scm</code> extension, and press enter. In the bottom area of the buffer, your mode line should look like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>----:---F1  filename.scm      (Scheme)--L1--All-------------------------</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This indicates that the buffer is now aware of Scheme sytax in this file, and will be sensitive to it if you have any specific linters installed.</p>
+
+<p>Now, you&rsquo;ll want to launch a Scheme intrepreter. If you&rsquo;re coming from the world of tmux and vim, you may be tempted to run the Scheme interpreter in a new tmux shell. But, with Emacs, you can actually run the intrepreter in another buffer inside of Emacs.</p>
+
+<p>To do so, type <code>M-x run-scheme</code>. If MIT-Scheme is on your path, this will bring up a new buffer with the mode line looking like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>----:**-F1  *scheme*     (Inferior Scheme:run)--L10--All------------</span></code></pre></td></tr></table></div></figure>
+
+
+<p>New buffers always take over the full screen. If you&rsquo;d like to have your file and the interpreter run side-by-side (as if you were running tmux and had vim split into one side, and the interpreter split into another), then you can quickly split your screen into two parts using <code>C-x 2</code>. Now you have a split with the same buffer on each side. You can open your file with <code>C-x b filename.scm</code>, or you can use the vim command <code>:e filename.scm</code> to get your file in one of the windows. To switch to the other split, you can use the Emacs command <code>C-x o</code>, or the vim command <code>C-w *direction*</code>.</p>
+
+<p>Now, to get your file to evaluate in the intepreter, you can use the following command in either buffer <code>C-c C-l</code>. This is equivilent to the Scheme command of <code>(load 'file.scm')</code>, which also works. Every time you modify and save your Scheme file, you can reload it using those keybindings. If you solely want to evaluate an S-expression, place your cursor underneath the desired expression, and use the following keybinding: <code>C-x C-e</code>.</p>
+
+<h3>May the () be with you</h3>
+
+<p>Hopefully this walkthrough of how, as a complete newbie, I got Emacs and MIT-Scheme working together is helpful for those coming to it for the first time. In my case, coming from Vim, I felt a little lost at the start of my journey. But after spending an hour or so for a few days playing with it and getting used to the setup, I feel comfortable enough that my tooling will allow me to focus on the content of SICP, more than worrying about the setup. If you have any ideas on how I can improve the setup, or a better way of going about this, please reach out to me! I would love to keep this updated as I learn more.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Five Days of Clojure Immersion at ClojureConj]]></title>
@@ -1090,23 +1207,6 @@ all of the requirements that I realized that starting at the top of the list wou
 <p>I couldn&rsquo;t believe how much time he had spent with us, going around in circles, walking us through debugging, and helping us find the issues in our program. I would love it if every mentor out there were as patient as Cory.</p>
 
 <p>Although in the end we did not finish SalesEngine, I believe the lessons we learned from Cory about debugging, and the persistence needed when tracking down issues, were monumental, and very important to the success of our future projects.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning from the Community]]></title>
-    <link href="http://codeadventurer.com/2013/09/29/learning-from-the-community"/>
-    <updated>2013-09-29T18:40:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/29/learning-from-the-community</id>
-    <content type="html"><![CDATA[<p>This past week of gSchool, we got our first outside-of-the-classroom introductions to the Ruby community by attending <a href="http://rockymtnruby.com/">Rocky Mountain Ruby Conf</a><!-- more -->, and also by having a personal session with <a href="https://github.com/wayneeseguin">Wayne E. Seguin</a>, the original creator of RVM.</p>
-
-<p>Wayne taught us a few important lessons, but the most important advice I heard is to know yourself, and to know how to deal with yourself. As a similar work-a-holic, when I am at home (aka: not in gSchool, where work-a-holicism is somewhat of a neccessity), I tend to spend hours learning new things after work, and ignoring my friends and family. Although great for keeping up with the current tech trends, this tends to wear on my personal relationships. To combat this, Wayne has set aside the 5pm to 8pm block of time as &ldquo;family time&rdquo;, and has alerted all of his friends, the open source projects he works on, and his colleagues of this rule. He sticks to it, and with this expectation, he does not let anyone down. His family knows his focus is on them during that time, and his co-collaborators respect that he is away and unavailable to work during that time of day.</p>
-
-<p>At Rocky Mountain Ruby, I learned a lot about the community. Aside from the stickers, soft tshirts, and good food, the presenters where really knowledgable about their topics. I have attended conferences before, but I have never been to a conference with only one track. This was interesting to me, because although I didn&rsquo;t have enough practical knowledge on the subject, I was forced to hear about threading, Go (the language), and 17 databases that I&rsquo;ve never heard of before, I listened throughout the presentations and was able to learn something about the subject. Coming out of the conference, I was amazed at how much I had understood about every presentation. It goes to show that if you listen and try to understand, you will learn.*</p>
-
-<p>Learning from the community, regardless of whether it is the Ruby community, or another community in general, is a very interesting experience. If you listen carefully, you hear about the triumphs, the losses, the intersections of people and pride, and the lessons that others have learned. I&rsquo;ve found that it is wise to listen hard during these anecdotes, because those that wore this path before us have made mistakes (or discoveries) that we can benefit from knowing, and hopefully apply to our own individual journeys.</p>
-
-<p><strong>*Pro-tip:</strong> Sit in the front during conferences and presentations. If you have any sense of shame left in you, you won&rsquo;t be as compelled to whip open your laptop or check your phone. And without distractions, there is only one thing left to do: listen to the presentation.</p>
 ]]></content>
   </entry>
   

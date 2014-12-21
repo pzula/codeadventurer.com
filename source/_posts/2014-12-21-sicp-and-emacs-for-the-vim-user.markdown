@@ -3,7 +3,7 @@ layout: post
 title: "SICP and Emacs for the Vim user"
 date: 2014-12-21 11:58
 comments: true
-categories: learning, sicp, functional, emacs, scheme
+categories: learning sicp functional emacs scheme
 ---
 
 ### What is SICP?

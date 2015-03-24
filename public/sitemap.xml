@@ -1,121 +1,127 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://codeadventurer.com/2013/09/02/on-a-quest-for-awesome</loc>
+        <loc>http://www.codeadventurer.com/2013/09/02/on-a-quest-for-awesome</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
         <loc>
-            http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx
+            http://www.codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx
         </loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</loc>
+        <loc>http://www.codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</loc>
+        <loc>http://www.codeadventurer.com/2013/09/20/learning-is-effin-hard</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/09/29/learning-from-the-community</loc>
+        <loc>http://www.codeadventurer.com/2013/09/29/learning-from-the-community</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</loc>
+        <loc>http://www.codeadventurer.com/2013/10/04/learning-from-a-mentor</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
         <loc>
-            http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects
+            http://www.codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects
         </loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</loc>
+        <loc>http://www.codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/10/26/naming-your-weakness</loc>
+        <loc>http://www.codeadventurer.com/2013/10/26/naming-your-weakness</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</loc>
+        <loc>http://www.codeadventurer.com/2013/10/28/web-apps-and-code-retreats</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/11/01/scraping-a-website</loc>
+        <loc>http://www.codeadventurer.com/2013/11/01/scraping-a-website</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</loc>
+        <loc>http://www.codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</loc>
+        <loc>http://www.codeadventurer.com/2013/11/08/dashing-down-the-rails</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/11/22/dinner-dash</loc>
+        <loc>http://www.codeadventurer.com/2013/11/22/dinner-dash</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2013/12/06/halfway-home</loc>
+        <loc>http://www.codeadventurer.com/2013/12/06/halfway-home</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</loc>
+        <loc>http://www.codeadventurer.com/2014/01/03/56-days-until-takeoff</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</loc>
+        <loc>http://www.codeadventurer.com/2014/01/11/mashing-code-at-codemash</loc>
         <lastmod>2014-02-07T22:37:08-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</loc>
+        <loc>http://www.codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</loc>
         <lastmod>2014-06-27T14:58:18-04:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</loc>
+        <loc>
+            http://www.codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer
+        </loc>
         <lastmod>2014-02-07T23:38:42-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/03/15/the-value-of-mentorship</loc>
+        <loc>http://www.codeadventurer.com/2014/03/15/the-value-of-mentorship</loc>
         <lastmod>2014-03-15T12:41:14-04:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</loc>
+        <loc>
+            http://www.codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer
+        </loc>
         <lastmod>2014-06-17T08:24:22-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra
+            http://www.codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra
         </loc>
         <lastmod>2014-06-27T18:08:38-04:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips</loc>
+        <loc>
+            http://www.codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips
+        </loc>
         <lastmod>2014-11-02T12:23:15-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</loc>
+        <loc>http://www.codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</loc>
         <lastmod>2014-11-23T09:22:54-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</loc>
+        <loc>http://www.codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</loc>
         <lastmod>2014-12-21T12:32:43-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/about/</loc>
-        <lastmod>2014-02-07T22:37:08-05:00</lastmod>
+        <loc>http://www.codeadventurer.com/about/</loc>
+        <lastmod>2015-03-24T11:15:07-04:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/blog/archives/</loc>
+        <loc>http://www.codeadventurer.com/blog/archives/</loc>
         <lastmod>2014-12-21T12:32:43-05:00</lastmod>
     </url>
     <url>
-        <loc>http://codeadventurer.com/</loc>
+        <loc>http://www.codeadventurer.com/</loc>
         <lastmod>2014-12-21T12:32:43-05:00</lastmod>
     </url>
 </urlset>

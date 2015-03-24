@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: clojureconj | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/clojureconj/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/clojureconj/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Five Days of Clojure Immersion at ClojureConj]]></title>
-    <link href="http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion"/>
+    <link href="http://www.codeadventurer.com/2014/11/22/five-days-of-clojure-immersion"/>
     <updated>2014-11-22T16:24:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</id>
+    <id>http://www.codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</id>
     <content type="html"><![CDATA[<p>This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give an overview of my experience as a newcomer to the community, so that anyone else that may have been intimidated by the parens can be inspired to give it a try.</p>
 
 <!-- more -->

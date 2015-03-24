@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sinatra | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/sinatra/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/sinatra/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Build Your Own API Data Vaccum with Sinatra, Redis, and MongoDB]]></title>
-    <link href="http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra"/>
+    <link href="http://www.codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra"/>
     <updated>2014-06-23T20:57:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra</id>
+    <id>http://www.codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra</id>
     <content type="html"><![CDATA[<p>After setting up a SparkCore device (an internet-connected, Arduino-like device) to report the temperature and humidity in my greenhouse, I had one problem: persistance of the data. The SparkCore can transmit data via their SparkCloud API if you assign a variable for it in your Arduino code, and so I had a place where the data was constantly being transmitted. However, since the SparkCore itself has very limited memory capabilities, and since the only thing the SparkCloud itself does it provide a JSON-formatted API, I needed to figure out how to periodically ping the API and scoop up the data into a database.</p>
 
 <p>This didn&rsquo;t seem like a job for the heft of Rails, so I started with Sinatra. My goals were to create something that others could reuse, improve upon, and deploy easily. Below I&rsquo;ll outline how to build your own API-slurping app from scratch. If you&rsquo;d rather just grab the code and hack on it, you can find it on GitHub at <a href="https://github.com/pzula/greenhouse-watchman">https://github.com/pzula/greenhouse-watchman</a>.The evolution of the project is evident through the <a href="https://github.com/pzula/greenhouse-watchman/commits/master">commit log</a>, so you can see how I started building up from a few simple files to a more organized solution.</p>

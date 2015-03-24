@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SICP and Emacs for the Vim user]]></title>
-    <link href="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
+    <link href="http://www.codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
     <updated>2014-12-21T11:58:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
+    <id>http://www.codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
     <content type="html"><![CDATA[<h3>What is SICP?</h3>
 
 <p><a href="http://mitpress.mit.edu/sicp/">SICP</a>, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald Sussman that was written to be used with the Computer Science 100 level course at MIT. For the last two decades, it has been the cornerstone of many student&rsquo;s introduction to how computer programs work. It is one of the few textbooks out there that, although originally written in the 1985, still applies in our field today. Although SICP does teach computer science concepts through the use of Scheme, the language that is being used is not as important as the concepts presented. Many fundamentals courses these days focus more on the language, and this is often cited as the reason why SICP is still relevant. After asking many programmers in several communities what their favorite book is on programming, SICP came up time and time again. As such, I am embarking on the journey to learn and practice through this textbook. But first, I need to get my environment set up. And that&rsquo;s where the interesting findings began!</p>
@@ -36,7 +36,7 @@
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/pzula">@pzula</a> Don&#39;t forget evil-mode. It&#39;s good!</p>&mdash; Chouser (@chrishouser) <a href="https://twitter.com/chrishouser/status/544713565479788544">December 16, 2014</a></blockquote>
 
 
-<script async src="http://codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://www.codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>So, having already completely copied the setup from Clojure for the Brave and True, I realized I had no idea how customizations work in Emacs, and my inital attempts at installing Evil-mode were failing me so I blew the entire directory away, re-installed emacs using homebrew, and started fresh in order to get what I needed.</p>
@@ -132,9 +132,9 @@
   
   <entry>
     <title type="html"><![CDATA[Five Days of Clojure Immersion at ClojureConj]]></title>
-    <link href="http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion"/>
+    <link href="http://www.codeadventurer.com/2014/11/22/five-days-of-clojure-immersion"/>
     <updated>2014-11-22T16:24:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</id>
+    <id>http://www.codeadventurer.com/2014/11/22/five-days-of-clojure-immersion</id>
     <content type="html"><![CDATA[<p>This past week marks my first deep-dive into Clojure, and it happened to be at clojure/conj in Washington, DC. I had great time, and I want to give an overview of my experience as a newcomer to the community, so that anyone else that may have been intimidated by the parens can be inspired to give it a try.</p>
 
 <!-- more -->
@@ -187,9 +187,9 @@
   
   <entry>
     <title type="html"><![CDATA[Building My Own Lightsaber: Ergodox Tips]]></title>
-    <link href="http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips"/>
+    <link href="http://www.codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips"/>
     <updated>2014-11-02T11:08:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips</id>
+    <id>http://www.codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips</id>
     <content type="html"><![CDATA[<p>Building a keyboard can be likened to building a lightsaber. I set off on an adventure, found some plans, and somehow found the confidence to give it a try.</p>
 
 <p>This is not an endeavor that happens without trepidation. When I first decided to spring for an Ergodox kit on <a href="http://massdrop.com">Massdrop</a>, I knew that I wouldn&rsquo;t be getting the parts in the mail for months. I figured I knew how to do a little soldering (thanks to the <a href="http://concoctory.com/">Concococtory&rsquo;s</a> beginner class), and it wouldn&rsquo;t be a big deal. But once the kit was on my front porch, months later, I started to doubt my abilities to complete this project.</p>
@@ -297,32 +297,32 @@ You&rsquo;re also going to need a few things to help you when you mess up. I rec
 
 <h2>Photos of my project</h2>
 
-<p><img src="http://codeadventurer.com/images/ergodox/ergodox_diodes.jpg" alt="Placing diodes using the magnifiying glass" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/ergodox_diodes.jpg" alt="Placing diodes using the magnifiying glass" /></p>
 
 <p class="caption">Placing diodes using the magnifying glass</p>
 
 
-<p><img src="http://codeadventurer.com/images/ergodox/keyswitches_on_acrylic.jpg" alt="Placing keyswitches on acrylic" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/keyswitches_on_acrylic.jpg" alt="Placing keyswitches on acrylic" /></p>
 
 <p class="caption">Placing keyswitches on acrylic</p>
 
 
-<p><img src="http://codeadventurer.com/images/ergodox/keyswitches_and_pcb.jpg" alt="Placing keyswitches on PCB" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/keyswitches_and_pcb.jpg" alt="Placing keyswitches on PCB" /></p>
 
 <p class="caption">Placing keyswitches on PCB</p>
 
 
-<p><img src="http://codeadventurer.com/images/ergodox/switches_and_diodes.jpg" alt="Soldering of switches" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/switches_and_diodes.jpg" alt="Soldering of switches" /></p>
 
 <p class="caption">Soldering on switches after the diodes</p>
 
 
-<p><img src="http://codeadventurer.com/images/ergodox/missing_keycap.jpg" alt="Finished, with missing keycap" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/missing_keycap.jpg" alt="Finished, with missing keycap" /></p>
 
 <p class="caption">Missing a keycap from the drop</p>
 
 
-<p><img src="http://codeadventurer.com/images/ergodox/with_new_keycaps.jpg" alt="Finished, with new keycaps" /></p>
+<p><img src="http://www.codeadventurer.com/images/ergodox/with_new_keycaps.jpg" alt="Finished, with new keycaps" /></p>
 
 <p class="caption">The Ergodox today</p>
 
@@ -331,9 +331,9 @@ You&rsquo;re also going to need a few things to help you when you mess up. I rec
   
   <entry>
     <title type="html"><![CDATA[Build Your Own API Data Vaccum with Sinatra, Redis, and MongoDB]]></title>
-    <link href="http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra"/>
+    <link href="http://www.codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra"/>
     <updated>2014-06-23T20:57:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra</id>
+    <id>http://www.codeadventurer.com/2014/06/23/build-your-own-api-data-vacuum-with-sinatra</id>
     <content type="html"><![CDATA[<p>After setting up a SparkCore device (an internet-connected, Arduino-like device) to report the temperature and humidity in my greenhouse, I had one problem: persistance of the data. The SparkCore can transmit data via their SparkCloud API if you assign a variable for it in your Arduino code, and so I had a place where the data was constantly being transmitted. However, since the SparkCore itself has very limited memory capabilities, and since the only thing the SparkCloud itself does it provide a JSON-formatted API, I needed to figure out how to periodically ping the API and scoop up the data into a database.</p>
 
 <p>This didn&rsquo;t seem like a job for the heft of Rails, so I started with Sinatra. My goals were to create something that others could reuse, improve upon, and deploy easily. Below I&rsquo;ll outline how to build your own API-slurping app from scratch. If you&rsquo;d rather just grab the code and hack on it, you can find it on GitHub at <a href="https://github.com/pzula/greenhouse-watchman">https://github.com/pzula/greenhouse-watchman</a>.The evolution of the project is evident through the <a href="https://github.com/pzula/greenhouse-watchman/commits/master">commit log</a>, so you can see how I started building up from a few simple files to a more organized solution.</p>
@@ -624,9 +624,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[My First 100 Days as a Software Engineer]]></title>
-    <link href="http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
+    <link href="http://www.codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
     <updated>2014-06-17T07:58:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
+    <id>http://www.codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
     <content type="html"><![CDATA[<p>Today marks 100 days* since my first day as a software engineer at Hireology, and it&rsquo;s been an amazing experience.</p>
 
 <p>A week before I officially became a software engineer, I packed up my apartment in Denver, shipped some bigger things home, packed the rest of my life in a suitcase and hopped back on a plane to Akron, Ohio.</p>
@@ -675,9 +675,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[The Value of Mentorship]]></title>
-    <link href="http://codeadventurer.com/2014/03/15/the-value-of-mentorship"/>
+    <link href="http://www.codeadventurer.com/2014/03/15/the-value-of-mentorship"/>
     <updated>2014-03-15T13:46:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/03/15/the-value-of-mentorship</id>
+    <id>http://www.codeadventurer.com/2014/03/15/the-value-of-mentorship</id>
     <content type="html"><![CDATA[<p>When making the decision to start a new career, you might find yourself a little lost. This can lead to a lot of online searches, reading articles and books on the subject at hand, and trying to understand quite a bit of contradictory advice. Instead of more online searches and questions posted to forums, the best investment you can make is in finding a mentor to help you through the maze. Throughout my journey, I&rsquo;ve come across great mentors, and have been starting to see patterns that emerge during a mentorship that make the relationship valuable and fulfilling for both parties.</p>
 
 <!-- more -->
@@ -711,9 +711,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Lessons Learned as a Budding Programmer]]></title>
-    <link href="http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
+    <link href="http://www.codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
     <updated>2014-02-07T10:12:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
+    <id>http://www.codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
     <content type="html"><![CDATA[<h2>A little background</h2>
 
 <p>I wasn&rsquo;t new to computers five months ago when I started gSchool, a 6-month intensive &amp; immersive course in learning Ruby and Ruby on Rails, but I might as well had been.</p>
@@ -753,9 +753,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Beautiful, Dynamic Database Seeding Scripts]]></title>
-    <link href="http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
+    <link href="http://www.codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding"/>
     <updated>2014-02-01T18:54:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</id>
+    <id>http://www.codeadventurer.com/2014/02/01/beautiful_dynamic_database_seeding</id>
     <content type="html"><![CDATA[<p>In our current Rails project, my team is building <a href="http://github.com/freshfinder">FreshFinder</a>, a community-edited Farmer&rsquo;s Market finder, with reviews. The main data we are using in our application, prior to user contributions, is data that we are pulling from <a href="http://data.gov">Data.gov</a>&rsquo;s Excel spreadsheet of USDA Farmer&rsquo;s Market Data. <!-- more -->A spreadsheet?? Yes. A spreadsheet. Because although they have a publicly-accessible API for the data, there are only two possible calls to this API, both of which do not contain all of the information otherwise contained in the Excel file.</p>
 
 <p>Armed with the <code>CSV</code> Ruby library, some regex, some string splitting, and gsubbing, my team and I have been normalizing the data from the spreadsheet to build out a publically-accessible, RESTful API for our application&rsquo;s frontend to consume. While building it out, it makes sense to seed the database with real data from the spreadsheet, so I&rsquo;ve been learning a lot about building beautiful, dynamic seed scripts for Rails.</p>
@@ -872,9 +872,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
-    <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
+    <link href="http://www.codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
     <updated>2014-01-11T14:30:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
+    <id>http://www.codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
     <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
 <p>The conference was interesting. I met a lot of people from the surrounding states that worked in many different fields, but over and over again I heard people repeat the same mantra, or some rendition of it &mdash; &ldquo;.Net for pay, Ruby for play&rdquo;. This was interesting to me, because although I knew I&rsquo;d be returning to Ohio after gSchool, I hadn&rsquo;t looked into the job opportunities available before I accepted a slot in the class. I doubt if it would have changed my mind to know that locally there are only a handful of companies that work with Ruby, because I was very adamant about learning test driven development in a language that has a strong culture of testing.</p>
@@ -889,9 +889,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
-    <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
+    <link href="http://www.codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
     <updated>2014-01-03T09:05:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
+    <id>http://www.codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
 <p>Before that day comes, I still have work to do. As I&rsquo;m reading Sandi Metz&rsquo;s book, <a href="http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330/ref=sr_1_1?ie=UTF8&amp;qid=1388765519&amp;sr=8-1&amp;keywords=practical+object-oriented+design+in+ruby">Practical Object Oriented Design in Ruby</a>, I see that I can improve on the way I think about and execute the design of applications. I&rsquo;m excited to work through the book, and apply the lessons in my projects.</p>
@@ -908,9 +908,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Halfway Home]]></title>
-    <link href="http://codeadventurer.com/2013/12/06/halfway-home"/>
+    <link href="http://www.codeadventurer.com/2013/12/06/halfway-home"/>
     <updated>2013-12-06T09:05:00-05:00</updated>
-    <id>http://codeadventurer.com/2013/12/06/halfway-home</id>
+    <id>http://www.codeadventurer.com/2013/12/06/halfway-home</id>
     <content type="html"><![CDATA[<p>Last week marked the halfway point for gSchool. We had our second assessments, using the instructions from the <a href="https://github.com/JumpstartLab/curriculum/blob/master/source/academy/workshops/scrabble_intermediate.markdown">Intermediate Scrabble</a> repo and requirements. <!-- more -->It was a fun challenge, and I&rsquo;ve had some major improvement since the previous assessment. After our assessments, we worked on a Rails tutorial that introduced some more advanced concepts. On Tuesday, the rest of the class worked on Arduino projects, but I had to catch a flight home for the holiday and missed out on that particular hack day. (But I got a few fun things from <a href="http://www.sparkfun.com">Sparkfun</a> on sale that I&rsquo;m going to hack on over Christmas). It felt great to go home for a few days, spend time with family, sleep in my bed, and program for only four hours instead of all day.</p>
 
 <p>This week we got back at it in full force. We&rsquo;re working on <a href="http://tutorials.jumpstartlab.com/projects/fourth_meal.html#functional-requirements">Fourth Meal</a>, building upon Dinner Dash using a codebase that is different from the last project. My group chose the project I worked on last time, which I am grateful for, because I did not feel I understood all of the parts of it before. We started out by refactoring a few pieces of the code, exploring the implementations, deploying a staging and production site, and writing our user stories in <a href="https://www.pivotaltracker.com/s/projects/968652">Pivotal Tracker</a>. We&rsquo;ve been focused on writing proper user stories, understanding our iterations, and dealing with a &ldquo;real&rdquo; client (&ldquo;real&rdquo; meaning Jeff Casimir, acting (in good character)  a demanding client). Our project includes expanding the original codebase to support multi-tenancy (i.e. multiple restaurants in the system with the ability to shop between them independently). I&rsquo;m enjoying the focus on iterations, and sticking to user stories throughout the development process. I believe it&rsquo;s important to delivering value as quickly as possible in an agile way.</p>
@@ -925,12 +925,12 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Dinner Dash, Battleship & Javascript]]></title>
-    <link href="http://codeadventurer.com/2013/11/22/dinner-dash"/>
+    <link href="http://www.codeadventurer.com/2013/11/22/dinner-dash"/>
     <updated>2013-11-22T11:07:00-05:00</updated>
-    <id>http://codeadventurer.com/2013/11/22/dinner-dash</id>
+    <id>http://www.codeadventurer.com/2013/11/22/dinner-dash</id>
     <content type="html"><![CDATA[<p>Last week, we finished up our Dinner Dash project in Rails. It was a great first dive into Rails, and I had a lot of fun learning about ActiveRecord, ActiveSupport, and all of the helper methods. <!-- more --> One of the biggest things I learned as we were wrapping up the project and working through our user interface is that in order to do BDD effectively, a project really needs to start off with wireframes. In the last two projects where I have used BDD, it&rsquo;s been a little rough connecting the user interface up in a logical way at the end. It makes much more sense to work through it at the beginning to help guide the final development and make design an easier piece of the puzzle.</p>
 
-<p><img src="http://codeadventurer.com/images/dinner_dash.png" title="Platable" alt="Platable" />
+<p><img src="http://www.codeadventurer.com/images/dinner_dash.png" title="Platable" alt="Platable" />
 <a href="http://platable.herokuapp.com">(See Platable on Heroku)</a></p>
 
 <p>At the end of last week, we had our second code retreat. We worked through a few 50-minute sessions to build <a href="https://github.com/JumpstartLab/code_retreat">Battleship</a> under different constraints. Unlike our last code retreat, where the scope was much smaller and tests were provided to help guide the design of the API, this time there were only instructions of how the gameplay works. Although the problem is very interesting, it was frustrating to keep switching the context of which piece of the game we were building, and it did not seem like any of my pairs and I got remotely close to solving the piece at hand before we had to delete our code and start over on a new part of the game. However, the exercise has definitely piqued my interest, and I plan on revisiting Battleship on my own to try to build it as a CLI.</p>
@@ -943,9 +943,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Dashing Down the Rails]]></title>
-    <link href="http://codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
+    <link href="http://www.codeadventurer.com/2013/11/08/dashing-down-the-rails"/>
     <updated>2013-11-08T10:13:00-05:00</updated>
-    <id>http://codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
+    <id>http://www.codeadventurer.com/2013/11/08/dashing-down-the-rails</id>
     <content type="html"><![CDATA[<p>It&rsquo;s amazing to look back on my time here at gSchool and realize that at this point in time, if I were in a shorter bootcamp program, I&rsquo;d be graduating today. <!-- more --> Instead, I&rsquo;m midway through my first Rails project, and learning about all of the features that Rails implements for me through a well-thought-out Ruby backend. When I want to write my own validators or database searches, I start down that journey, but then quickly realize that Rails has already taken care of it for me and that I just need to find the right method in the documentation.</p>
 
 <p>I can imagine what a contrast this is for people who learn as little Ruby as possible in order to get by using all the magic that Rails provides. I think that if I didn&rsquo;t know about the internals of how it worked, I would likely end up in the same boat as when I was hacking things together in Drupal. I have often heard that it is best to know Ruby before working with Rails, and now having experience with both Ruby, and Sinatra, I can see the differences between what Rails provides, and what the language itself does for me, which I think is very important for anyone using any framework.</p>
@@ -960,9 +960,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Running Rails with PostgreSQL locally]]></title>
-    <link href="http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
+    <link href="http://www.codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally"/>
     <updated>2013-11-02T13:18:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
+    <id>http://www.codeadventurer.com/2013/11/02/running-rails-with-postgresql-locally</id>
     <content type="html"><![CDATA[<p>I had a few issues installing Rails for the first time with PostgreSQL locally, and since the problems I was having as a newbie in both were not well-documented on the internet, I thought I&rsquo;d post a rundown of what happened and how I fixed it. <!-- more --></p>
 
 <h3>Installing pgsql with home-brew</h3>
@@ -1011,9 +1011,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Scraping a Website, Building a CMS]]></title>
-    <link href="http://codeadventurer.com/2013/11/01/scraping-a-website"/>
+    <link href="http://www.codeadventurer.com/2013/11/01/scraping-a-website"/>
     <updated>2013-11-01T09:12:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/11/01/scraping-a-website</id>
+    <id>http://www.codeadventurer.com/2013/11/01/scraping-a-website</id>
     <content type="html"><![CDATA[<p>This week, we started a quick-turnaround project in Sinatra called <a href="http://tutorials.jumpstartlab.com/projects/clone_wars.html">Clone Wars</a>. Our challenge was to pick one of five local businesses, build a CMS for their existing types of content, and then scrape their existing website into our database &mdash; all in three days. <!-- more --></p>
 
 <p>On Monday, before the project started, we took a little time to research web scrapers as a class. Afterwards, we did a short <a href="http://tutorials.jumpstartlab.com/topics/mechanize.html">tutorial</a> with the <a href="https://github.com/sparklemotion/mechanize">Mechanize</a> and <a href="https://github.com/sparklemotion/nokogiri">Nokogiri</a> gems, and started scraping different websites.</p>
@@ -1042,9 +1042,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Web Apps &amp; Code Retreats]]></title>
-    <link href="http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
+    <link href="http://www.codeadventurer.com/2013/10/28/web-apps-and-code-retreats"/>
     <updated>2013-10-28T09:22:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
+    <id>http://www.codeadventurer.com/2013/10/28/web-apps-and-code-retreats</id>
     <content type="html"><![CDATA[<p>Our latest project, finished last week, was <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>. As mentioned in a previous post, we started building the project from a tutorial, without tests, and went from there. <!-- more --> I added unit tests before the weekend, and then started using Capybara for acceptance tests last. After watching the <a href="http://www.youtube.com/watch?v=BG_DDUD4M9E">RailsConf talk on BDD</a>, I realized I&rsquo;d much rather work from the outside-in approach demonstrated in the talk.*</p>
 
 <p>After building through IdeaBox on our own, we presented the projects on Thursday afternoon. It was great to see everybody&rsquo;s work, and see how far they got in the project, learn about their &ldquo;a-ha!&rdquo; moments, and also hear about pain points. It was great to see a project starting to turn out differently &mdash; I&rsquo;m sure as the course progresses, we will end up with vastly different projects than in the first third of the course.</p>
@@ -1064,9 +1064,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Naming Your Weakness]]></title>
-    <link href="http://codeadventurer.com/2013/10/26/naming-your-weakness"/>
+    <link href="http://www.codeadventurer.com/2013/10/26/naming-your-weakness"/>
     <updated>2013-10-26T13:28:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/10/26/naming-your-weakness</id>
+    <id>http://www.codeadventurer.com/2013/10/26/naming-your-weakness</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we had our first assessment. We were offered a problem, in this case, the <a href="http://tutorials.jumpstartlab.com/academy/workshops/scrabble.html">building blocks of the Scrabble game</a>, which included a short guide <!-- more -->that informed us of some of the API decisions based on the expected input and output of the program, and we sat down with one of our three instructors for 40 minutes, while they watched and listened to us work through the problem.</p>
 
 <p>As an exercise in Enumerators a few weeks ago, I took a similar look at the beginnings of the Scrabble exercise (counting word scores), so I did not spend too much time &ldquo;preparing&rdquo; for the assessment. I did not want to memorize how to solve the problem, because I wanted a raw feel to how my process works from my instructors&#8217; perspective, so that I knew what I needed to work on improving.</p>
@@ -1107,9 +1107,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Back to the land of HTTP requests]]></title>
-    <link href="http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests"/>
+    <link href="http://www.codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests"/>
     <updated>2013-10-18T08:58:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</id>
+    <id>http://www.codeadventurer.com/2013/10/18/back-to-the-land-of-http-requests</id>
     <content type="html"><![CDATA[<p>This week, we started using Sinatra to build a web application. At the start of the week, we built <a href="http://tutorials.jumpstartlab.com/projects/web_guesser.html">WebGuesser</a>, a random-number guessing site <!--more -->that allows for a user to guess the number, and gives feedback on how close they are. <a href="http://agile-peak-6795.herokuapp.com/">My version</a> has a few bugs. For instance, if two people are accessing the site at the same time and playing, each person&rsquo;s guess counts towards the total, so you may only guess once or twice and be presented with a &ldquo;Too many guesses&rdquo; message. This can easily be solved with session cookies, but I haven&rsquo;t gotten around to refactoring yet. I&rsquo;m sure I&rsquo;ll get a chance to come back and make that short project better.</p>
 
 <p>We also started building <a href="http://tutorials.jumpstartlab.com/projects/idea_box.html">IdeaBox</a>, a place for someone to jot down ideas and store them. Originally, I just worked through the tutorial to have an understanding of the application, and then I implemented a few changes before writing tests. It was hard to work through the tutorial to understand what was happening and try to write tests at the same time, but now that I have gone back and written tests for the application, I am much more comfortable with moving forward with implementing the extensions.</p>
@@ -1124,9 +1124,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[A week of focus is worth a thousand projects]]></title>
-    <link href="http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
+    <link href="http://www.codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects"/>
     <updated>2013-10-11T09:01:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
+    <id>http://www.codeadventurer.com/2013/10/11/a-week-of-focus-is-worth-a-thousand-projects</id>
     <content type="html"><![CDATA[<p>This past week at gSchool, we broke out into groups based on how comfortable we felt with the projects we had done and the techniques and methods used in them. <!-- more --> We had an emerging group, a progress group, and an advanced group. In these groups, we would focus on taking what we knew, building on it, and pushing ourselves past our comfort levels.</p>
 
 <p>I felt like I could get some benefit out of the exercises the emerging group has been working on (like locking in various ways of using hashes, arrays, and enumerators), but I also had a feeling that I might have a good enough grasp on those things that I could push myself in a different way. Instead, I chose to join in with Jeff&rsquo;s group, the progress group, to take a fresh look at our first paired project from a few weeks back, <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">EventReporter</a>.</p>
@@ -1149,9 +1149,9 @@ Then, add another require statement in <code>application.rb</code> like so: <cod
   
   <entry>
     <title type="html"><![CDATA[Turtles & Mentors]]></title>
-    <link href="http://codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
+    <link href="http://www.codeadventurer.com/2013/10/04/learning-from-a-mentor"/>
     <updated>2013-10-04T20:41:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
+    <id>http://www.codeadventurer.com/2013/10/04/learning-from-a-mentor</id>
     <content type="html"><![CDATA[<p>Our most recent project at gSchool, called <a href="http://tutorials.jumpstartlab.com/projects/sales_engine.html">SalesEngine</a>, was quite a stretch for a lot of us in the class. <!-- more --> Beyond the complexity of EventReporter, we had not had any time to recover from that project, overview the lessons learned, and reinforce the most important concepts from from the project. Instead, we jumped right into the next project, some of us without even having touched EventReporter, others with only half of the project completed.</p>
 
 <p>With our new pairs, we dove into the requirements. The project looked massive at first glance, but slowly we started to follow through the requirements (with very handy method and class name requirement) and made progress.</p>

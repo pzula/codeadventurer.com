@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: sicp | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/sicp/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/sicp/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SICP and Emacs for the Vim user]]></title>
-    <link href="http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
+    <link href="http://www.codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user"/>
     <updated>2014-12-21T11:58:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
+    <id>http://www.codeadventurer.com/2014/12/21/sicp-and-emacs-for-the-vim-user</id>
     <content type="html"><![CDATA[<h3>What is SICP?</h3>
 
 <p><a href="http://mitpress.mit.edu/sicp/">SICP</a>, also known as &lsquo;Structure and Interpretation of Computer Programs&rsquo;, is a textbook by Harold Abelson and Gerald Sussman that was written to be used with the Computer Science 100 level course at MIT. For the last two decades, it has been the cornerstone of many student&rsquo;s introduction to how computer programs work. It is one of the few textbooks out there that, although originally written in the 1985, still applies in our field today. Although SICP does teach computer science concepts through the use of Scheme, the language that is being used is not as important as the concepts presented. Many fundamentals courses these days focus more on the language, and this is often cited as the reason why SICP is still relevant. After asking many programmers in several communities what their favorite book is on programming, SICP came up time and time again. As such, I am embarking on the journey to learn and practice through this textbook. But first, I need to get my environment set up. And that&rsquo;s where the interesting findings began!</p>
@@ -36,7 +36,7 @@
 <blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/pzula">@pzula</a> Don&#39;t forget evil-mode. It&#39;s good!</p>&mdash; Chouser (@chrishouser) <a href="https://twitter.com/chrishouser/status/544713565479788544">December 16, 2014</a></blockquote>
 
 
-<script async src="http://codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://www.codeadventurer.com//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <p>So, having already completely copied the setup from Clojure for the Brave and True, I realized I had no idea how customizations work in Emacs, and my inital attempts at installing Evil-mode were failing me so I blew the entire directory away, re-installed emacs using homebrew, and started fresh in order to get what I needed.</p>

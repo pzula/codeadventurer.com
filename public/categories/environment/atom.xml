@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: environment | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/environment/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/environment/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Review: The Carolina Morning Zen Office Floor Desk]]></title>
-    <link href="http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office"/>
+    <link href="http://www.codeadventurer.com/2013/09/10/review-carolina-morning-zen-office"/>
     <updated>2013-09-10T22:02:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</id>
+    <id>http://www.codeadventurer.com/2013/09/10/review-carolina-morning-zen-office</id>
     <content type="html"><![CDATA[<p>In the previous post, I spoke about getting your computer ready for you to work, but I didn&rsquo;t spend much time talking about getting <strong>yourself</strong> ready to work. In a series of posts, I will cover tools beyond your computer that can help you be a better developer.</p>
 
 <!-- more -->
@@ -61,9 +61,9 @@
   
   <entry>
     <title type="html"><![CDATA[Getting a New Development Environment Up &amp; Running on Mac OSX]]></title>
-    <link href="http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx"/>
+    <link href="http://www.codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx"/>
     <updated>2013-09-05T21:14:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
+    <id>http://www.codeadventurer.com/2013/09/05/getting-a-new-development-environment-up-and-running-on-mac-osx</id>
     <content type="html"><![CDATA[<p>Getting a new computer can be fun, but it also means a lot of work. Between running into bugs, new versions of software running amok, and documentation from various sources on the big, bad internet just not lining up, it can quickly go from being fun to just being plain frustrating.</p>
 
 <!-- more -->

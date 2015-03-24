@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: projects | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/projects/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/projects/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Building My Own Lightsaber: Ergodox Tips]]></title>
-    <link href="http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips"/>
+    <link href="http://www.codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips"/>
     <updated>2014-11-02T11:08:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips</id>
+    <id>http://www.codeadventurer.com/2014/11/02/building-my-own-lightsaber-ergodox-tips</id>
     <content type="html"><![CDATA[<p>Building a keyboard can be likened to building a lightsaber. I set off on an adventure, found some plans, and somehow found the confidence to give it a try.</p>
 
 <p>This is not an endeavor that happens without trepidation. When I first decided to spring for an Ergodox kit on <a href="http://massdrop.com">Massdrop</a>, I knew that I wouldn&rsquo;t be getting the parts in the mail for months. I figured I knew how to do a little soldering (thanks to the <a href="http://concoctory.com/">Concococtory&rsquo;s</a> beginner class), and it wouldn&rsquo;t be a big deal. But once the kit was on my front porch, months later, I started to doubt my abilities to complete this project.</p>
@@ -159,9 +159,9 @@ You&rsquo;re also going to need a few things to help you when you mess up. I rec
   
   <entry>
     <title type="html"><![CDATA[Learning is Effin' Hard]]></title>
-    <link href="http://codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
+    <link href="http://www.codeadventurer.com/2013/09/20/learning-is-effin-hard"/>
     <updated>2013-09-20T09:04:00-04:00</updated>
-    <id>http://codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
+    <id>http://www.codeadventurer.com/2013/09/20/learning-is-effin-hard</id>
     <content type="html"><![CDATA[<p>Two days into building Event Reporter (you can find the project guidelines <a href="http://tutorials.jumpstartlab.com/projects/event_reporter.html">here</a>), I was flummoxed. <!-- more -->I&rsquo;d only been programming in Ruby for a little over a week, and we were diving head-first into test-driven development, while programming our first project without any training wheels. I came to Katrina, our super-heroine, molecular-biologist-turned-programmer instructor, and showed her my codebase. I was trying hard to separate concerns, build different classes, and keep every class and every test in its own file. This was starting to confuse me, and I was starting to lose sight of how to connect all the pieces back to one another. She took a few looks at what I had done, and asked me to <code>rm -rf</code> everything. All of it.</p>
 
 <p>I looked at her in disbelief, explained that this was hours worth of work (even though really it looked like there wasn&rsquo;t much there)… and then complied. And cried a little inside.</p>

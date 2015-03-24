@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: journey | Code Adventurer]]></title>
-  <link href="http://codeadventurer.com/categories/journey/atom.xml" rel="self"/>
-  <link href="http://codeadventurer.com/"/>
-  <updated>2014-12-21T12:32:48-05:00</updated>
-  <id>http://codeadventurer.com/</id>
+  <link href="http://www.codeadventurer.com/categories/journey/atom.xml" rel="self"/>
+  <link href="http://www.codeadventurer.com/"/>
+  <updated>2015-03-24T11:16:56-04:00</updated>
+  <id>http://www.codeadventurer.com/</id>
   <author>
     <name><![CDATA[Persa Zula]]></name>
     <email><![CDATA[persa@persazula.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My First 100 Days as a Software Engineer]]></title>
-    <link href="http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
+    <link href="http://www.codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer"/>
     <updated>2014-06-17T07:58:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
+    <id>http://www.codeadventurer.com/2014/06/17/my-first-100-days-as-a-software-engineer</id>
     <content type="html"><![CDATA[<p>Today marks 100 days* since my first day as a software engineer at Hireology, and it&rsquo;s been an amazing experience.</p>
 
 <p>A week before I officially became a software engineer, I packed up my apartment in Denver, shipped some bigger things home, packed the rest of my life in a suitcase and hopped back on a plane to Akron, Ohio.</p>
@@ -66,9 +66,9 @@
   
   <entry>
     <title type="html"><![CDATA[The Value of Mentorship]]></title>
-    <link href="http://codeadventurer.com/2014/03/15/the-value-of-mentorship"/>
+    <link href="http://www.codeadventurer.com/2014/03/15/the-value-of-mentorship"/>
     <updated>2014-03-15T13:46:00-04:00</updated>
-    <id>http://codeadventurer.com/2014/03/15/the-value-of-mentorship</id>
+    <id>http://www.codeadventurer.com/2014/03/15/the-value-of-mentorship</id>
     <content type="html"><![CDATA[<p>When making the decision to start a new career, you might find yourself a little lost. This can lead to a lot of online searches, reading articles and books on the subject at hand, and trying to understand quite a bit of contradictory advice. Instead of more online searches and questions posted to forums, the best investment you can make is in finding a mentor to help you through the maze. Throughout my journey, I&rsquo;ve come across great mentors, and have been starting to see patterns that emerge during a mentorship that make the relationship valuable and fulfilling for both parties.</p>
 
 <!-- more -->
@@ -102,9 +102,9 @@
   
   <entry>
     <title type="html"><![CDATA[Lessons Learned as a Budding Programmer]]></title>
-    <link href="http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
+    <link href="http://www.codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer"/>
     <updated>2014-02-07T10:12:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
+    <id>http://www.codeadventurer.com/2014/02/07/lessons-learned-as-a-budding-programmer</id>
     <content type="html"><![CDATA[<h2>A little background</h2>
 
 <p>I wasn&rsquo;t new to computers five months ago when I started gSchool, a 6-month intensive &amp; immersive course in learning Ruby and Ruby on Rails, but I might as well had been.</p>
@@ -144,9 +144,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mashing Code at CodeMash]]></title>
-    <link href="http://codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
+    <link href="http://www.codeadventurer.com/2014/01/11/mashing-code-at-codemash"/>
     <updated>2014-01-11T14:30:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
+    <id>http://www.codeadventurer.com/2014/01/11/mashing-code-at-codemash</id>
     <content type="html"><![CDATA[<p>This past week, gSchool continued on while I took a few steps into the Ohio developer community. I&rsquo;ve been to conferences before, but not as a Ruby developer. <!-- more -->I&rsquo;ve been to conferences about web development in higher education, conferences focused on WordPress, and conferences focused on Drupal, but <a href="http://codemash.org">CodeMash</a> was my first multi-language conference &mdash; and the first one I&rsquo;d attended at at waterpark.</p>
 
 <p>The conference was interesting. I met a lot of people from the surrounding states that worked in many different fields, but over and over again I heard people repeat the same mantra, or some rendition of it &mdash; &ldquo;.Net for pay, Ruby for play&rdquo;. This was interesting to me, because although I knew I&rsquo;d be returning to Ohio after gSchool, I hadn&rsquo;t looked into the job opportunities available before I accepted a slot in the class. I doubt if it would have changed my mind to know that locally there are only a handful of companies that work with Ruby, because I was very adamant about learning test driven development in a language that has a strong culture of testing.</p>
@@ -161,9 +161,9 @@
   
   <entry>
     <title type="html"><![CDATA[56 days until takeoff]]></title>
-    <link href="http://codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
+    <link href="http://www.codeadventurer.com/2014/01/03/56-days-until-takeoff"/>
     <updated>2014-01-03T09:05:00-05:00</updated>
-    <id>http://codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
+    <id>http://www.codeadventurer.com/2014/01/03/56-days-until-takeoff</id>
     <content type="html"><![CDATA[<p>56 days from now, 26 students from gSchool will be closing their laptops, saying their goodbyes, and getting ready to start their careers as software developers. <!-- more --> Some of them will be staying in Denver, some will be joining past graduates of the program built by Jumpstart Lab, and others will be spreading out across the country, working at startups, consultancies, and corporations. Regardless of where they end up, the six months they spent together will never be forgotten. The shared wins and frustrations, the walking taco days and lunchtime dip parties, and plenty of post-project-deadline happy hours have built solid friendships that are sure to last the test of time.</p>
 
 <p>Before that day comes, I still have work to do. As I&rsquo;m reading Sandi Metz&rsquo;s book, <a href="http://www.amazon.com/Practical-Object-Oriented-Design-Ruby-Addison-Wesley/dp/0321721330/ref=sr_1_1?ie=UTF8&amp;qid=1388765519&amp;sr=8-1&amp;keywords=practical+object-oriented+design+in+ruby">Practical Object Oriented Design in Ruby</a>, I see that I can improve on the way I think about and execute the design of applications. I&rsquo;m excited to work through the book, and apply the lessons in my projects.</p>
